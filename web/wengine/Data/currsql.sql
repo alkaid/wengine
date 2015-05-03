@@ -6,7 +6,7 @@
 -- Database : weplt
 -- 
 -- Part : #1
--- Date : 2015-05-01 21:16:51
+-- Date : 2015-05-04 03:51:09
 -- -----------------------------
 
 SET FOREIGN_KEY_CHECKS = 0;
@@ -45,6 +45,26 @@ DROP TABLE IF EXISTS `wplt_action_log`;
 -- Records of `wplt_action_log`
 -- -----------------------------
 INSERT INTO `wplt_action_log` VALUES ('1447', '12', '1', '0', 'member', '1', 'alkaid在2015-05-01 21:16登录了后台', '1', '1430486194');
+INSERT INTO `wplt_action_log` VALUES ('1448', '7', '1', '0', 'model', '153', '操作url：/wengine/web/wengine/index.php?s=/Admin/Model/update.html', '1', '1430637565');
+INSERT INTO `wplt_action_log` VALUES ('1449', '12', '1', '0', 'member', '1', 'alkaid在2015-05-03 15:54登录了后台', '1', '1430639655');
+INSERT INTO `wplt_action_log` VALUES ('1450', '7', '1', '0', 'model', '154', '操作url：/wengine/web/wengine/index.php?s=/Admin/Model/update.html', '1', '1430660576');
+INSERT INTO `wplt_action_log` VALUES ('1451', '8', '1', '0', 'attribute', '1343', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430660958');
+INSERT INTO `wplt_action_log` VALUES ('1452', '8', '1', '0', 'attribute', '1344', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430661109');
+INSERT INTO `wplt_action_log` VALUES ('1453', '8', '1', '0', 'attribute', '1345', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430661696');
+INSERT INTO `wplt_action_log` VALUES ('1454', '8', '1', '0', 'attribute', '1346', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430661758');
+INSERT INTO `wplt_action_log` VALUES ('1455', '8', '1', '0', 'attribute', '1347', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430661836');
+INSERT INTO `wplt_action_log` VALUES ('1456', '8', '1', '0', 'attribute', '1347', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430661862');
+INSERT INTO `wplt_action_log` VALUES ('1457', '8', '1', '0', 'attribute', '1348', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430661987');
+INSERT INTO `wplt_action_log` VALUES ('1458', '8', '1', '0', 'attribute', '1349', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430662095');
+INSERT INTO `wplt_action_log` VALUES ('1459', '8', '1', '0', 'attribute', '1348', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430662128');
+INSERT INTO `wplt_action_log` VALUES ('1460', '8', '1', '0', 'attribute', '1346', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430662138');
+INSERT INTO `wplt_action_log` VALUES ('1461', '8', '1', '0', 'attribute', '1345', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430662147');
+INSERT INTO `wplt_action_log` VALUES ('1462', '8', '1', '0', 'attribute', '1346', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/remove/id/1346.html', '1', '1430663042');
+INSERT INTO `wplt_action_log` VALUES ('1463', '8', '1', '0', 'attribute', '1349', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/remove/id/1349.html', '1', '1430663054');
+INSERT INTO `wplt_action_log` VALUES ('1464', '8', '1', '0', 'attribute', '1345', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430663087');
+INSERT INTO `wplt_action_log` VALUES ('1465', '8', '1', '0', 'attribute', '1348', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430663102');
+INSERT INTO `wplt_action_log` VALUES ('1466', '8', '1', '0', 'attribute', '1343', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430664600');
+INSERT INTO `wplt_action_log` VALUES ('1467', '8', '1', '0', 'attribute', '1350', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430671232');
 
 -- -----------------------------
 -- Table structure for `wplt_addon_category`
@@ -750,6 +770,14 @@ pic_weixin:弹出微信相册发图器|keyword@show,url@hide
 location_select:弹出地理位置选择器|keyword@show,url@hide
 none:无事件的一级菜单|keyword@hide,url@hide', '85', '0', '1', '1416812039', '1416810588', '', '3', '', 'regex', '', '3', 'function');
 INSERT INTO `wplt_attribute` VALUES ('1341', 'encodingaeskey', 'EncodingAESKey', 'varchar(255) NOT NULL', 'string', '', '安全模式下必填', '1', '', '11', '0', '1', '1416817970', '1416817924', '', '3', '', 'regex', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1343', 'mp_id', '公众号ID', 'int(10) unsigned NOT NULL ', 'num', '', '', '4', '', '154', '1', '1', '1430664600', '1430660958', '', '1', '公众号原始ID已经存在，请不要重复增加', 'unique', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1344', 'input_switch', 'Accesstoken输入开关', 'tinyint(2) NOT NULL', 'bool', '0', '', '1', '0:关
+1:开', '154', '1', '1', '1430661109', '1430661109', '', '3', '', 'regex', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1345', 'input_url', 'Accesstoken来源接口', 'varchar(1024) NULL', 'string', '', '', '1', '', '154', '0', '1', '1430663088', '1430661696', '', '3', '', 'regex', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1347', 'output_switch', 'Accesstoken输出开关', 'tinyint(2) NOT NULL', 'bool', '0', '', '1', '0:关
+1:开', '154', '1', '1', '1430661863', '1430661836', '', '3', '', 'regex', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1348', 'output_url', 'Accesstoken推送接口', 'varchar(1024) NULL', 'string', '', '', '1', '', '154', '0', '1', '1430663102', '1430661987', '', '3', '', 'regex', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1350', 'secrect', 'AppSecret', 'varchar(255) NOT NULL', 'string', '', '应用密钥', '1', '', '154', '0', '1', '1430671232', '1430671232', '', '3', '', 'regex', '', '3', 'function');
 
 -- -----------------------------
 -- Table structure for `wplt_auth_extend`
@@ -1479,7 +1507,8 @@ DROP TABLE IF EXISTS `wplt_member`;
 -- -----------------------------
 -- Records of `wplt_member`
 -- -----------------------------
-INSERT INTO `wplt_member` VALUES ('1', 'alkaid', '0', '0000-00-00', '', '0', '2', '0', '1430486033', '0', '1430486194', '1', '', '');
+INSERT INTO `wplt_member` VALUES ('1', 'alkaid', '0', '0000-00-00', '', '0', '3', '0', '1430486033', '0', '1430639655', '1', '', '');
+INSERT INTO `wplt_member` VALUES ('363', 'test', '0', '0000-00-00', '', '0', '1', '0', '1430638108', '0', '1430638108', '1', '', '');
 
 -- -----------------------------
 -- Table structure for `wplt_member_public`
@@ -1487,6 +1516,11 @@ INSERT INTO `wplt_member` VALUES ('1', 'alkaid', '0', '0000-00-00', '', '0', '2'
 DROP TABLE IF EXISTS `wplt_member_public`;
 ;
 
+-- -----------------------------
+-- Records of `wplt_member_public`
+-- -----------------------------
+INSERT INTO `wplt_member_public` VALUES ('107', '363', 'test', 'gh_8006af1d66c7', 'gh_8006af1d66c7', '', '', '', '', '', 'gh_8006af1d66c7', '2', 'wx3fa9c7e89fd2ea45', '9017bcac9f55a4dc2cbf2c04c124c5c9', '0', '');
+INSERT INTO `wplt_member_public` VALUES ('108', '363', 'test2', 'gh_8006af1d66c8', 'aiweier', '', '', '', '', '', 'gh_8006af1d66c8', '2', 'sfdsdf', '', '0', '');
 
 -- -----------------------------
 -- Table structure for `wplt_member_public_group`
@@ -1499,6 +1533,18 @@ DROP TABLE IF EXISTS `wplt_member_public_group`;
 -- Table structure for `wplt_member_public_link`
 -- -----------------------------
 DROP TABLE IF EXISTS `wplt_member_public_link`;
+;
+
+-- -----------------------------
+-- Records of `wplt_member_public_link`
+-- -----------------------------
+INSERT INTO `wplt_member_public_link` VALUES ('114', '363', '107', '1', '', '0');
+INSERT INTO `wplt_member_public_link` VALUES ('115', '363', '108', '1', '', '1');
+
+-- -----------------------------
+-- Table structure for `wplt_member_public_token_io`
+-- -----------------------------
+DROP TABLE IF EXISTS `wplt_member_public_token_io`;
 ;
 
 
@@ -1931,6 +1977,7 @@ cTime|time_format:增加时间
 request_count|intval:请求数
 id:操作:[EDIT]|编辑,[DELETE]|删除', '10', 'qr_code', '', '1388815871', '1406130247', '1', 'MyISAM');
 INSERT INTO `wplt_model` VALUES ('143', 'import', '导入数据', '0', '', '1', '', '1:基础', '', '', '', '', '', '10', '', '', '1407554076', '1407554076', '1', 'MyISAM');
+INSERT INTO `wplt_model` VALUES ('154', 'member_public_token_io', '公众号Accesstoken输入输出', '0', '', '1', '', '1:基础', '', '', '', '', '', '10', '', '', '1430660576', '1430660576', '1', 'MyISAM');
 
 -- -----------------------------
 -- Table structure for `wplt_picture`
@@ -2074,7 +2121,8 @@ DROP TABLE IF EXISTS `wplt_ucenter_member`;
 -- -----------------------------
 -- Records of `wplt_ucenter_member`
 -- -----------------------------
-INSERT INTO `wplt_ucenter_member` VALUES ('1', 'alkaid', '6e67f5e7487f0dbc69bf84b20d7b4b47', 'muliangcong@163.com', '', '1430486033', '0', '1430486194', '0', '1430486033', '1', '', '');
+INSERT INTO `wplt_ucenter_member` VALUES ('1', 'alkaid', '6e67f5e7487f0dbc69bf84b20d7b4b47', 'muliangcong@163.com', '', '1430486033', '0', '1430639655', '0', '1430486033', '1', '', '');
+INSERT INTO `wplt_ucenter_member` VALUES ('363', 'test', '330e4acc6d83693d1ec57b71e172c310', 'test@126.com', '', '1430638087', '0', '1430638108', '0', '1430638087', '1', '', '');
 
 -- -----------------------------
 -- Table structure for `wplt_ucenter_setting`

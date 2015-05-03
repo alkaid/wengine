@@ -186,7 +186,10 @@ class MemberPublicController extends HomeController {
 					$ids 
 			);
 			M ( 'member_public_link' )->where ( $map_link )->delete ();
-			
+//++++++++++++++++ added by alkaid+++++++++++++++++++++++
+            M ( 'member_public_token_io' )->where ( $map_link )->delete ();
+//-----------------added by alkaid-----------------------
+
 			$this->success ( '删除成功' );
 		} else {
 			$this->error ( '删除失败！' );
@@ -288,6 +291,34 @@ class MemberPublicController extends HomeController {
 			$this->display ( 'step_2' );
 		}
 	}
+//++++++++++++++++ added by alkaid+++++++++++++++++++++++
+    function step_3(){
+        $model = $this->getModel('public_member_token_io');
+        $id = I ( 'get.id' );
+        $data=M('public_member_token_io')->where('mp_id='.$id)->select();
+        $id=$data['id'];
+        $this->assign ( 'id', $id );
+
+        if (IS_POST) {
+            $_POST ['id'] = $id;
+            foreach ( $_POST as &$v ) {
+                $v = trim ( $v );
+            }
+
+            $Model = D ( parse_name ( get_table_name ( $model ['id'] ), 1 ) );
+            // 获取模型的字段信息
+            $Model = $this->checkAttr ( $Model, $model ['id'] );
+            if ($Model->create () && false !== $Model->save ()) {
+                $this->success ( '保存成功！', U ( 'lists?model=' . $model ['name'] ) );
+            } else {
+                $this->error ( $Model->getError () );
+            }
+        } else {
+            $this->assign ( 'info', $data );
+            $this->display ( 'step_3' );
+        }
+    }
+//-----------------added by alkaid-----------------------
 	protected function checkAttr($Model, $model_id) {
 		$fields = get_model_attribute ( $model_id, false );
 		$validate = $auto = array ();

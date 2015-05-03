@@ -37,6 +37,67 @@ class WeixinController extends HomeController {
 		// 结束程序。防止oneThink框架的调试信息输出
 		exit ();
 	}
+//++++++++++++++++ added by alkaid+++++++++++++++++++++++
+    public function setaccesstoken(){
+        // 记录日志
+        addWeixinLog ( '来自第三方accesstoken推送', $GLOBALS ['HTTP_RAW_POST_DATA'] );
+        $content = wp_file_get_contents ( 'php://input' );
+        ! empty ( $content ) || die ( '这是微信请求的接口地址，直接在浏览器里无效' );
+        \Think\Log::record ('来自第三方accesstoken推送:'.$content,'DEBUG');
+        set_access_token($content);
+    }
+
+    public function getaccesstoken(){
+        $id = I ( 'get.id' );
+        if (IS_POST) {
+            $token=$_POST('wechat_id');
+            $serect=$_POST('secrect');
+
+
+            $msg ['access_token'] = $serect;
+            //TODO 验证secrect
+            $msg ['wechat_id'] = $token;
+            $msg ['access_token'] = get_access_token($token);
+            $msg ['expires_time'] = get_access_token_expire_time($token);
+
+            $str = json_encode($msg);
+
+            // 记录日志
+            addWeixinLog ( $str, '第三方请求获得accesstoken' );
+
+            if ($_GET ['encrypt_type'] == 'aes') {
+                $sEncryptMsg = ""; // xml格式的密文
+                $errCode = $this->wxcpt->EncryptMsg ( $str, $this->sReqTimeStamp, $this->sReqNonce, $sEncryptMsg );
+                if ($errCode == 0) {
+                    $str = $sEncryptMsg;
+                } else {
+                    addWeixinLog ( $str, "EncryptMsg Error: " . $errCode );
+                }
+            }
+
+            echo ($str);
+        }
+    }
+
+    /* 组装xml数据 */
+    public function _data2xml($xml, $data, $item = 'item') {
+        foreach ( $data as $key => $value ) {
+            is_numeric ( $key ) && ($key = $item);
+            if (is_array ( $value ) || is_object ( $value )) {
+                $child = $xml->addChild ( $key );
+                $this->_data2xml ( $child, $value, $item );
+            } else {
+                if (is_numeric ( $value )) {
+                    $child = $xml->addChild ( $key, $value );
+                } else {
+                    $child = $xml->addChild ( $key );
+                    $node = dom_import_simplexml ( $child );
+                    $node->appendChild ( $node->ownerDocument->createCDATASection ( $value ) );
+                }
+            }
+        }
+    }
+//-----------------added by alkaid-----------------------
 	private function reply($data, $weixin) {
 		$key = $data ['Content'];
 		$keywordArr = array ();
