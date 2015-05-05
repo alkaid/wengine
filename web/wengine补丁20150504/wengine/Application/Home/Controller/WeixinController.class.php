@@ -39,31 +39,35 @@ class WeixinController extends HomeController {
 	}
 //++++++++++++++++ added by alkaid+++++++++++++++++++++++
     public function setaccesstoken(){
-        // 记录日志
-        addWeixinLog ( '来自第三方accesstoken推送', $GLOBALS ['HTTP_RAW_POST_DATA'] );
-        $content = wp_file_get_contents ( 'php://input' );
-        ! empty ( $content ) || die ( '这是微信请求的接口地址，直接在浏览器里无效' );
-        \Think\Log::record ('来自第三方accesstoken推送:'.$content,'DEBUG');
-        set_access_token($content);
+		$content = wp_file_get_contents ( 'php://input' );
+		! empty ( $content ) || die ( '这是微信请求的接口地址，直接在浏览器里无效' );
+		addWeixinLog ( '来自第三方accesstoken推送', $content );
+        if(set_access_token($content)){
+			echo 'success';
+		}else{
+			echo 'failur';
+		}
     }
 
     public function getaccesstoken(){
         $id = I ( 'get.id' );
+		$content = wp_file_get_contents ( 'php://input' );
+		! empty ( $content ) || die ( '这是微信请求的接口地址，直接在浏览器里无效' );
+		addWeixinLog ( '来自第三方请求获取accesstoken', $content );
         if (IS_POST) {
-            $token=$_POST('wechat_id');
-            $serect=$_POST('secrect');
+			$tempArr=json_decode($content,true);
+            $token=$tempArr['wechat_id'];
+            $secret=$tempArr['secret'];
 
-
-            $msg ['access_token'] = $serect;
-            //TODO 验证secrect
+            //TODO 验证secret
             $msg ['wechat_id'] = $token;
             $msg ['access_token'] = get_access_token($token);
-            $msg ['expires_time'] = get_access_token_expire_time($token);
+            $msg ['expires_time'] = get_access_token_expires_time($token);
 
             $str = json_encode($msg);
 
             // 记录日志
-            addWeixinLog ( $str, '第三方请求获得accesstoken' );
+            addWeixinLog ( '返回值：第三方请求获得accesstoken',$str  );
 
             if ($_GET ['encrypt_type'] == 'aes') {
                 $sEncryptMsg = ""; // xml格式的密文

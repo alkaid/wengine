@@ -106,7 +106,7 @@ class CustomMenuController extends AddonsController {
 		curl_close ( $ch1 );
 		$access = json_decode ( $accesstxt, true );*/
 		//不应该自己去刷accesstoken,应从全局取
-		$access=get_access_token($map ['token']);
+		$access['access_token']=get_access_token($map ['token']);
 //-------------------------modified by alkaid-----------------------------
 
 		if (empty ( $access ['access_token'] )) {
@@ -117,7 +117,8 @@ class CustomMenuController extends AddonsController {
 		
 		$url = 'https://api.weixin.qq.com/cgi-bin/menu/create?access_token=' . $access ['access_token'];
 		$header [] = "content-type: application/x-www-form-urlencoded; charset=UTF-8";
-		
+
+		addWeixinLog ( "调用系统菜单接口".$url,$tree  );
 		$ch = curl_init ();
 		curl_setopt ( $ch, CURLOPT_URL, $url );
 		curl_setopt ( $ch, CURLOPT_CUSTOMREQUEST, "POST" );
@@ -131,6 +132,7 @@ class CustomMenuController extends AddonsController {
 		curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, true );
 		$res = curl_exec ( $ch );
 		curl_close ( $ch );
+		addWeixinLog ( "返回值:调用系统菜单接口".$url,$res  );
 		$res = json_decode ( $res, true );
 		if ($res ['errcode'] == 0) {
 			$this->success ( '发送菜单成功' );

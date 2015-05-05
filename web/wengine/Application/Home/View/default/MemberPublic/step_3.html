@@ -49,7 +49,7 @@
           </div>
 
           <p>Accesstoken接收地址：<span style="color: #FF0000">{:U('home/weixin/setaccesstoken',array('id'=>$id))}</span><br>
-              须提交的post参数：类型:json. 字段：wechat_id（微信原始ID），access_token，expire_time或expire_in
+              须提交的post参数：类型:json. 字段：wechat_id（微信原始ID），access_token，expires_time或expires_in
           </p>
           <div class="form-item cf toggle-appid">
               <label class="item-label"> Accesstoken输入接口 <span class="check-tips"> （从第三方地址请求获得Accesstoken） </span></label>
@@ -58,7 +58,7 @@
               </div>
           </div>
           <p>
-              获得的post参数：类型:json. 字段：wechat_id（微信原始ID），access_token，expire_time
+              获得的post参数：类型:json. 字段：wechat_id（微信原始ID），access_token，expires_time
           </p>
 
           <div class="form-item cf toggle-type">
@@ -90,7 +90,7 @@
           </div>
 
           <p>Accesstoken获取地址：<span style="color: #FF0000">{:U('home/weixin/getaccesstoken',array('id'=>$id))}</span><br>
-              须提交的post参数：类型:json. 字段：wechat_id（微信原始ID），secrect(下面提供的AppSecrect)
+              须提交的post参数：类型:json. 字段：wechat_id（微信原始ID），secret(下面提供的Appsecret)
           </p>
           <div class="form-item cf toggle-secret">
               <label class="item-label"> AppSecret <span class="check-tips"> （应用密钥） </span></label>
@@ -105,7 +105,7 @@
               </div>
           </div>
           <p>
-              推送的post参数：类型:json. 字段：wechat_id（微信原始ID），access_token，expire_time
+              推送的post参数：类型:json. 字段：wechat_id（微信原始ID），access_token，expires_time
           </p>
 
         <div class="form-item cf">
