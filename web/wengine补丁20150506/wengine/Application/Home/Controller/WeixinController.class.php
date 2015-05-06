@@ -29,7 +29,7 @@ class WeixinController extends HomeController {
 		$this->initFollow ( $weixin, $data );
 		
 		// 记录日志
-//		addWeixinLog ( $data, $GLOBALS ['HTTP_RAW_POST_DATA'] );
+		addWeixinLog ( $data, $GLOBALS ['HTTP_RAW_POST_DATA'] );
 		
 		// 回复数据
 		$this->reply ( $data, $weixin );
@@ -41,7 +41,6 @@ class WeixinController extends HomeController {
 		$mapMpT['mp_id']=$mp['id'];
 		$tokenIO= M ( 'member_public_token_io' )->where ( $mapMpT )->find ();
 		$rawData=$weixin->getRawData();
-		addWeixinLog ( $data, $rawData );
 		//从第三方接口获取accesstoken
 		if($tokenIO['wxdata_output_switch'] && $tokenIO['wxdata_output_url']) {
 			$ch = curl_init();
