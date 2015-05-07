@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2015-05-06 16:51:12
+Date: 2015-05-07 21:28:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -66,7 +66,7 @@ CREATE TABLE `wplt_action_log` (
   KEY `action_ip_ix` (`action_ip`),
   KEY `action_id_ix` (`action_id`),
   KEY `user_id_ix` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1475 DEFAULT CHARSET=utf8 COMMENT='行为日志表';
+) ENGINE=MyISAM AUTO_INCREMENT=1492 DEFAULT CHARSET=utf8 COMMENT='行为日志表';
 
 -- ----------------------------
 -- Records of wplt_action_log
@@ -99,6 +99,23 @@ INSERT INTO `wplt_action_log` VALUES ('1471', '8', '1', '0', 'attribute', '1351'
 INSERT INTO `wplt_action_log` VALUES ('1472', '8', '1', '0', 'attribute', '1351', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430878869');
 INSERT INTO `wplt_action_log` VALUES ('1473', '8', '1', '0', 'attribute', '1352', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430897913');
 INSERT INTO `wplt_action_log` VALUES ('1474', '8', '1', '0', 'attribute', '1353', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430897996');
+INSERT INTO `wplt_action_log` VALUES ('1475', '7', '1', '0', 'model', '155', '操作url：/wengine/web/wengine/index.php?s=/Admin/Model/update.html', '1', '1430992691');
+INSERT INTO `wplt_action_log` VALUES ('1476', '8', '1', '0', 'attribute', '1354', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430997435');
+INSERT INTO `wplt_action_log` VALUES ('1477', '8', '1', '0', 'attribute', '1355', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430997589');
+INSERT INTO `wplt_action_log` VALUES ('1478', '8', '1', '0', 'attribute', '1356', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430997865');
+INSERT INTO `wplt_action_log` VALUES ('1479', '8', '1', '0', 'attribute', '1355', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430998934');
+INSERT INTO `wplt_action_log` VALUES ('1480', '8', '1', '0', 'attribute', '1356', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431000681');
+INSERT INTO `wplt_action_log` VALUES ('1481', '8', '1', '0', 'attribute', '1355', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431000696');
+INSERT INTO `wplt_action_log` VALUES ('1482', '8', '1', '0', 'attribute', '1356', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431000721');
+INSERT INTO `wplt_action_log` VALUES ('1483', '8', '1', '0', 'attribute', '1357', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431000847');
+INSERT INTO `wplt_action_log` VALUES ('1484', '8', '1', '0', 'attribute', '1358', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431001135');
+INSERT INTO `wplt_action_log` VALUES ('1485', '8', '1', '0', 'attribute', '1359', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431001179');
+INSERT INTO `wplt_action_log` VALUES ('1486', '8', '1', '0', 'attribute', '1360', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431001392');
+INSERT INTO `wplt_action_log` VALUES ('1487', '8', '1', '0', 'attribute', '1361', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431002674');
+INSERT INTO `wplt_action_log` VALUES ('1488', '8', '1', '0', 'attribute', '1362', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431004759');
+INSERT INTO `wplt_action_log` VALUES ('1489', '8', '1', '0', 'attribute', '1363', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431005281');
+INSERT INTO `wplt_action_log` VALUES ('1490', '8', '1', '0', 'attribute', '1362', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431005293');
+INSERT INTO `wplt_action_log` VALUES ('1491', '8', '1', '0', 'attribute', '1363', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431005313');
 
 -- ----------------------------
 -- Table structure for wplt_addons
@@ -227,7 +244,7 @@ CREATE TABLE `wplt_attribute` (
   `auto_time` tinyint(1) unsigned NOT NULL,
   `auto_type` varchar(25) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1354 DEFAULT CHARSET=utf8 COMMENT='模型属性表';
+) ENGINE=MyISAM AUTO_INCREMENT=1364 DEFAULT CHARSET=utf8 COMMENT='模型属性表';
 
 -- ----------------------------
 -- Records of wplt_attribute
@@ -750,6 +767,16 @@ INSERT INTO `wplt_attribute` VALUES ('1350', 'output_secret', 'AppSecret(输出)
 INSERT INTO `wplt_attribute` VALUES ('1351', 'input_secret', 'AppSecret(输入)', 'varchar(255) NULL', 'string', '', '应用密钥', '1', '', '154', '0', '1', '1430878869', '1430878850', '', '3', '', 'regex', '', '3', 'function');
 INSERT INTO `wplt_attribute` VALUES ('1352', 'wxdata_output_switch', '微信数据转发开关', 'tinyint(2) NOT NULL', 'bool', '0', '是否将收到的微信数据推送给第三方', '1', '0:关闭\r\n1:打开', '154', '1', '1', '1430897913', '1430897913', '', '3', '', 'regex', '', '3', 'function');
 INSERT INTO `wplt_attribute` VALUES ('1353', 'wxdata_output_url', '微信数据转发地址', 'varchar(255) NULL', 'string', '', '转发微信数据给第三方地址', '1', '', '154', '0', '1', '1430897996', '1430897996', '', '3', '', 'regex', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1354', 'card_type', '卡券类型', 'varchar(255) NOT NULL', 'cascade', '', '', '1', 'GENERAL_COUPON:通用券\r\nGROUPON:团购券\r\nDISCOUNT:折扣券\r\nGIFT:礼品券\r\nCASH:代金券\r\nMEMBER_CARD:会员卡\r\nSCENIC_TICKET:景点门票\r\nMOVIE_TICKET:电影票\r\nBOARDING_PASS:飞机票\r\nLUCKY_MONEY:红包\r\nMEERING_TICKET:会议门票', '155', '1', '1', '1430997435', '1430997435', '', '3', '', 'regex', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1355', 'default_detail', '描述文本', 'varchar(2048) NULL', 'string', '', 'general_coupon通用卡券的描述文本', '1', '', '155', '0', '1', '1431000696', '1430997589', '0,2048', '3', '长度超出2048', 'length', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1356', 'deal_detail', '团购详情', 'varchar(2048) NULL', 'string', '', 'groupon团购券专用，团购详情', '1', '', '155', '0', '1', '1431000721', '1430997866', '0,2048', '3', '长度超出2048', 'length', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1357', 'gift', '礼品名字', 'varchar(200) NOT NULL', 'string', '', 'gift礼品券专用，表示礼品名字', '1', '', '155', '0', '1', '1431000847', '1431000847', '0,200', '3', '长度超出200', 'length', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1358', 'least_cost', '起用金额', 'int(10) NULL', 'num', '', 'cash代金券专用，表示起用金额（单 位为分）', '1', '', '155', '0', '1', '1431001136', '1431001136', '', '3', '', 'regex', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1359', 'reduce_cost', '减免金额', 'int(10) NULL', 'num', '', 'cash代金券专用，表示减免金额（单 位为分）', '1', '', '155', '0', '1', '1431001179', '1431001179', '', '3', '', 'regex', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1360', 'discount', '打折额度', 'int(10) NULL', 'num', '', 'discount折扣券专用，表示打折额度（百 分比）。填30 就是七折。', '1', '', '155', '0', '1', '1431001392', '1431001392', '1,99', '3', '打折额度必须在1%到99%之间', 'between', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1361', 'logo_url', '商户logo', 'varchar(255) NOT NULL', 'string', '', '卡券的商户logo，尺寸为 300*300', '1', '', '155', '1', '1', '1431002674', '1431002674', '', '3', '', 'regex', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1362', 'token', '微信原始id', 'varchar(100) NOT NULL', 'string', '', '微信原始ID 关联member_public的token字段', '0', '', '155', '1', '1', '1431005293', '1431004759', '', '3', '', 'regex', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1363', 'code_type', 'code码展示类型', 'varchar(255) NOT NULL', 'cascade', '', 'code码展示类型', '1', '\"CODE_TYPE_TEXT\":文本\r\n\"CODE_TYPE_BARCODE\":一维码\r\n\"CODE_TYPE_QRCODE\":二维码\r\n\"CODE_TYPE_ONLY_QRCODE\":二维码无code显示\r\n\"CODE_TYPE_ONLY_BARCODE\":一维码无code显示', '155', '1', '1', '1431005313', '1431005281', '', '3', '', 'regex', '', '3', 'function');
 
 -- ----------------------------
 -- Table structure for wplt_auth_extend
@@ -2110,7 +2137,7 @@ CREATE TABLE `wplt_model` (
   `status` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '状态',
   `engine_type` varchar(25) NOT NULL DEFAULT 'MyISAM' COMMENT '数据库引擎',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=155 DEFAULT CHARSET=utf8 COMMENT='文档模型表';
+) ENGINE=MyISAM AUTO_INCREMENT=156 DEFAULT CHARSET=utf8 COMMENT='文档模型表';
 
 -- ----------------------------
 -- Records of wplt_model
@@ -2175,6 +2202,7 @@ INSERT INTO `wplt_model` VALUES ('120', 'youaskservice_wxlogs', '你问我答- �
 INSERT INTO `wplt_model` VALUES ('121', 'qr_code', '二维码表', '0', '', '1', '{\"1\":[\"qr_code\",\"addon\",\"aim_id\",\"cTime\",\"extra_text\",\"extra_int\",\"scene_id\",\"action_name\"]}', '1:基础', '', '', '', '', 'scene_id:事件KEY值\r\nqr_code|get_code_img:二维码\r\naction_name|get_name_by_status: 	二维码类型\r\naddon:所属插件\r\naim_id:插件数据ID\r\ncTime|time_format:增加时间\r\nrequest_count|intval:请求数\r\nid:操作:[EDIT]|编辑,[DELETE]|删除', '10', 'qr_code', '', '1388815871', '1406130247', '1', 'MyISAM');
 INSERT INTO `wplt_model` VALUES ('143', 'import', '导入数据', '0', '', '1', '', '1:基础', '', '', '', '', '', '10', '', '', '1407554076', '1407554076', '1', 'MyISAM');
 INSERT INTO `wplt_model` VALUES ('154', 'member_public_token_io', '公众号Accesstoken输入输出', '0', '', '1', '', '1:基础', '', '', '', '', '', '10', '', '', '1430660576', '1430660576', '1', 'MyISAM');
+INSERT INTO `wplt_model` VALUES ('155', 'wxcard', '微信卡券', '0', '', '1', '', '1:基础', '', '', '', '', '', '10', '', '', '1430992691', '1430992691', '1', 'MyISAM');
 
 -- ----------------------------
 -- Table structure for wplt_picture
@@ -2555,14 +2583,15 @@ CREATE TABLE `wplt_tongji` (
   `day` int(10) NOT NULL COMMENT '日期',
   `content` text NOT NULL COMMENT '统计数据',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of wplt_tongji
 -- ----------------------------
 INSERT INTO `wplt_tongji` VALUES ('1', 'gh_8006af1d66c8', '201505', '20150505', 'a:1:{s:10:\"CustomMenu\";i:2;}');
 INSERT INTO `wplt_tongji` VALUES ('2', 'gh_99be645d3d8f', '201505', '20150505', 'a:2:{s:10:\"CustomMenu\";i:8;s:6:\"Coupon\";i:2;}');
-INSERT INTO `wplt_tongji` VALUES ('3', 'gh_99be645d3d8f', '201505', '20150506', 'a:1:{s:10:\"CustomMenu\";i:1;}');
+INSERT INTO `wplt_tongji` VALUES ('3', 'gh_99be645d3d8f', '201505', '20150506', 'a:4:{s:10:\"CustomMenu\";i:4;s:4:\"Chat\";i:1;s:6:\"Wecome\";i:1;s:10:\"UserCenter\";i:3;}');
+INSERT INTO `wplt_tongji` VALUES ('4', 'gh_99be645d3d8f', '201505', '20150507', 'a:5:{s:10:\"UserCenter\";i:3;s:10:\"CustomMenu\";i:2;s:6:\"Wecome\";i:1;s:4:\"Card\";i:3;s:10:\"HelloWorld\";i:1;}');
 
 -- ----------------------------
 -- Table structure for wplt_ucenter_admin
@@ -2851,16 +2880,34 @@ CREATE TABLE `wplt_weixin_log` (
   `data` text,
   `data_post` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7218 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of wplt_weixin_log
 -- ----------------------------
-INSERT INTO `wplt_weixin_log` VALUES ('7213', '1430825074', '2015-05-05 19:24:34', '来自第三方accesstoken推送', 'ddddddddddddd');
-INSERT INTO `wplt_weixin_log` VALUES ('7214', '1430828204', '2015-05-05 20:16:44', '从第三方接口获取accesstoken', '{\"wechat_id\":\"gh_99be645d3d8f\",\"access_token\":\"xfn-yOHcklQeSbbHFBr7G12f3xOYXfmRup_ISs1R5I-1i6bXaf0R9eIbsOD-6IIztXZgfWVqAhvANPNQOTNwhtR4P21VpTwxnTMgJkDassM\",\"expires_time\":1430832435}');
-INSERT INTO `wplt_weixin_log` VALUES ('7215', '1430829171', '2015-05-05 20:32:51', '从第三方接口获取accesstoken', '{\"wechat_id\":\"gh_99be645d3d8f\",\"access_token\":\"0griLt-vzeQCtByWGtYYIxf9BQ1GKH9DLKUTg3SQG-4ketpULtrBRbO_DWlTNzBAkV17JFQeMHsq5st9j_nu0uZnG8JAwPm8luZA-IbmJZI\",\"expires_time\":1430836271}');
-INSERT INTO `wplt_weixin_log` VALUES ('7216', '1430829225', '2015-05-05 20:33:45', '调用系统菜单接口https://api.weixin.qq.com/cgi-bin/menu/create?access_token=0griLt-vzeQCtByWGtYYIxf9BQ1GKH9DLKUTg3SQG-4ketpULtrBRbO_DWlTNzBAkV17JFQeMHsq5st9j_nu0uZnG8JAwPm8luZA-IbmJZI', '{\"button\":[{\"name\":\"testlocal\",\"type\":\"click\",\"key\":\"key6\"}]}');
-INSERT INTO `wplt_weixin_log` VALUES ('7217', '1430829227', '2015-05-05 20:33:47', '返回值:调用系统菜单接口https://api.weixin.qq.com/cgi-bin/menu/create?access_token=0griLt-vzeQCtByWGtYYIxf9BQ1GKH9DLKUTg3SQG-4ketpULtrBRbO_DWlTNzBAkV17JFQeMHsq5st9j_nu0uZnG8JAwPm8luZA-IbmJZI', '{\"errcode\":0,\"errmsg\":\"ok\"}');
+
+-- ----------------------------
+-- Table structure for wplt_wxcard
+-- ----------------------------
+DROP TABLE IF EXISTS `wplt_wxcard`;
+CREATE TABLE `wplt_wxcard` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `card_type` varchar(255) NOT NULL COMMENT '卡券类型',
+  `default_detail` varchar(2048) DEFAULT NULL COMMENT '描述文本',
+  `deal_detail` varchar(2048) DEFAULT NULL COMMENT '团购详情',
+  `gift` varchar(200) NOT NULL COMMENT '礼品名字',
+  `least_cost` int(10) DEFAULT NULL COMMENT '起用金额',
+  `reduce_cost` int(10) DEFAULT NULL COMMENT '减免金额',
+  `discount` int(10) DEFAULT NULL COMMENT '打折额度',
+  `logo_url` varchar(255) NOT NULL COMMENT '商户logo',
+  `token` varchar(100) NOT NULL COMMENT '微信原始id',
+  `code_type` varchar(255) NOT NULL COMMENT 'code码展示类型',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+-- ----------------------------
+-- Records of wplt_wxcard
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for wplt_youaskservice_behavior
