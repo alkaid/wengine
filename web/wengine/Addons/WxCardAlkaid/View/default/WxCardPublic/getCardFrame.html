@@ -113,6 +113,7 @@
         color: #8d8d8d
     }</style>
     <style type="text/css"></style>
+    <script type="text/javascript" src="__STATIC__/jquery-2.0.3.min.js"></script>
 </head>
 <body>
 <div class="wrp">
@@ -129,14 +130,22 @@
                     <div class="deco"></div>
                 </div>
                 <div class="card_bottom"><a class="btn btn_primary">领取卡券</a></div>
-                <p class="info info_warning">请使用手机客户端领券</p></div>
+                <!--<p class="info info_warning">请使用手机客户端领券</p></div>-->
+            </div>
+        </div>
+        <div id="js_loading" style="display:none;"><i class="icon_mask_loading icon16_light_loading"></i>
+
+            <div id="js_ui_mask" class="mask"></div>
         </div>
     </div>
-    <div id="js_loading" style="display:none;"><i class="icon_mask_loading icon16_light_loading"></i>
-
-        <div id="js_ui_mask" class="mask"></div>
-    </div>
 </div>
+<script type="text/javascript">
+    $('#js_form').click(function(e){
+        var ifr = window.parent;
+        var targetOrigin = "{: SITE_URL}";
+        ifr.postMessage('obtainCard', targetOrigin);
+    });
+</script>
 </body>
 </html>
 

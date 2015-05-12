@@ -7,7 +7,7 @@ return array(
 			'1'=>'开启',		 //值=>文字
 			'0'=>'关闭',
 		),
-		'value'=>'1',			 //表单的默认值
+		'value'=>'1',			 //表单的默认值··
 	),
 	'logo_url'=>array(//配置在表单中的键名 ,这个会是config[random]
 		'title'=>'商户logo:',//表单的文字
