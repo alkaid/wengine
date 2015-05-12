@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2015-05-08 21:33:15
+Date: 2015-05-12 18:37:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -188,7 +188,7 @@ CREATE TABLE `wplt_addons` (
   `type` tinyint(1) DEFAULT '0' COMMENT '插件类型 0 普通插件 1 微信插件 2 易信插件',
   `cate_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=92 DEFAULT CHARSET=utf8 COMMENT='插件表';
+) ENGINE=MyISAM AUTO_INCREMENT=93 DEFAULT CHARSET=utf8 COMMENT='插件表';
 
 -- ----------------------------
 -- Records of wplt_addons
@@ -224,6 +224,7 @@ INSERT INTO `wplt_addons` VALUES ('60', 'Scratch', '刮刮卡', '刮刮卡', '1'
 INSERT INTO `wplt_addons` VALUES ('64', 'Tongji', '运营统计', '统计每个插件使用情况', '1', 'null', '凡星', '0.1', '1401371025', '1', '1', '2');
 INSERT INTO `wplt_addons` VALUES ('83', 'YouaskService', '你问我答客服系统', '一个支持你问我答,关键词制定客服的客服系统', '1', 'null', '陌路生人', '0.1', '1403947448', '1', '1', '1');
 INSERT INTO `wplt_addons` VALUES ('91', 'WxCardAlkaid', '微信卡券', '卡券插件 创建修改等基础操作', '1', '{\"random\":\"1\"}', 'alkaid', '0.1', '1431066156', '1', '1', '2');
+INSERT INTO `wplt_addons` VALUES ('92', 'LangerieCard1', '卡券', '兰卓丽卡券1', '1', '{\"random\":\"1\"}', '无名', '0.1', '1431398237', '1', '1', '5');
 
 -- ----------------------------
 -- Table structure for wplt_addon_category
@@ -1357,7 +1358,7 @@ INSERT INTO `wplt_config` VALUES ('42', 'ACCESS', '2', '未登录时可访问的
 INSERT INTO `wplt_config` VALUES ('44', 'DEFAULT_PUBLIC_GROUP_ID', '0', '公众号默认等级ID', '3', '', '前台新增加的公众号的默认等级，值为0表示不做权限控制，公众号拥有全部插件的权限', '1393759885', '1393759981', '1', '0', '1');
 INSERT INTO `wplt_config` VALUES ('45', 'SYSTEM_UPDATE_REMIND', '4', '系统升级提醒', '4', '0:关闭\r\n1:开启', '开启后官方有新升级信息会及时在后台的网站设置页面头部显示升级提醒', '1393764263', '1393764263', '1', '1', '5');
 INSERT INTO `wplt_config` VALUES ('46', 'SYSTEM_UPDATRE_VERSION', '0', '系统升级最新版本号', '4', '', '记录当前系统的版本号，这是与官方比较是否有升级包的唯一标识，不熟悉者只勿改变其数值', '1393764702', '1394337646', '1', '20141202', '0');
-INSERT INTO `wplt_config` VALUES ('47', 'FOLLOW_YOUKE_UID', '0', '粉丝游客ID', '0', '', '', '1398927704', '1398927704', '1', '-3349', '0');
+INSERT INTO `wplt_config` VALUES ('47', 'FOLLOW_YOUKE_UID', '0', '粉丝游客ID', '0', '', '', '1398927704', '1398927704', '1', '-3350', '0');
 INSERT INTO `wplt_config` VALUES ('48', 'DEFAULT_PUBLIC', '0', '注册后默认可管理的公众号ID', '3', '', '可为空。配置用户注册后即可管理的公众号ID，多个时用英文逗号分割', '1398928794', '1398929088', '1', '', '0');
 INSERT INTO `wplt_config` VALUES ('49', 'DEFAULT_PUBLIC_CREATE_MAX_NUMB', '0', '默认用户最多可创建的公众号数', '3', '', '注册用户最多的创建数，也可以在用户管理里对每个用户设置不同的值', '1398949652', '1398950115', '1', '5', '0');
 INSERT INTO `wplt_config` VALUES ('50', 'COPYRIGHT', '1', '版权信息', '1', '', '', '1401018910', '1401018910', '1', 'WeiPHP 版权所有', '3');
@@ -1881,7 +1882,7 @@ INSERT INTO `wplt_hooks` VALUES ('8', 'adminArticleEdit', '后台内容编辑页
 INSERT INTO `wplt_hooks` VALUES ('13', 'AdminIndex', '首页小格子个性化显示', '1', '1382596073', 'SiteStat,SystemInfo,DevTeam');
 INSERT INTO `wplt_hooks` VALUES ('14', 'topicComment', '评论提交方式扩展钩子。', '1', '1380163518', 'Editor');
 INSERT INTO `wplt_hooks` VALUES ('16', 'app_begin', '应用开始', '2', '1384481614', '');
-INSERT INTO `wplt_hooks` VALUES ('17', 'weixin', '微信插件必须加载的钩子', '1', '1388810858', 'Vote,Chat,Wecome,UserCenter,Robot,Suggestions,Extensions,Card,WeiSite,Hitegg,Leaflets,CustomReply,Forms,Survey,Exam,Test,Diy,Shop,CustomMenu,Coupon,Scratch,Juhe,Tongji,HelloWorld,WxCardAlkaid');
+INSERT INTO `wplt_hooks` VALUES ('17', 'weixin', '微信插件必须加载的钩子', '1', '1388810858', 'Vote,Chat,Wecome,UserCenter,Robot,Suggestions,Extensions,Card,WeiSite,Hitegg,Leaflets,CustomReply,Forms,Survey,Exam,Test,Diy,Shop,CustomMenu,Coupon,Scratch,Juhe,Tongji,HelloWorld,WxCardAlkaid,LangerieCard1');
 INSERT INTO `wplt_hooks` VALUES ('18', 'cascade', '级联菜单', '1', '1398694587', 'Cascade');
 INSERT INTO `wplt_hooks` VALUES ('19', 'page_diy', '万能页面的钩子', '1', '1399040364', 'Diy');
 
@@ -2668,7 +2669,7 @@ CREATE TABLE `wplt_tongji` (
   `day` int(10) NOT NULL COMMENT '日期',
   `content` text NOT NULL COMMENT '统计数据',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of wplt_tongji
@@ -2678,6 +2679,9 @@ INSERT INTO `wplt_tongji` VALUES ('2', 'gh_99be645d3d8f', '201505', '20150505', 
 INSERT INTO `wplt_tongji` VALUES ('3', 'gh_99be645d3d8f', '201505', '20150506', 'a:4:{s:10:\"CustomMenu\";i:4;s:4:\"Chat\";i:1;s:6:\"Wecome\";i:1;s:10:\"UserCenter\";i:3;}');
 INSERT INTO `wplt_tongji` VALUES ('4', 'gh_99be645d3d8f', '201505', '20150507', 'a:5:{s:10:\"UserCenter\";i:3;s:10:\"CustomMenu\";i:2;s:6:\"Wecome\";i:1;s:4:\"Card\";i:3;s:10:\"HelloWorld\";i:1;}');
 INSERT INTO `wplt_tongji` VALUES ('5', 'gh_99be645d3d8f', '201505', '20150508', 'a:3:{s:10:\"UserCenter\";i:1;s:4:\"Chat\";i:2;s:12:\"WxCardAlkaid\";i:22;}');
+INSERT INTO `wplt_tongji` VALUES ('6', 'gh_99be645d3d8f', '201505', '20150511', 'a:1:{s:12:\"WxCardAlkaid\";i:15;}');
+INSERT INTO `wplt_tongji` VALUES ('7', 'gh_99be645d3d8f', '201505', '20150512', 'a:4:{s:12:\"WxCardAlkaid\";i:6;s:11:\"CustomReply\";i:3;s:8:\"Leaflets\";i:1;s:13:\"LangerieCard1\";i:1;}');
+INSERT INTO `wplt_tongji` VALUES ('8', '-1', '201505', '20150512', 'a:1:{s:12:\"WxCardAlkaid\";i:1;}');
 
 -- ----------------------------
 -- Table structure for wplt_ucenter_admin
