@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : local_mysql
-Source Server Version : 50540
+Source Server         : localhost
+Source Server Version : 50538
 Source Host           : localhost:3306
 Source Database       : weplt
 
 Target Server Type    : MYSQL
-Target Server Version : 50540
+Target Server Version : 50538
 File Encoding         : 65001
 
-Date: 2015-05-13 18:29:30
+Date: 2015-05-14 03:05:34
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -66,7 +66,7 @@ CREATE TABLE `wplt_action_log` (
   KEY `action_ip_ix` (`action_ip`),
   KEY `action_id_ix` (`action_id`),
   KEY `user_id_ix` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1549 DEFAULT CHARSET=utf8 COMMENT='行为日志表';
+) ENGINE=MyISAM AUTO_INCREMENT=1553 DEFAULT CHARSET=utf8 COMMENT='行为日志表';
 
 -- ----------------------------
 -- Records of wplt_action_log
@@ -173,6 +173,10 @@ INSERT INTO `wplt_action_log` VALUES ('1545', '8', '1', '0', 'attribute', '1393'
 INSERT INTO `wplt_action_log` VALUES ('1546', '8', '1', '0', 'attribute', '1394', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431508083');
 INSERT INTO `wplt_action_log` VALUES ('1547', '8', '1', '0', 'attribute', '1393', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431508109');
 INSERT INTO `wplt_action_log` VALUES ('1548', '8', '1', '0', 'attribute', '1395', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431508150');
+INSERT INTO `wplt_action_log` VALUES ('1549', '8', '1', '0', 'attribute', '1394', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431535355');
+INSERT INTO `wplt_action_log` VALUES ('1550', '8', '1', '0', 'attribute', '1394', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431535372');
+INSERT INTO `wplt_action_log` VALUES ('1551', '8', '1', '0', 'attribute', '1395', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/remove/id/1395.html', '1', '1431535389');
+INSERT INTO `wplt_action_log` VALUES ('1552', '8', '1', '0', 'attribute', '1393', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/remove/id/1393.html', '1', '1431535396');
 
 -- ----------------------------
 -- Table structure for wplt_addons
@@ -865,9 +869,7 @@ INSERT INTO `wplt_attribute` VALUES ('1386', 'card_id', 'card_id', 'varchar(255)
 INSERT INTO `wplt_attribute` VALUES ('1387', 'status', '卡券状态', 'varchar(100) NOT NULL', 'string', 'CARD_STATUS_NOT_VERIFY', '卡券状态(包括:待审核,审核失败,通过审核,已删除,已投放)', '1', 'CARD_STATUS_NOT_VERIFY:待审核\r\nCARD_STATUS_VERIFY_FALL:审核失败\r\nCARD_STATUS_VERIFY_OK:通过审核\r\nCARD_STATUS_USER_DELETE:卡券被用户删除\r\nCARD_STATUS_USER_DISPATCH:在公众平台投放过的卡券', '155', '0', '1', '1431053896', '1431053896', '', '3', '', 'regex', '', '3', 'function');
 INSERT INTO `wplt_attribute` VALUES ('1392', 'promotion_url_sub_title', '营销入口副标题', 'varchar(50) NULL', 'string', '', '显示在营销入口右侧的tips，长度限制在6个汉字内', '1', '', '155', '0', '1', '1431079189', '1431079189', '0,6', '3', '长度超出6个汉字', 'length', '', '3', 'function');
 INSERT INTO `wplt_attribute` VALUES ('1391', 'promotion_url', '营销入口链接', 'varchar(255) NULL', 'string', '', '营销场景入口跳转外链的地址链接', '1', '', '155', '0', '1', '1431079009', '1431079009', '', '3', '', 'regex', '', '3', 'function');
-INSERT INTO `wplt_attribute` VALUES ('1393', 'jsticket_iswitch', 'jsapi_ticket输入开关', 'tinyint(2) NOT NULL', 'bool', '0', 'jsapi_ticket输入开关', '1', '', '154', '1', '1', '1431508109', '1431508017', '', '3', '', 'regex', '', '3', 'function');
-INSERT INTO `wplt_attribute` VALUES ('1394', 'jsticket_iurl', 'jsapi_ticket输入开关', 'varchar(255) NULL', 'string', '', 'jsapi_ticket输入开关', '1', '', '154', '0', '1', '1431508084', '1431508084', '', '3', '', 'regex', '', '3', 'function');
-INSERT INTO `wplt_attribute` VALUES ('1395', 'jsticket_oswitch', 'jsapi_ticket输出开关', 'tinyint(2) NOT NULL', 'bool', '0', 'jsapi_ticket输出开关', '1', '', '154', '1', '1', '1431508150', '1431508150', '', '3', '', 'regex', '', '3', 'function');
+INSERT INTO `wplt_attribute` VALUES ('1394', 'jsticket_iurl', 'jsapi_ticket来源接口', 'varchar(255) NULL', 'string', '', 'jsapi_ticket来源接口', '1', '', '154', '0', '1', '1431535372', '1431508084', '', '3', '', 'regex', '', '3', 'function');
 
 -- ----------------------------
 -- Table structure for wplt_auth_extend
@@ -2042,17 +2044,15 @@ CREATE TABLE `wplt_member_public_token_io` (
   `input_secret` varchar(255) DEFAULT NULL COMMENT 'AppSecret(输入)',
   `wxdata_output_switch` tinyint(2) NOT NULL DEFAULT '0' COMMENT '微信数据转发开关',
   `wxdata_output_url` varchar(255) DEFAULT NULL COMMENT '微信数据转发地址',
-  `jsticket_iswitch` tinyint(2) NOT NULL DEFAULT '0' COMMENT 'jsapi_ticket输入开关',
-  `jsticket_iurl` varchar(255) DEFAULT NULL COMMENT 'jsapi_ticket输入开关',
-  `jsticket_oswitch` tinyint(2) NOT NULL DEFAULT '0' COMMENT 'jsapi_ticket输出开关',
+  `jsticket_iurl` varchar(255) DEFAULT NULL COMMENT 'jsapi_ticket来源接口',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of wplt_member_public_token_io
 -- ----------------------------
-INSERT INTO `wplt_member_public_token_io` VALUES ('1', '108', '0', 'sdf2', '0', 'sdf2', 'tyrty1', null, '0', null, '0', null, '0');
-INSERT INTO `wplt_member_public_token_io` VALUES ('2', '109', '1', 'http://coodroid.com/wengine/index.php?s=/home/weixin/getaccesstoken/id/109.html', '0', '', '', null, '0', null, '0', null, '0');
+INSERT INTO `wplt_member_public_token_io` VALUES ('1', '108', '0', 'sdf2', '0', 'sdf2', 'tyrty1', null, '0', null, null);
+INSERT INTO `wplt_member_public_token_io` VALUES ('2', '109', '1', 'http://coodroid.com/wengine/index.php?s=/home/weixin/getaccesstoken/id/109.html', '0', '', '', null, '0', null, null);
 
 -- ----------------------------
 -- Table structure for wplt_menu

@@ -63,7 +63,7 @@ class WeixinController extends HomeController {
 		exit ();
 	}
 //++++++++++++++++ added by alkaid+++++++++++++++++++++++
-    public function setaccesstoken(){
+/*    public function setaccesstoken(){
 		$content = wp_file_get_contents ( 'php://input' );
 		! empty ( $content ) || die ( '这是微信请求的接口地址，直接在浏览器里无效' );
 		addWeixinLog ( '来自第三方accesstoken推送', $content );
@@ -72,7 +72,7 @@ class WeixinController extends HomeController {
 		}else{
 			echo 'failur';
 		}
-    }
+    }*/
 
     public function getaccesstoken(){
         $id = I ( 'get.id' );
@@ -108,28 +108,76 @@ class WeixinController extends HomeController {
         }
     }
 
-    /* 组装xml数据 */
-    public function _data2xml($xml, $data, $item = 'item') {
-        foreach ( $data as $key => $value ) {
-            is_numeric ( $key ) && ($key = $item);
-            if (is_array ( $value ) || is_object ( $value )) {
-                $child = $xml->addChild ( $key );
-                $this->_data2xml ( $child, $value, $item );
-            } else {
-                if (is_numeric ( $value )) {
-                    $child = $xml->addChild ( $key, $value );
+    /**
+     * 客户端请求获得js配置
+     */
+	public function jsconfig(){
+        $id = I ( 'get.id' );
+        if(!$id)
+            return;
+        $member=M('member_public')->where('id='.$id)->find();
+        $token=$member['token'];
+        if(IS_POST){
+//            window.location.href
+            $content = wp_file_get_contents ( 'php://input' );
+            $tempArr=json_decode($content,true);
+            $data['url']=$tempArr['url'];
+            $data['noncestr']=create_noncestr();
+            $data['jsapi_ticket']=get_jsapi_ticket($token);
+            $data['timestamp']=time();
+            ksort($data);
+            $sign='';
+            foreach ($data as $key => $val) {
+                $sign=$sign.$key.'='.$val.'&';
+            }
+            $sign=substr($sign,0,strlen($sign)-1);
+            $sign=sha1($sign);
+            $info = get_token_appinfo ( $token );
+            if (empty ( $info ['appid'] )) {
+                return;
+            }
+            $response['appId']=$info['appid'];
+            $response['timestamp']=$data['timestamp'];
+            $response['nonceStr']=$data['nonceStr'];
+            $response['signature']=$sign;
+            $str=json_encode($response);
+            echo($str);
+        }
+	}
+
+    //提供给第三方的jsapi_ticket接口
+    public function jsapiticket()
+    {
+        $id = I('get.id');
+        $content = wp_file_get_contents('php://input');
+        !empty ($content) || die ('这是微信请求的接口地址，直接在浏览器里无效');
+        addWeixinLog('来自第三方请求获取jsapiticket', $content);
+        if (IS_POST) {
+            $tempArr = json_decode($content, true);
+            $token = $tempArr['wechat_id'];
+            $secret = $tempArr['secret'];
+
+            //TODO 验证secret
+            $msg ['rawString'] = "jsapi_ticket=".get_jsapi_ticket().'&test';
+
+            $str = json_encode($msg);
+
+            // 记录日志
+            addWeixinLog('返回值：第三方请求获得jsapi_ticket', $str);
+
+            if ($_GET ['encrypt_type'] == 'aes') {
+                $sEncryptMsg = ""; // xml格式的密文
+                $errCode = $this->wxcpt->EncryptMsg($str, $this->sReqTimeStamp, $this->sReqNonce, $sEncryptMsg);
+                if ($errCode == 0) {
+                    $str = $sEncryptMsg;
                 } else {
-                    $child = $xml->addChild ( $key );
-                    $node = dom_import_simplexml ( $child );
-                    $node->appendChild ( $node->ownerDocument->createCDATASection ( $value ) );
+                    addWeixinLog($str, "EncryptMsg Error: " . $errCode);
                 }
             }
+
+            echo($str);
         }
     }
-
-	public function jsconfig(){
-
-	}
 //-----------------added by alkaid-----------------------
 	private function reply($data, $weixin) {
 		$key = $data ['Content'];

@@ -1538,7 +1538,8 @@ function get_token_type($token = '') {
 function get_access_token($token = '') {
     empty ( $token ) && $token = get_token ();
     $key = 'access_token_' . $token;
-    $key_expires_time= 'access_token_expires_time_' . $token;
+    $key_expire_time= 'access_token_expire_time_' . $token;
+    $key_jsapi_tickett='jsapi_ticket_'.$token;
     $res = S ( $key );
     if ($res !== false)
         return $res;
@@ -1549,6 +1550,7 @@ function get_access_token($token = '') {
         return 0;
     }
     //加载tokenIO配置
+    $access_token=0;
     $mapMp ['token'] = $token;
     $mp = M ( 'member_public' )->where ( $mapMp )->find ();
     $mapMpT['mp_id']=$mp['id'];
@@ -1571,24 +1573,62 @@ function get_access_token($token = '') {
 		curl_close ( $ch );
 		addWeixinLog ( "从第三方接口获取accesstoken",$tempJson  );
 		$tempArr = json_decode ( $tempJson, true );
-		if (@array_key_exists ( 'access_token', $tempArr )) {
+        $thridSuccess=false;
+        $expires_in=-1;
+        $expireTime=-1;
+        if (@array_key_exists ( 'accessToken', $tempArr )) {
+            $access_token=$tempArr['accessToken'];
 			if (@array_key_exists ( 'expires_in', $tempArr )) {
-				$expireTime=$tempArr['expires_in']+time();
-				S ( $key, $tempArr ['access_token'], $tempArr['expires_in'] );
-				S($key_expires_time,$expireTime,$tempArr['expires_in']+10);
-				push_access_token($token,$tokenIO,$tempArr['access_token'],$expireTime);
-				return $tempArr ['access_token'];
-            }else if (@array_key_exists ( 'expires_time', $tempArr )) {
-                $expires_in=$tempArr['expires_time']-time();
-                S ( $key, $tempArr ['access_token'], $expires_in );
-                S($key_expires_time,$tempArr['expires_time'],$expires_in+10);
-                push_access_token($token,$tokenIO,$tempArr['access_token'],$tempArr['expires_time']);
-                return $tempArr ['access_token'];
-            }else{
-				return 0;
-			}
+                $expires_in=$tempArr['expires_in'];
+				$expireTime=$expires_in+time();
+                $thridSuccess=true;
+            }else if (@array_key_exists ( 'expire_time', $tempArr )) {
+                $expireTime=$tempArr['expire_time'];
+                $expires_in=$expireTime-time();
+                $thridSuccess=true;
+            }
         }
-        return 0;
+        if(!$thridSuccess){
+            return 0;
+        }
+        //第三方获取token成功 设置缓存
+        S ( $key, $access_token, $expires_in );
+        S($key_expire_time,$expireTime,$expires_in+10);
+        //从第三方获取jsapi_ticket
+        if($tokenIO['jsticket_iurl']){
+            $ch = curl_init ();
+            $postData['wechat_id']=$token;
+            $postData['secret']=$tokenIO['input_secret'];
+            curl_setopt ( $ch, CURLOPT_URL, $tokenIO['jsticket_iurl'] );
+            curl_setopt ( $ch, CURLOPT_CUSTOMREQUEST, "POST" );
+            curl_setopt ( $ch, CURLOPT_SSL_VERIFYPEER, FALSE );
+            curl_setopt ( $ch, CURLOPT_SSL_VERIFYHOST, FALSE );
+            curl_setopt ( $ch, CURLOPT_CONNECTTIMEOUT, 5 );
+            curl_setopt ( $ch, CURLOPT_FOLLOWLOCATION, 1 );
+            curl_setopt ( $ch, CURLOPT_AUTOREFERER, 1 );
+            curl_setopt ( $ch, CURLOPT_POSTFIELDS, json_encode($postData) );
+            curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, true );
+            $tempJson = curl_exec ( $ch );
+            curl_close ( $ch );
+            addWeixinLog ( "从第三方接口获取jsapi_ticket",$tempJson  );
+            $tempArr = json_decode ( $tempJson, true );
+            $thridSuccess=false;
+            $expires_in=-1;
+            $expireTime=-1;
+            if (@array_key_exists ( 'rawString', $tempArr )) {
+                $rawArray=explode("&",$tempArr['rawString']);
+                foreach($rawArray as $raw){
+                    if(strpos($raw,'jsapi_ticket=')!==false){
+                        $jsapi_ticket=str_replace('jsapi_ticket=','',$raw);
+                        S ( $key_jsapi_tickett, $jsapi_ticket, $expires_in+10 );
+                        break;
+                    }
+                }
+            }
+        }
+//				push_access_token($token,$tokenIO,$tempArr['accessToken'],$expireTime);
+
+        return $access_token;
     }
 
     $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' . $info ['appid'] . '&secret=' . $info ['secret'];
@@ -1596,6 +1636,7 @@ function get_access_token($token = '') {
 	addWeixinLog ( "从微信接口获取accesstoken",$tempJson  );
 	$tempArr = json_decode ( $tempJson, true );
     if (@array_key_exists ( 'access_token', $tempArr )) {
+        $access_token=$tempArr ['access_token'];
         $expireIn=7200;
         $expireTime=$expireIn+time();
         if (@array_key_exists ( 'expires_in', $tempArr )) {
@@ -1603,9 +1644,17 @@ function get_access_token($token = '') {
             $expireTime=$expireIn+time();
         }
         S ( $key, $tempArr ['access_token'], $expireIn );
-        S($key_expires_time,$expireTime,$expireIn+10);
-        push_access_token($token,$tokenIO,$tempArr['access_token'],$expireTime);
-        return $tempArr ['access_token'];
+        S($key_expire_time,$expireTime,$expireIn+10);
+        //获取jsapi_ticket
+        $url = 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=' . $access_token . '&type=jsapi';
+        $tempJson=file_get_contents ( $url );
+        addWeixinLog ( "从微信接口获取jsapi_ticket",$tempJson  );
+        $tempArr = json_decode ( $tempJson, true );
+        if (@array_key_exists ( 'ticket', $tempArr )) {
+            S ( $key_jsapi_tickett, $tempArr['ticket'], $expireIn+10 );
+        }
+//        push_access_token($token,$tokenIO,$tempArr['access_token'],$expireTime);
+        return $access_token;
     } else {
         return 0;
     }
@@ -1615,17 +1664,18 @@ function get_access_token($token = '') {
 // 获取access_token，自动带缓存功能
 function get_access_token_expires_time($token = '') {
     empty ( $token ) && $token = get_token ();
-    $key = 'access_token_expires_time_' . $token;
+    $key = 'access_token_expire_time_' . $token;
     $res = S ( $key );
 //    if ($res !== false)
         return $res;
 }
-//根据json字符串设置accesstoken缓存
+
+/*//根据json字符串设置accesstoken缓存
 function set_access_token($jsonStr){
     $tempArr=json_decode($jsonStr,true);
     $token=$tempArr['wechat_id'];
     $key = 'access_token_' . $token;
-    $key_expires_time= 'access_token_expires_time_' . $token;
+    $key_expire_time= 'access_token_expire_time_' . $token;
     //加载tokenIO配置
     $mapMp ['token'] = $token;
     $mp = M ( 'member_public' )->where ( $mapMp )->find ();
@@ -1636,14 +1686,14 @@ function set_access_token($jsonStr){
         if (@array_key_exists ( 'expires_in', $tempArr )) {
             $expireTime=$tempArr['expires_in']+time();
             S ( $key, $tempArr ['access_token'], $tempArr['expires_in'] );
-            S($key_expires_time,$expireTime,$tempArr['expires_in']+10);
+            S($key_expire_time,$expireTime,$tempArr['expires_in']+10);
             push_access_token($token,$tokenIO,$tempArr['access_token'],$expireTime);
             return true;
-        }else if (@array_key_exists ( 'expires_time', $tempArr )) {
-            $expires_in=$tempArr['expires_time']-time();
+        }else if (@array_key_exists ( 'expire_time', $tempArr )) {
+            $expires_in=$tempArr['expire_time']-time();
             S ( $key, $tempArr ['access_token'], $expires_in );
-            S($key_expires_time,$tempArr['expires_time'],$expires_in+10);
-            push_access_token($token,$tokenIO,$tempArr['access_token'],$tempArr['expires_time']);
+            S($key_expire_time,$tempArr['expire_time'],$expires_in+10);
+            push_access_token($token,$tokenIO,$tempArr['access_token'],$tempArr['expire_time']);
             return true;
         }
     }
@@ -1654,7 +1704,7 @@ function push_access_token($token,$tokenIO,$accesstoken,$expireTime){
     if($tokenIO['output_switch'] && $tokenIO['output_url']){
 		$postData['wechat_id']=$token;
 		$postData['access_token']=$accesstoken;
-		$postData['expires_time']=$expireTime;
+		$postData['expire_time']=$expireTime;
 		$tempJson=json_encode($postData);
 		addWeixinLog ( "推送access_token到".$tokenIO['output_url'],$tempJson  );
 		$ch = curl_init ();
@@ -1673,6 +1723,26 @@ function push_access_token($token,$tokenIO,$accesstoken,$expireTime){
         //TODO 此处应该验证返回值，若非预期或超时应该重试3次
         return;
     }
+}*/
+// 获取jsapi_ticket，自动带缓存功能
+function get_jsapi_ticket($token = '') {
+    empty ( $token ) && $token = get_token ();
+    $key_jsapi_tickett='jsapi_ticket_'.$token;
+    get_access_token($token);
+    $res = S ( $key_jsapi_tickett );
+    if ($res !== false)
+        return $res;
+    return 0;
+}
+//生成16位随机字符串
+function create_noncestr( $length = 16 ) {
+    $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    $str ="";
+    for ( $i = 0; $i < $length; $i++ )  {
+        $str.= substr($chars, mt_rand(0, strlen($chars)-1), 1);
+        //$str .= $chars[ mt_rand(0, strlen($chars) - 1) ];
+    }
+    return $str;
 }
 //-----------------added by alkaid-----------------------
 function OAuthWeixin($callback) {
