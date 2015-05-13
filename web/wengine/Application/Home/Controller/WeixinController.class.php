@@ -126,6 +126,10 @@ class WeixinController extends HomeController {
             }
         }
     }
+
+	public function jsconfig(){
+
+	}
 //-----------------added by alkaid-----------------------
 	private function reply($data, $weixin) {
 		$key = $data ['Content'];
