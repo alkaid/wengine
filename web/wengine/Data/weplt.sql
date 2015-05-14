@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50538
 File Encoding         : 65001
 
-Date: 2015-05-15 01:09:34
+Date: 2015-05-15 02:33:49
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -66,117 +66,11 @@ CREATE TABLE `wplt_action_log` (
   KEY `action_ip_ix` (`action_ip`),
   KEY `action_id_ix` (`action_id`),
   KEY `user_id_ix` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1553 DEFAULT CHARSET=utf8 COMMENT='行为日志表';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='行为日志表';
 
 -- ----------------------------
 -- Records of wplt_action_log
 -- ----------------------------
-INSERT INTO `wplt_action_log` VALUES ('1447', '12', '1', '0', 'member', '1', 'alkaid在2015-05-01 21:16登录了后台', '1', '1430486194');
-INSERT INTO `wplt_action_log` VALUES ('1448', '7', '1', '0', 'model', '153', '操作url：/wengine/web/wengine/index.php?s=/Admin/Model/update.html', '1', '1430637565');
-INSERT INTO `wplt_action_log` VALUES ('1449', '12', '1', '0', 'member', '1', 'alkaid在2015-05-03 15:54登录了后台', '1', '1430639655');
-INSERT INTO `wplt_action_log` VALUES ('1450', '7', '1', '0', 'model', '154', '操作url：/wengine/web/wengine/index.php?s=/Admin/Model/update.html', '1', '1430660576');
-INSERT INTO `wplt_action_log` VALUES ('1451', '8', '1', '0', 'attribute', '1343', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430660958');
-INSERT INTO `wplt_action_log` VALUES ('1452', '8', '1', '0', 'attribute', '1344', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430661109');
-INSERT INTO `wplt_action_log` VALUES ('1453', '8', '1', '0', 'attribute', '1345', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430661696');
-INSERT INTO `wplt_action_log` VALUES ('1454', '8', '1', '0', 'attribute', '1346', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430661758');
-INSERT INTO `wplt_action_log` VALUES ('1455', '8', '1', '0', 'attribute', '1347', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430661836');
-INSERT INTO `wplt_action_log` VALUES ('1456', '8', '1', '0', 'attribute', '1347', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430661862');
-INSERT INTO `wplt_action_log` VALUES ('1457', '8', '1', '0', 'attribute', '1348', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430661987');
-INSERT INTO `wplt_action_log` VALUES ('1458', '8', '1', '0', 'attribute', '1349', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430662095');
-INSERT INTO `wplt_action_log` VALUES ('1459', '8', '1', '0', 'attribute', '1348', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430662128');
-INSERT INTO `wplt_action_log` VALUES ('1460', '8', '1', '0', 'attribute', '1346', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430662138');
-INSERT INTO `wplt_action_log` VALUES ('1461', '8', '1', '0', 'attribute', '1345', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430662147');
-INSERT INTO `wplt_action_log` VALUES ('1462', '8', '1', '0', 'attribute', '1346', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/remove/id/1346.html', '1', '1430663042');
-INSERT INTO `wplt_action_log` VALUES ('1463', '8', '1', '0', 'attribute', '1349', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/remove/id/1349.html', '1', '1430663054');
-INSERT INTO `wplt_action_log` VALUES ('1464', '8', '1', '0', 'attribute', '1345', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430663087');
-INSERT INTO `wplt_action_log` VALUES ('1465', '8', '1', '0', 'attribute', '1348', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430663102');
-INSERT INTO `wplt_action_log` VALUES ('1466', '8', '1', '0', 'attribute', '1343', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430664600');
-INSERT INTO `wplt_action_log` VALUES ('1467', '8', '1', '0', 'attribute', '1350', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430671232');
-INSERT INTO `wplt_action_log` VALUES ('1468', '12', '1', '0', 'member', '1', 'alkaid在2015-05-04 14:32登录了后台', '1', '1430721140');
-INSERT INTO `wplt_action_log` VALUES ('1469', '8', '1', '0', 'attribute', '1350', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430721192');
-INSERT INTO `wplt_action_log` VALUES ('1470', '8', '1', '0', 'attribute', '1350', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430878779');
-INSERT INTO `wplt_action_log` VALUES ('1471', '8', '1', '0', 'attribute', '1351', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430878850');
-INSERT INTO `wplt_action_log` VALUES ('1472', '8', '1', '0', 'attribute', '1351', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430878869');
-INSERT INTO `wplt_action_log` VALUES ('1473', '8', '1', '0', 'attribute', '1352', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430897913');
-INSERT INTO `wplt_action_log` VALUES ('1474', '8', '1', '0', 'attribute', '1353', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430897996');
-INSERT INTO `wplt_action_log` VALUES ('1475', '7', '1', '0', 'model', '155', '操作url：/wengine/web/wengine/index.php?s=/Admin/Model/update.html', '1', '1430992691');
-INSERT INTO `wplt_action_log` VALUES ('1476', '8', '1', '0', 'attribute', '1354', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430997435');
-INSERT INTO `wplt_action_log` VALUES ('1477', '8', '1', '0', 'attribute', '1355', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430997589');
-INSERT INTO `wplt_action_log` VALUES ('1478', '8', '1', '0', 'attribute', '1356', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430997865');
-INSERT INTO `wplt_action_log` VALUES ('1479', '8', '1', '0', 'attribute', '1355', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1430998934');
-INSERT INTO `wplt_action_log` VALUES ('1480', '8', '1', '0', 'attribute', '1356', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431000681');
-INSERT INTO `wplt_action_log` VALUES ('1481', '8', '1', '0', 'attribute', '1355', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431000696');
-INSERT INTO `wplt_action_log` VALUES ('1482', '8', '1', '0', 'attribute', '1356', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431000721');
-INSERT INTO `wplt_action_log` VALUES ('1483', '8', '1', '0', 'attribute', '1357', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431000847');
-INSERT INTO `wplt_action_log` VALUES ('1484', '8', '1', '0', 'attribute', '1358', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431001135');
-INSERT INTO `wplt_action_log` VALUES ('1485', '8', '1', '0', 'attribute', '1359', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431001179');
-INSERT INTO `wplt_action_log` VALUES ('1486', '8', '1', '0', 'attribute', '1360', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431001392');
-INSERT INTO `wplt_action_log` VALUES ('1487', '8', '1', '0', 'attribute', '1361', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431002674');
-INSERT INTO `wplt_action_log` VALUES ('1488', '8', '1', '0', 'attribute', '1362', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431004759');
-INSERT INTO `wplt_action_log` VALUES ('1489', '8', '1', '0', 'attribute', '1363', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431005281');
-INSERT INTO `wplt_action_log` VALUES ('1490', '8', '1', '0', 'attribute', '1362', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431005293');
-INSERT INTO `wplt_action_log` VALUES ('1491', '8', '1', '0', 'attribute', '1363', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431005313');
-INSERT INTO `wplt_action_log` VALUES ('1492', '8', '1', '0', 'attribute', '1364', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431048711');
-INSERT INTO `wplt_action_log` VALUES ('1493', '8', '1', '0', 'attribute', '1365', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431048799');
-INSERT INTO `wplt_action_log` VALUES ('1494', '8', '1', '0', 'attribute', '1364', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431048812');
-INSERT INTO `wplt_action_log` VALUES ('1495', '8', '1', '0', 'attribute', '1366', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431048873');
-INSERT INTO `wplt_action_log` VALUES ('1496', '8', '1', '0', 'attribute', '1366', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431048887');
-INSERT INTO `wplt_action_log` VALUES ('1497', '8', '1', '0', 'attribute', '1367', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431048970');
-INSERT INTO `wplt_action_log` VALUES ('1498', '8', '1', '0', 'attribute', '1368', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431049046');
-INSERT INTO `wplt_action_log` VALUES ('1499', '8', '1', '0', 'attribute', '1369', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431049104');
-INSERT INTO `wplt_action_log` VALUES ('1500', '8', '1', '0', 'attribute', '1370', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431049525');
-INSERT INTO `wplt_action_log` VALUES ('1501', '8', '1', '0', 'attribute', '1367', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431049556');
-INSERT INTO `wplt_action_log` VALUES ('1502', '8', '1', '0', 'attribute', '1366', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431049570');
-INSERT INTO `wplt_action_log` VALUES ('1503', '8', '1', '0', 'attribute', '1363', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431049611');
-INSERT INTO `wplt_action_log` VALUES ('1504', '8', '1', '0', 'attribute', '1354', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431049635');
-INSERT INTO `wplt_action_log` VALUES ('1505', '8', '1', '0', 'attribute', '1371', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431049869');
-INSERT INTO `wplt_action_log` VALUES ('1506', '8', '1', '0', 'attribute', '1372', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431049925');
-INSERT INTO `wplt_action_log` VALUES ('1507', '8', '1', '0', 'attribute', '1372', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431049937');
-INSERT INTO `wplt_action_log` VALUES ('1508', '8', '1', '0', 'attribute', '1371', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431049947');
-INSERT INTO `wplt_action_log` VALUES ('1509', '8', '1', '0', 'attribute', '1373', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431050224');
-INSERT INTO `wplt_action_log` VALUES ('1510', '8', '1', '0', 'attribute', '1374', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431050285');
-INSERT INTO `wplt_action_log` VALUES ('1511', '8', '1', '0', 'attribute', '1375', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431051081');
-INSERT INTO `wplt_action_log` VALUES ('1512', '8', '1', '0', 'attribute', '1376', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431051179');
-INSERT INTO `wplt_action_log` VALUES ('1513', '8', '1', '0', 'attribute', '1377', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431051326');
-INSERT INTO `wplt_action_log` VALUES ('1514', '8', '1', '0', 'attribute', '1378', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431051397');
-INSERT INTO `wplt_action_log` VALUES ('1515', '8', '1', '0', 'attribute', '1379', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431051506');
-INSERT INTO `wplt_action_log` VALUES ('1516', '8', '1', '0', 'attribute', '1379', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431051524');
-INSERT INTO `wplt_action_log` VALUES ('1517', '8', '1', '0', 'attribute', '1378', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431051540');
-INSERT INTO `wplt_action_log` VALUES ('1518', '8', '1', '0', 'attribute', '1377', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431051549');
-INSERT INTO `wplt_action_log` VALUES ('1519', '8', '1', '0', 'attribute', '1370', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431051566');
-INSERT INTO `wplt_action_log` VALUES ('1520', '8', '1', '0', 'attribute', '1367', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431051599');
-INSERT INTO `wplt_action_log` VALUES ('1521', '8', '1', '0', 'attribute', '1363', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431051619');
-INSERT INTO `wplt_action_log` VALUES ('1522', '8', '1', '0', 'attribute', '1354', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431051638');
-INSERT INTO `wplt_action_log` VALUES ('1523', '8', '1', '0', 'attribute', '1380', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431051774');
-INSERT INTO `wplt_action_log` VALUES ('1524', '8', '1', '0', 'attribute', '1381', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431051899');
-INSERT INTO `wplt_action_log` VALUES ('1525', '8', '1', '0', 'attribute', '1382', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431051970');
-INSERT INTO `wplt_action_log` VALUES ('1526', '8', '1', '0', 'attribute', '1383', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431052017');
-INSERT INTO `wplt_action_log` VALUES ('1527', '8', '1', '0', 'attribute', '1384', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431052178');
-INSERT INTO `wplt_action_log` VALUES ('1528', '8', '1', '0', 'attribute', '1385', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431052323');
-INSERT INTO `wplt_action_log` VALUES ('1529', '8', '1', '0', 'attribute', '1386', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431053197');
-INSERT INTO `wplt_action_log` VALUES ('1530', '8', '1', '0', 'attribute', '1386', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431053205');
-INSERT INTO `wplt_action_log` VALUES ('1531', '8', '1', '0', 'attribute', '1387', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431053896');
-INSERT INTO `wplt_action_log` VALUES ('1532', '8', '1', '0', 'attribute', '1384', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/remove/id/1384.html', '1', '1431075472');
-INSERT INTO `wplt_action_log` VALUES ('1533', '8', '1', '0', 'attribute', '1388', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431075956');
-INSERT INTO `wplt_action_log` VALUES ('1534', '8', '1', '0', 'attribute', '1388', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431076041');
-INSERT INTO `wplt_action_log` VALUES ('1535', '8', '1', '0', 'attribute', '1389', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431078386');
-INSERT INTO `wplt_action_log` VALUES ('1536', '8', '1', '0', 'attribute', '1388', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431078404');
-INSERT INTO `wplt_action_log` VALUES ('1537', '8', '1', '0', 'attribute', '1390', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431078943');
-INSERT INTO `wplt_action_log` VALUES ('1538', '8', '1', '0', 'attribute', '1391', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431079009');
-INSERT INTO `wplt_action_log` VALUES ('1539', '8', '1', '0', 'attribute', '1390', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431079017');
-INSERT INTO `wplt_action_log` VALUES ('1540', '8', '1', '0', 'attribute', '1388', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431079065');
-INSERT INTO `wplt_action_log` VALUES ('1541', '8', '1', '0', 'attribute', '1388', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431079080');
-INSERT INTO `wplt_action_log` VALUES ('1542', '8', '1', '0', 'attribute', '1388', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431079096');
-INSERT INTO `wplt_action_log` VALUES ('1543', '8', '1', '0', 'attribute', '1389', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431079111');
-INSERT INTO `wplt_action_log` VALUES ('1544', '8', '1', '0', 'attribute', '1392', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431079189');
-INSERT INTO `wplt_action_log` VALUES ('1545', '8', '1', '0', 'attribute', '1393', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431508017');
-INSERT INTO `wplt_action_log` VALUES ('1546', '8', '1', '0', 'attribute', '1394', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431508083');
-INSERT INTO `wplt_action_log` VALUES ('1547', '8', '1', '0', 'attribute', '1393', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431508109');
-INSERT INTO `wplt_action_log` VALUES ('1548', '8', '1', '0', 'attribute', '1395', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431508150');
-INSERT INTO `wplt_action_log` VALUES ('1549', '8', '1', '0', 'attribute', '1394', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431535355');
-INSERT INTO `wplt_action_log` VALUES ('1550', '8', '1', '0', 'attribute', '1394', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/update.html', '1', '1431535372');
-INSERT INTO `wplt_action_log` VALUES ('1551', '8', '1', '0', 'attribute', '1395', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/remove/id/1395.html', '1', '1431535389');
-INSERT INTO `wplt_action_log` VALUES ('1552', '8', '1', '0', 'attribute', '1393', '操作url：/wengine/web/wengine/index.php?s=/Admin/Attribute/remove/id/1393.html', '1', '1431535396');
 
 -- ----------------------------
 -- Table structure for wplt_addons
@@ -2699,7 +2593,7 @@ INSERT INTO `wplt_tongji` VALUES ('8', '-1', '201505', '20150512', 'a:1:{s:12:\"
 INSERT INTO `wplt_tongji` VALUES ('9', 'gh_99be645d3d8f', '201505', '20150513', 'a:1:{s:13:\"LangerieCard1\";i:1;}');
 INSERT INTO `wplt_tongji` VALUES ('10', 'gh_99be645d3d8f', '201505', '20150514', 'a:5:{s:6:\"Wecome\";i:1;s:11:\"CustomReply\";i:1;s:12:\"WxCardAlkaid\";i:3;s:10:\"CustomMenu\";i:28;s:13:\"LangerieCard1\";i:1;}');
 INSERT INTO `wplt_tongji` VALUES ('11', 'gh_9a02b12868ff', '201505', '20150514', 'a:2:{s:13:\"LangerieCard1\";i:4;s:12:\"WxCardAlkaid\";i:4;}');
-INSERT INTO `wplt_tongji` VALUES ('12', 'gh_9a02b12868ff', '201505', '20150515', 'a:2:{s:13:\"LangerieCard1\";i:16;s:12:\"WxCardAlkaid\";i:8;}');
+INSERT INTO `wplt_tongji` VALUES ('12', 'gh_9a02b12868ff', '201505', '20150515', 'a:2:{s:13:\"LangerieCard1\";i:32;s:12:\"WxCardAlkaid\";i:23;}');
 
 -- ----------------------------
 -- Table structure for wplt_ucenter_admin
@@ -2989,27 +2883,11 @@ CREATE TABLE `wplt_weixin_log` (
   `data` text,
   `data_post` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of wplt_weixin_log
 -- ----------------------------
-INSERT INTO `wplt_weixin_log` VALUES ('1', '1431611687', '2015-05-14 21:54:47', '从第三方接口获取accesstoken', '{\"wechat_id\":\"gh_99be645d3d8f\",\"accessToken\":\"2KXS-sGgGyYtcXGsPUrqJt5NcUToVyJv9azxbeFW0Ko-2Uxb99EZYOG6Tb2EZbglHgkJopaJXWW6gZFwiisd9pPbF4bakkri6HN6g1uSYro\",\"expire_time\":1431616495}');
-INSERT INTO `wplt_weixin_log` VALUES ('2', '1431611687', '2015-05-14 21:54:47', '从第三方接口获取jsapi_ticket', '{\"rawString\":\"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VAt8XgUe09YqMUO7oo8TQplwwbdKPuF2qbCAnHMs4XXucGgQP5e3YJgt1dK1FufvXg&test\"}');
-INSERT INTO `wplt_weixin_log` VALUES ('3', '1431611687', '2015-05-14 21:54:47', '调用系统菜单接口https://api.weixin.qq.com/cgi-bin/menu/create?access_token=2KXS-sGgGyYtcXGsPUrqJt5NcUToVyJv9azxbeFW0Ko-2Uxb99EZYOG6Tb2EZbglHgkJopaJXWW6gZFwiisd9pPbF4bakkri6HN6g1uSYro', '{\"button\":[{\"name\":\"testlocal\",\"type\":\"click\",\"key\":\"key6\"}]}');
-INSERT INTO `wplt_weixin_log` VALUES ('4', '1431611687', '2015-05-14 21:54:47', '返回值:调用系统菜单接口https://api.weixin.qq.com/cgi-bin/menu/create?access_token=2KXS-sGgGyYtcXGsPUrqJt5NcUToVyJv9azxbeFW0Ko-2Uxb99EZYOG6Tb2EZbglHgkJopaJXWW6gZFwiisd9pPbF4bakkri6HN6g1uSYro', '{\"errcode\":0,\"errmsg\":\"ok\"}');
-INSERT INTO `wplt_weixin_log` VALUES ('5', '1431616127', '2015-05-14 23:08:47', '从第三方接口获取accesstoken', '{\"accessToken\":\"F3txJVm_XLw9hazGXg2SCkQx5IrH9GDuzmT2PACj89F-pOnfFTimtW-irL7rDhGrTx8_ULcNMYxl6EnIKGObBYPL7lBuZz0d5T5mViS2mbQ\",\"expire_time\":1431619201}');
-INSERT INTO `wplt_weixin_log` VALUES ('6', '1431616127', '2015-05-14 23:08:47', '从第三方接口获取jsapi_ticket', '{\"appId\":\"wxa68ac7516480cc71\",\"nonceStr\":\"KSjL1H0AMwMIsgdb\",\"timestamp\":1431616785,\"url\":\"xxxx\",\"signature\":\"dbbef9176c7f4fc979cd6fa121d1f4a7ec62376f\",\"rawString\":\"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VPRZ3KKi19K441UVYIWiqlD-8eFT8VV0tSf1MOVsIT-AHmUyCQ6vFFqduj0Rr_7h_w&noncestr=KSjL1H0AMwMIsgdb&timestamp=1431616785&url=xxxx\"}');
-INSERT INTO `wplt_weixin_log` VALUES ('7', '1431619753', '2015-05-15 00:09:13', '从第三方接口获取accesstoken', '{\"accessToken\":\"vN-QHMZNFUmfS7eteQljNF6l-dCAcw4Ud4Y8748ISBR2oNMDIdzzQssjYepWntNHVKQfmzKZ8VbZNSlIORDJ6KBgrzCs9uJDxYq9rf4_088\",\"expire_time\":1431622806}');
-INSERT INTO `wplt_weixin_log` VALUES ('8', '1431619759', '2015-05-15 00:09:19', '从第三方接口获取jsapi_ticket', '{\"appId\":\"wxa68ac7516480cc71\",\"nonceStr\":\"KSjL1H0AMwMIsgdb\",\"timestamp\":1431620416,\"url\":\"xxxx\",\"signature\":\"1c0bdfd0720db9ba4d3a2f698edd7a79cf97a92a\",\"rawString\":\"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VPRZ3KKi19K441UVYIWiqlCSX5lfbZyrlOlPknlTzoGhC16sjKUNmaAi-Ac4l3ccZA&noncestr=KSjL1H0AMwMIsgdb&timestamp=1431620416&url=xxxx\"}');
-INSERT INTO `wplt_weixin_log` VALUES ('9', '1431621617', '2015-05-15 00:40:17', '从第三方接口获取accesstoken', '{\"accessToken\":\"vN-QHMZNFUmfS7eteQljNF6l-dCAcw4Ud4Y8748ISBR2oNMDIdzzQssjYepWntNHVKQfmzKZ8VbZNSlIORDJ6KBgrzCs9uJDxYq9rf4_088\",\"expire_time\":1431622806}');
-INSERT INTO `wplt_weixin_log` VALUES ('10', '1431621691', '2015-05-15 00:41:31', '从第三方接口获取jsapi_ticket', '{\"appId\":\"wxa68ac7516480cc71\",\"nonceStr\":\"KSjL1H0AMwMIsgdb\",\"timestamp\":1431622342,\"url\":\"xxxx\",\"signature\":\"ab8182237d64af985ce48b795b42b23540c58d9e\",\"rawString\":\"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VPRZ3KKi19K441UVYIWiqlCSX5lfbZyrlOlPknlTzoGhC16sjKUNmaAi-Ac4l3ccZA&noncestr=KSjL1H0AMwMIsgdb&timestamp=1431622342&url=xxxx\"}');
-INSERT INTO `wplt_weixin_log` VALUES ('11', '1431621832', '2015-05-15 00:43:52', '从第三方接口获取accesstoken', '{\"accessToken\":\"vN-QHMZNFUmfS7eteQljNF6l-dCAcw4Ud4Y8748ISBR2oNMDIdzzQssjYepWntNHVKQfmzKZ8VbZNSlIORDJ6KBgrzCs9uJDxYq9rf4_088\",\"expire_time\":1431622806}');
-INSERT INTO `wplt_weixin_log` VALUES ('12', '1431621877', '2015-05-15 00:44:37', '从第三方接口获取jsapi_ticket', '{\"appId\":\"wxa68ac7516480cc71\",\"nonceStr\":\"KSjL1H0AMwMIsgdb\",\"timestamp\":1431622532,\"url\":\"xxxx\",\"signature\":\"63a11d4ad7b8be52b1f1ac08e17a081bbf15da67\",\"rawString\":\"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VPRZ3KKi19K441UVYIWiqlCSX5lfbZyrlOlPknlTzoGhC16sjKUNmaAi-Ac4l3ccZA&noncestr=KSjL1H0AMwMIsgdb&timestamp=1431622532&url=xxxx\"}');
-INSERT INTO `wplt_weixin_log` VALUES ('13', '1431621935', '2015-05-15 00:45:35', '从第三方接口获取accesstoken', '{\"accessToken\":\"vN-QHMZNFUmfS7eteQljNF6l-dCAcw4Ud4Y8748ISBR2oNMDIdzzQssjYepWntNHVKQfmzKZ8VbZNSlIORDJ6KBgrzCs9uJDxYq9rf4_088\",\"expire_time\":1431622806}');
-INSERT INTO `wplt_weixin_log` VALUES ('14', '1431621943', '2015-05-15 00:45:43', '从第三方接口获取jsapi_ticket', '{\"appId\":\"wxa68ac7516480cc71\",\"nonceStr\":\"KSjL1H0AMwMIsgdb\",\"timestamp\":1431622598,\"url\":\"xxxx\",\"signature\":\"4e46b5366fa55ed8b4f880e515b8facf76f056eb\",\"rawString\":\"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VPRZ3KKi19K441UVYIWiqlCSX5lfbZyrlOlPknlTzoGhC16sjKUNmaAi-Ac4l3ccZA&noncestr=KSjL1H0AMwMIsgdb&timestamp=1431622598&url=xxxx\"}');
-INSERT INTO `wplt_weixin_log` VALUES ('15', '1431623202', '2015-05-15 01:06:42', '从第三方接口获取accesstoken', '{\"accessToken\":\"-q-yXYZ9IXUw3Oj7Pgnigy1a2rLs49vDpeayoJ-6UoOzO-pEWpPldLSlz1Jlt-lWe7TO5WafMO893shr0M36fQaWEYC040jDn1tKgK2C8mU\",\"expire_time\":1431626407}');
-INSERT INTO `wplt_weixin_log` VALUES ('16', '1431623203', '2015-05-15 01:06:43', '从第三方接口获取jsapi_ticket', '{\"appId\":\"wxa68ac7516480cc71\",\"nonceStr\":\"KSjL1H0AMwMIsgdb\",\"timestamp\":1431623860,\"url\":\"xxxx\",\"signature\":\"ca46d9564fb62a847eae71ebf6389206e18f46ec\",\"rawString\":\"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VPRZ3KKi19K441UVYIWiqlCSX5lfbZyrlOlPknlTzoGhC16sjKUNmaAi-Ac4l3ccZA&noncestr=KSjL1H0AMwMIsgdb&timestamp=1431623860&url=xxxx\"}');
 
 -- ----------------------------
 -- Table structure for wplt_wxcard
