@@ -1536,7 +1536,7 @@ function get_token_type($token = '') {
 //alkaid修改后的方法
 // 获取access_token，自动带缓存功能
 function get_access_token($token = '') {
-    empty ( $token ) && $token = get_token ();
+    empty ( $token ) && $token = get_token ();//get_access_token_expires_time($token)
     $key = 'access_token_' . $token;
     $key_expire_time= 'access_token_expire_time_' . $token;
     $key_jsapi_tickett='jsapi_ticket_'.$token;
@@ -1612,9 +1612,6 @@ function get_access_token($token = '') {
             curl_close ( $ch );
             addWeixinLog ( "从第三方接口获取jsapi_ticket",$tempJson  );
             $tempArr = json_decode ( $tempJson, true );
-            $thridSuccess=false;
-            $expires_in=-1;
-            $expireTime=-1;
             if (@array_key_exists ( 'rawString', $tempArr )) {
                 $rawArray=explode("&",$tempArr['rawString']);
                 foreach($rawArray as $raw){
@@ -1728,6 +1725,12 @@ function push_access_token($token,$tokenIO,$accesstoken,$expireTime){
 function get_jsapi_ticket($token = '') {
     empty ( $token ) && $token = get_token ();
     $key_jsapi_tickett='jsapi_ticket_'.$token;
+    get_access_token($token);
+    $res = S ( $key_jsapi_tickett );
+    if ($res !== false)
+        return $res;
+    $key = 'access_token_' . $token;
+    S($key,null);
     get_access_token($token);
     $res = S ( $key_jsapi_tickett );
     if ($res !== false)

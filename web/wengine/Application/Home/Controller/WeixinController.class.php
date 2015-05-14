@@ -86,8 +86,10 @@ class WeixinController extends HomeController {
 
             //TODO 验证secret
             $msg ['wechat_id'] = $token;
-            $msg ['access_token'] = get_access_token($token);
-            $msg ['expires_time'] = get_access_token_expires_time($token);
+//            $msg ['access_token'] = get_access_token($token);
+//            $msg ['expires_time'] = get_access_token_expires_time($token);
+            $msg ['accessToken'] = get_access_token($token);
+            $msg ['expire_time'] = get_access_token_expires_time($token);
 
             $str = json_encode($msg);
 
@@ -108,6 +110,34 @@ class WeixinController extends HomeController {
         }
     }
 
+    public function test(){
+        $id = I ( 'get.id' );
+        if(!$id)
+            return;
+        $member=M('member_public')->where('id='.$id)->find();
+        $token=$member['token'];
+        $access_token=get_access_token($token);
+        echo $access_token;
+        $url = 'https://api.weixin.qq.com/cgi-bin/user/get?access_token=' . $access_token;
+        $header [] = "content-type: application/x-www-form-urlencoded; charset=UTF-8";
+//        addWeixinLog ( "test".$url,$tree  );
+        $ch = curl_init ();
+        curl_setopt ( $ch, CURLOPT_URL, $url );
+        curl_setopt ( $ch, CURLOPT_CUSTOMREQUEST, "GET" );
+        curl_setopt ( $ch, CURLOPT_SSL_VERIFYPEER, FALSE );
+        curl_setopt ( $ch, CURLOPT_SSL_VERIFYHOST, FALSE );
+        curl_setopt ( $ch, CURLOPT_HTTPHEADER, $header );
+        curl_setopt ( $ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (compatible; MSIE 5.01; Windows NT 5.0)' );
+        curl_setopt ( $ch, CURLOPT_FOLLOWLOCATION, 1 );
+        curl_setopt ( $ch, CURLOPT_AUTOREFERER, 1 );
+//        curl_setopt ( $ch, CURLOPT_POSTFIELDS, $tree );
+        curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, true );
+        $res = curl_exec ( $ch );
+        curl_close ( $ch );
+//        addWeixinLog ( "返回值:test".$url,$res  );
+        echo $res;
+    }
+
     /**
      * 客户端请求获得js配置
      */
@@ -119,9 +149,7 @@ class WeixinController extends HomeController {
         $token=$member['token'];
         if(IS_POST){
 //            window.location.href
-            $content = wp_file_get_contents ( 'php://input' );
-            $tempArr=json_decode($content,true);
-            $data['url']=$tempArr['url'];
+            $data['url']=I('post.url');
             $data['noncestr']=create_noncestr();
             $data['jsapi_ticket']=get_jsapi_ticket($token);
             $data['timestamp']=time();
@@ -138,7 +166,7 @@ class WeixinController extends HomeController {
             }
             $response['appId']=$info['appid'];
             $response['timestamp']=$data['timestamp'];
-            $response['nonceStr']=$data['nonceStr'];
+            $response['nonceStr']=$data['noncestr'];
             $response['signature']=$sign;
             $str=json_encode($response);
             echo($str);
@@ -158,7 +186,7 @@ class WeixinController extends HomeController {
             $secret = $tempArr['secret'];
 
             //TODO 验证secret
-            $msg ['rawString'] = "jsapi_ticket=".get_jsapi_ticket().'&test';
+            $msg ['rawString'] = "jsapi_ticket=".get_jsapi_ticket($token).'&test';
 
             $str = json_encode($msg);
 

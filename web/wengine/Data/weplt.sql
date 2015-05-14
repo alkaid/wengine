@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : local_mysql
-Source Server Version : 50540
+Source Server         : localhost
+Source Server Version : 50538
 Source Host           : localhost:3306
 Source Database       : weplt
 
 Target Server Type    : MYSQL
-Target Server Version : 50540
+Target Server Version : 50538
 File Encoding         : 65001
 
-Date: 2015-05-14 18:37:15
+Date: 2015-05-15 01:09:34
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1958,8 +1958,9 @@ CREATE TABLE `wplt_member` (
 -- ----------------------------
 -- Records of wplt_member
 -- ----------------------------
-INSERT INTO `wplt_member` VALUES ('1', 'alkaid', '0', '0000-00-00', '', '0', '4', '0', '1430486033', '0', '1430721140', '1', null, null);
+INSERT INTO `wplt_member` VALUES ('1', 'alkaid', '0', '0000-00-00', '', '0', '6', '0', '1430486033', '0', '1431616918', '1', null, null);
 INSERT INTO `wplt_member` VALUES ('363', 'test', '0', '0000-00-00', '', '0', '2', '0', '1430638108', '0', '1430812879', '1', null, null);
+INSERT INTO `wplt_member` VALUES ('364', 'langerie', '0', '0000-00-00', '', '0', '3', '0', '1431615294', '0', '1431616986', '1', null, null);
 
 -- ----------------------------
 -- Table structure for wplt_member_public
@@ -1983,7 +1984,7 @@ CREATE TABLE `wplt_member_public` (
   `group_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '等级',
   `encodingaeskey` varchar(255) NOT NULL COMMENT 'EncodingAESKey',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=110 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=111 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wplt_member_public
@@ -1991,6 +1992,7 @@ CREATE TABLE `wplt_member_public` (
 INSERT INTO `wplt_member_public` VALUES ('107', '363', 'test', 'gh_8006af1d66c7', 'gh_8006af1d66c7', '', '', '', '', '', 'gh_8006af1d66c7', '2', 'wx3fa9c7e89fd2ea45', '9017bcac9f55a4dc2cbf2c04c124c5c9', '0', '');
 INSERT INTO `wplt_member_public` VALUES ('108', '363', 'test2', 'gh_8006af1d66c8', 'aiweier', '', '', '', '', '', 'gh_8006af1d66c8', '2', 'sfdsdf', '', '0', '');
 INSERT INTO `wplt_member_public` VALUES ('109', '363', '五维微动力', 'gh_99be645d3d8f', 'fivewaypower', '', '', '', '{\"WxCardAlkaid\":{\"random\":\"1\",\"logo_url\":\"366\"}}', '', 'gh_99be645d3d8f', '2', 'wxd84c8b2f576aa65b', 'cde10af35b9f4526cf6b5ee3bc293d13', '0', 'cnBTsbHtJZcUr02lGXvvs1hpdeMx4Ik0Lh2y0n6LfqE');
+INSERT INTO `wplt_member_public` VALUES ('110', '364', '兰卓丽', 'gh_9a02b12868ff', 'langerie-kefu', '', '', '', '', '{\"YouaskService\":0,\"HelloWorld\":0,\"Scratch\":0,\"Coupon\":0,\"CustomMenu\":0,\"Test\":0,\"Exam\":0,\"Survey\":0,\"Forms\":0,\"CustomReply\":0,\"Leaflets\":0,\"WeiSite\":0,\"Card\":0,\"Extensions\":0,\"Suggestions\":0,\"Robot\":0,\"UserCenter\":0,\"Wecome\":0,\"Chat\":0,\"Vote\":0}', 'gh_9a02b12868ff', '2', 'wxa68ac7516480cc71', '22be04739a94a07ce1e9deb2e9300164', '0', 'maVti768lX0KbpITOmpTqYj3TyoO1u6ZP813y6LxP28');
 
 -- ----------------------------
 -- Table structure for wplt_member_public_group
@@ -2020,7 +2022,7 @@ CREATE TABLE `wplt_member_public_link` (
   `is_use` tinyint(2) NOT NULL DEFAULT '0' COMMENT '是否为当前管理的公众号',
   PRIMARY KEY (`id`),
   UNIQUE KEY `um` (`uid`,`mp_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=117 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=118 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wplt_member_public_link
@@ -2028,6 +2030,7 @@ CREATE TABLE `wplt_member_public_link` (
 INSERT INTO `wplt_member_public_link` VALUES ('114', '363', '107', '1', '', '0');
 INSERT INTO `wplt_member_public_link` VALUES ('115', '363', '108', '1', '', '0');
 INSERT INTO `wplt_member_public_link` VALUES ('116', '363', '109', '1', '', '1');
+INSERT INTO `wplt_member_public_link` VALUES ('117', '364', '110', '1', '', '0');
 
 -- ----------------------------
 -- Table structure for wplt_member_public_token_io
@@ -2046,13 +2049,14 @@ CREATE TABLE `wplt_member_public_token_io` (
   `wxdata_output_url` varchar(255) DEFAULT NULL COMMENT '微信数据转发地址',
   `jsticket_iurl` varchar(255) DEFAULT NULL COMMENT 'jsapi_ticket来源接口',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of wplt_member_public_token_io
 -- ----------------------------
 INSERT INTO `wplt_member_public_token_io` VALUES ('1', '108', '0', 'sdf2', '0', 'sdf2', 'tyrty1', null, '0', null, null);
-INSERT INTO `wplt_member_public_token_io` VALUES ('2', '109', '1', 'http://coodroid.com/wengine/index.php?s=/home/weixin/getaccesstoken/id/109.html', '0', '', '', null, '0', '', 'http://coodroid.com/wengine/index.php?s=/home/weixin/jsapiticket/id/109.html');
+INSERT INTO `wplt_member_public_token_io` VALUES ('2', '109', '1', 'http://wechatengine.com/wei/plt/wengine/index.php?s=/home/weixin/getaccesstoken/id/109.html', '0', '', '', null, '0', '', 'http://wechatengine.com/wei/plt/wengine/index.php?s=/home/weixin/jsapiticket/id/109.html');
+INSERT INTO `wplt_member_public_token_io` VALUES ('3', '110', '1', 'http://weixin.maniform.cn/wepartner_huijie/wepartner/mobile.php?act=gettoken&weid=39', '0', null, '', null, '0', '', 'http://weixin.maniform.cn/wepartner_huijie/wepartner/mobile.php?act=getshare&weid=39&active=xxx&url=xxxx');
 
 -- ----------------------------
 -- Table structure for wplt_menu
@@ -2679,7 +2683,7 @@ CREATE TABLE `wplt_tongji` (
   `day` int(10) NOT NULL COMMENT '日期',
   `content` text NOT NULL COMMENT '统计数据',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of wplt_tongji
@@ -2693,7 +2697,9 @@ INSERT INTO `wplt_tongji` VALUES ('6', 'gh_99be645d3d8f', '201505', '20150511', 
 INSERT INTO `wplt_tongji` VALUES ('7', 'gh_99be645d3d8f', '201505', '20150512', 'a:4:{s:12:\"WxCardAlkaid\";i:6;s:11:\"CustomReply\";i:3;s:8:\"Leaflets\";i:1;s:13:\"LangerieCard1\";i:1;}');
 INSERT INTO `wplt_tongji` VALUES ('8', '-1', '201505', '20150512', 'a:1:{s:12:\"WxCardAlkaid\";i:1;}');
 INSERT INTO `wplt_tongji` VALUES ('9', 'gh_99be645d3d8f', '201505', '20150513', 'a:1:{s:13:\"LangerieCard1\";i:1;}');
-INSERT INTO `wplt_tongji` VALUES ('10', 'gh_99be645d3d8f', '201505', '20150514', 'a:4:{s:6:\"Wecome\";i:1;s:11:\"CustomReply\";i:1;s:12:\"WxCardAlkaid\";i:1;s:10:\"CustomMenu\";i:2;}');
+INSERT INTO `wplt_tongji` VALUES ('10', 'gh_99be645d3d8f', '201505', '20150514', 'a:5:{s:6:\"Wecome\";i:1;s:11:\"CustomReply\";i:1;s:12:\"WxCardAlkaid\";i:3;s:10:\"CustomMenu\";i:28;s:13:\"LangerieCard1\";i:1;}');
+INSERT INTO `wplt_tongji` VALUES ('11', 'gh_9a02b12868ff', '201505', '20150514', 'a:2:{s:13:\"LangerieCard1\";i:4;s:12:\"WxCardAlkaid\";i:4;}');
+INSERT INTO `wplt_tongji` VALUES ('12', 'gh_9a02b12868ff', '201505', '20150515', 'a:2:{s:13:\"LangerieCard1\";i:16;s:12:\"WxCardAlkaid\";i:8;}');
 
 -- ----------------------------
 -- Table structure for wplt_ucenter_admin
@@ -2755,13 +2761,14 @@ CREATE TABLE `wplt_ucenter_member` (
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`),
   KEY `status` (`status`)
-) ENGINE=MyISAM AUTO_INCREMENT=364 DEFAULT CHARSET=utf8 COMMENT='用户表';
+) ENGINE=MyISAM AUTO_INCREMENT=365 DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 -- ----------------------------
 -- Records of wplt_ucenter_member
 -- ----------------------------
-INSERT INTO `wplt_ucenter_member` VALUES ('1', 'alkaid', '', 'muliangcong@163.com', '', '1430486033', '0', '1430721140', '0', '1430486033', '1', null, null);
+INSERT INTO `wplt_ucenter_member` VALUES ('1', 'alkaid', 'e0eb4215e08b10d3ea16c7ac771afd81', 'muliangcong@163.com', '', '1431616903', '0', '1431616918', '0', '1431616903', '1', null, null);
 INSERT INTO `wplt_ucenter_member` VALUES ('363', 'test', '', 'test@126.com', '', '1430638087', '0', '1430812879', '0', '1430638087', '1', null, null);
+INSERT INTO `wplt_ucenter_member` VALUES ('364', 'langerie', '7a163c3f77579d3a20b1a11984a618e6', '1876627247@qq.com', '', '1431615270', '0', '1431616986', '0', '1431615270', '1', null, null);
 
 -- ----------------------------
 -- Table structure for wplt_ucenter_setting
@@ -2982,12 +2989,27 @@ CREATE TABLE `wplt_weixin_log` (
   `data` text,
   `data_post` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of wplt_weixin_log
 -- ----------------------------
-INSERT INTO `wplt_weixin_log` VALUES ('1', '1431592714', '2015-05-14 16:38:34', '从第三方接口获取accesstoken', '{\"wechat_id\":\"gh_99be645d3d8f\",\"access_token\":\"dGJus7moSwFlMQ80el8EhcjaTr1qa0vx3OCBEfrgOtdwirNaemORjkbGc2tGAtxUFS4eUmuLW6iM_UKdnniD_uauTGJr_VBekb_hL3cdzmk\",\"expires_time\":1431599933}');
+INSERT INTO `wplt_weixin_log` VALUES ('1', '1431611687', '2015-05-14 21:54:47', '从第三方接口获取accesstoken', '{\"wechat_id\":\"gh_99be645d3d8f\",\"accessToken\":\"2KXS-sGgGyYtcXGsPUrqJt5NcUToVyJv9azxbeFW0Ko-2Uxb99EZYOG6Tb2EZbglHgkJopaJXWW6gZFwiisd9pPbF4bakkri6HN6g1uSYro\",\"expire_time\":1431616495}');
+INSERT INTO `wplt_weixin_log` VALUES ('2', '1431611687', '2015-05-14 21:54:47', '从第三方接口获取jsapi_ticket', '{\"rawString\":\"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VAt8XgUe09YqMUO7oo8TQplwwbdKPuF2qbCAnHMs4XXucGgQP5e3YJgt1dK1FufvXg&test\"}');
+INSERT INTO `wplt_weixin_log` VALUES ('3', '1431611687', '2015-05-14 21:54:47', '调用系统菜单接口https://api.weixin.qq.com/cgi-bin/menu/create?access_token=2KXS-sGgGyYtcXGsPUrqJt5NcUToVyJv9azxbeFW0Ko-2Uxb99EZYOG6Tb2EZbglHgkJopaJXWW6gZFwiisd9pPbF4bakkri6HN6g1uSYro', '{\"button\":[{\"name\":\"testlocal\",\"type\":\"click\",\"key\":\"key6\"}]}');
+INSERT INTO `wplt_weixin_log` VALUES ('4', '1431611687', '2015-05-14 21:54:47', '返回值:调用系统菜单接口https://api.weixin.qq.com/cgi-bin/menu/create?access_token=2KXS-sGgGyYtcXGsPUrqJt5NcUToVyJv9azxbeFW0Ko-2Uxb99EZYOG6Tb2EZbglHgkJopaJXWW6gZFwiisd9pPbF4bakkri6HN6g1uSYro', '{\"errcode\":0,\"errmsg\":\"ok\"}');
+INSERT INTO `wplt_weixin_log` VALUES ('5', '1431616127', '2015-05-14 23:08:47', '从第三方接口获取accesstoken', '{\"accessToken\":\"F3txJVm_XLw9hazGXg2SCkQx5IrH9GDuzmT2PACj89F-pOnfFTimtW-irL7rDhGrTx8_ULcNMYxl6EnIKGObBYPL7lBuZz0d5T5mViS2mbQ\",\"expire_time\":1431619201}');
+INSERT INTO `wplt_weixin_log` VALUES ('6', '1431616127', '2015-05-14 23:08:47', '从第三方接口获取jsapi_ticket', '{\"appId\":\"wxa68ac7516480cc71\",\"nonceStr\":\"KSjL1H0AMwMIsgdb\",\"timestamp\":1431616785,\"url\":\"xxxx\",\"signature\":\"dbbef9176c7f4fc979cd6fa121d1f4a7ec62376f\",\"rawString\":\"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VPRZ3KKi19K441UVYIWiqlD-8eFT8VV0tSf1MOVsIT-AHmUyCQ6vFFqduj0Rr_7h_w&noncestr=KSjL1H0AMwMIsgdb&timestamp=1431616785&url=xxxx\"}');
+INSERT INTO `wplt_weixin_log` VALUES ('7', '1431619753', '2015-05-15 00:09:13', '从第三方接口获取accesstoken', '{\"accessToken\":\"vN-QHMZNFUmfS7eteQljNF6l-dCAcw4Ud4Y8748ISBR2oNMDIdzzQssjYepWntNHVKQfmzKZ8VbZNSlIORDJ6KBgrzCs9uJDxYq9rf4_088\",\"expire_time\":1431622806}');
+INSERT INTO `wplt_weixin_log` VALUES ('8', '1431619759', '2015-05-15 00:09:19', '从第三方接口获取jsapi_ticket', '{\"appId\":\"wxa68ac7516480cc71\",\"nonceStr\":\"KSjL1H0AMwMIsgdb\",\"timestamp\":1431620416,\"url\":\"xxxx\",\"signature\":\"1c0bdfd0720db9ba4d3a2f698edd7a79cf97a92a\",\"rawString\":\"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VPRZ3KKi19K441UVYIWiqlCSX5lfbZyrlOlPknlTzoGhC16sjKUNmaAi-Ac4l3ccZA&noncestr=KSjL1H0AMwMIsgdb&timestamp=1431620416&url=xxxx\"}');
+INSERT INTO `wplt_weixin_log` VALUES ('9', '1431621617', '2015-05-15 00:40:17', '从第三方接口获取accesstoken', '{\"accessToken\":\"vN-QHMZNFUmfS7eteQljNF6l-dCAcw4Ud4Y8748ISBR2oNMDIdzzQssjYepWntNHVKQfmzKZ8VbZNSlIORDJ6KBgrzCs9uJDxYq9rf4_088\",\"expire_time\":1431622806}');
+INSERT INTO `wplt_weixin_log` VALUES ('10', '1431621691', '2015-05-15 00:41:31', '从第三方接口获取jsapi_ticket', '{\"appId\":\"wxa68ac7516480cc71\",\"nonceStr\":\"KSjL1H0AMwMIsgdb\",\"timestamp\":1431622342,\"url\":\"xxxx\",\"signature\":\"ab8182237d64af985ce48b795b42b23540c58d9e\",\"rawString\":\"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VPRZ3KKi19K441UVYIWiqlCSX5lfbZyrlOlPknlTzoGhC16sjKUNmaAi-Ac4l3ccZA&noncestr=KSjL1H0AMwMIsgdb&timestamp=1431622342&url=xxxx\"}');
+INSERT INTO `wplt_weixin_log` VALUES ('11', '1431621832', '2015-05-15 00:43:52', '从第三方接口获取accesstoken', '{\"accessToken\":\"vN-QHMZNFUmfS7eteQljNF6l-dCAcw4Ud4Y8748ISBR2oNMDIdzzQssjYepWntNHVKQfmzKZ8VbZNSlIORDJ6KBgrzCs9uJDxYq9rf4_088\",\"expire_time\":1431622806}');
+INSERT INTO `wplt_weixin_log` VALUES ('12', '1431621877', '2015-05-15 00:44:37', '从第三方接口获取jsapi_ticket', '{\"appId\":\"wxa68ac7516480cc71\",\"nonceStr\":\"KSjL1H0AMwMIsgdb\",\"timestamp\":1431622532,\"url\":\"xxxx\",\"signature\":\"63a11d4ad7b8be52b1f1ac08e17a081bbf15da67\",\"rawString\":\"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VPRZ3KKi19K441UVYIWiqlCSX5lfbZyrlOlPknlTzoGhC16sjKUNmaAi-Ac4l3ccZA&noncestr=KSjL1H0AMwMIsgdb&timestamp=1431622532&url=xxxx\"}');
+INSERT INTO `wplt_weixin_log` VALUES ('13', '1431621935', '2015-05-15 00:45:35', '从第三方接口获取accesstoken', '{\"accessToken\":\"vN-QHMZNFUmfS7eteQljNF6l-dCAcw4Ud4Y8748ISBR2oNMDIdzzQssjYepWntNHVKQfmzKZ8VbZNSlIORDJ6KBgrzCs9uJDxYq9rf4_088\",\"expire_time\":1431622806}');
+INSERT INTO `wplt_weixin_log` VALUES ('14', '1431621943', '2015-05-15 00:45:43', '从第三方接口获取jsapi_ticket', '{\"appId\":\"wxa68ac7516480cc71\",\"nonceStr\":\"KSjL1H0AMwMIsgdb\",\"timestamp\":1431622598,\"url\":\"xxxx\",\"signature\":\"4e46b5366fa55ed8b4f880e515b8facf76f056eb\",\"rawString\":\"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VPRZ3KKi19K441UVYIWiqlCSX5lfbZyrlOlPknlTzoGhC16sjKUNmaAi-Ac4l3ccZA&noncestr=KSjL1H0AMwMIsgdb&timestamp=1431622598&url=xxxx\"}');
+INSERT INTO `wplt_weixin_log` VALUES ('15', '1431623202', '2015-05-15 01:06:42', '从第三方接口获取accesstoken', '{\"accessToken\":\"-q-yXYZ9IXUw3Oj7Pgnigy1a2rLs49vDpeayoJ-6UoOzO-pEWpPldLSlz1Jlt-lWe7TO5WafMO893shr0M36fQaWEYC040jDn1tKgK2C8mU\",\"expire_time\":1431626407}');
+INSERT INTO `wplt_weixin_log` VALUES ('16', '1431623203', '2015-05-15 01:06:43', '从第三方接口获取jsapi_ticket', '{\"appId\":\"wxa68ac7516480cc71\",\"nonceStr\":\"KSjL1H0AMwMIsgdb\",\"timestamp\":1431623860,\"url\":\"xxxx\",\"signature\":\"ca46d9564fb62a847eae71ebf6389206e18f46ec\",\"rawString\":\"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VPRZ3KKi19K441UVYIWiqlCSX5lfbZyrlOlPknlTzoGhC16sjKUNmaAi-Ac4l3ccZA&noncestr=KSjL1H0AMwMIsgdb&timestamp=1431623860&url=xxxx\"}');
 
 -- ----------------------------
 -- Table structure for wplt_wxcard
