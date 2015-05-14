@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
-Source Server Version : 50538
+Source Server         : local_mysql
+Source Server Version : 50540
 Source Host           : localhost:3306
 Source Database       : weplt
 
 Target Server Type    : MYSQL
-Target Server Version : 50538
+Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2015-05-14 03:05:34
+Date: 2015-05-14 18:37:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -209,13 +209,13 @@ INSERT INTO `wplt_addons` VALUES ('5', 'Editor', '前台编辑器', '用于增�
 INSERT INTO `wplt_addons` VALUES ('6', 'Attachment', '附件', '用于文档模型上传附件', '0', 'null', 'thinkphp', '0.1', '1379842319', '1', '0', null);
 INSERT INTO `wplt_addons` VALUES ('9', 'SocialComment', '通用社交化评论', '集成了各种社交化评论插件，轻松集成到系统中。', '1', '{\"comment_type\":\"1\",\"comment_uid_youyan\":\"1669260\",\"comment_short_name_duoshuo\":\"\",\"comment_form_pos_duoshuo\":\"buttom\",\"comment_data_list_duoshuo\":\"10\",\"comment_data_order_duoshuo\":\"asc\"}', 'thinkphp', '0.1', '1380273962', '0', '0', null);
 INSERT INTO `wplt_addons` VALUES ('16', 'Vote', '投票', '支持文本和图片两类的投票功能', '1', '{\"random\":\"1\"}', '地下凡星', '0.1', '1388811198', '1', '1', '3');
-INSERT INTO `wplt_addons` VALUES ('17', 'Chat', '智能聊天', '通过网络上支持的智能API，实现：天气、翻译、藏头诗、笑话、歌词、计算、域名信息/备案/收录查询、IP查询、手机号码归属、人工智能聊天等功能', '1', '{\"tuling_key\":\"d812d695a5e0df258df952698faca6cc\",\"tuling_url\":\"http:\\/\\/www.tuling123.com\\/openapi\\/api\",\"simsim_key\":\"41250a68-3cb5-43c8-9aa2-d7b3caf519b1\",\"simsim_url\":\"http:\\/\\/sandbox.api.simsimi.com\\/request.p\",\"i9_url\":\"http:\\/\\/www.xiaojo.com\\/bot\\/chata.php\",\"rand_reply\":\"\\u6211\\u4eca\\u5929\\u7d2f\\u4e86\\uff0c\\u660e\\u5929\\u518d\\u966a\\u4f60\\u804a\\u5929\\u5427\\r\\n\\u54c8\\u54c8~~\\r\\n\\u4f60\\u8bdd\\u597d\\u591a\\u554a\\uff0c\\u4e0d\\u8ddf\\u4f60\\u804a\\u4e86\\r\\n\\u867d\\u7136\\u4e0d\\u61c2\\uff0c\\u4f46\\u89c9\\u5f97\\u4f60\\u8bf4\\u5f97\\u5f88\\u5bf9\"}', '地下凡星', '0.1', '1389454867', '0', '1', '2');
+INSERT INTO `wplt_addons` VALUES ('17', 'Chat', '智能聊天', '通过网络上支持的智能API，实现：天气、翻译、藏头诗、笑话、歌词、计算、域名信息/备案/收录查询、IP查询、手机号码归属、人工智能聊天等功能', '0', '{\"tuling_key\":\"d812d695a5e0df258df952698faca6cc\",\"tuling_url\":\"http:\\/\\/www.tuling123.com\\/openapi\\/api\",\"simsim_key\":\"41250a68-3cb5-43c8-9aa2-d7b3caf519b1\",\"simsim_url\":\"http:\\/\\/sandbox.api.simsimi.com\\/request.p\",\"i9_url\":\"http:\\/\\/www.xiaojo.com\\/bot\\/chata.php\",\"rand_reply\":\"\\u6211\\u4eca\\u5929\\u7d2f\\u4e86\\uff0c\\u660e\\u5929\\u518d\\u966a\\u4f60\\u804a\\u5929\\u5427\\r\\n\\u54c8\\u54c8~~\\r\\n\\u4f60\\u8bdd\\u597d\\u591a\\u554a\\uff0c\\u4e0d\\u8ddf\\u4f60\\u804a\\u4e86\\r\\n\\u867d\\u7136\\u4e0d\\u61c2\\uff0c\\u4f46\\u89c9\\u5f97\\u4f60\\u8bf4\\u5f97\\u5f88\\u5bf9\"}', '地下凡星', '0.1', '1389454867', '0', '1', '2');
 INSERT INTO `wplt_addons` VALUES ('18', 'Wecome', '欢迎语', '用户关注公众号时发送的欢迎信息，支持文本，图片，图文的信息', '1', '{\"type\":\"1\",\"title\":\"\",\"description\":\"欢迎关注，请<a href=\"[follow]\">绑定帐号</a>后体验更多功能\",\"pic_url\":\"\",\"url\":\"\"}', '地下凡星', '0.1', '1389620372', '0', '1', '2');
 INSERT INTO `wplt_addons` VALUES ('19', 'UserCenter', '微信用户中心', '实现3G首页、微信登录，微信用户绑定，微信用户信息初始化等基本功能', '1', '{\"random\":\"1\"}', '地下凡星', '0.1', '1390660425', '1', '1', '2');
-INSERT INTO `wplt_addons` VALUES ('65', 'HelloWorld', '微信入门案例', '这是一个简单的入门案例', '1', 'null', '凡星', '0.1', '1404133803', '0', '1', null);
+INSERT INTO `wplt_addons` VALUES ('65', 'HelloWorld', '微信入门案例', '这是一个简单的入门案例', '0', 'null', '凡星', '0.1', '1404133803', '0', '1', null);
 INSERT INTO `wplt_addons` VALUES ('24', 'BaiduStatistics', '百度统计', '这是百度统计功能，只要开启插件并设置统计代码，就可以使用统计功能了', '1', '{\"code\":\"\"}', 'weiphp.cn', '1.0', '1393116011', '0', '0', null);
 INSERT INTO `wplt_addons` VALUES ('56', 'CustomMenu', '自定义菜单', '自定义菜单能够帮助公众号丰富界面，让用户更好更快地理解公众号的功能', '1', 'null', '凡星', '0.1', '1398264735', '1', '1', '2');
-INSERT INTO `wplt_addons` VALUES ('31', 'Robot', '机器人聊天', '实现的效果如下\r\n用户输入：“机器人学习时间”\r\n微信回复：“你的问题是？”\r\n用户输入：“这个世界上谁最美？”\r\n微信回复： “你的答案是？”\r\n用户回复： “当然是你啦！”\r\n微信回复：“我明白啊，不信你可以问问我”\r\n用户回复：“这个世界上谁最美？”\r\n微信回复：“当然是你啦！”', '1', 'null', '地下凡星', '0.1', '1393987090', '0', '1', '4');
+INSERT INTO `wplt_addons` VALUES ('31', 'Robot', '机器人聊天', '实现的效果如下\r\n用户输入：“机器人学习时间”\r\n微信回复：“你的问题是？”\r\n用户输入：“这个世界上谁最美？”\r\n微信回复： “你的答案是？”\r\n用户回复： “当然是你啦！”\r\n微信回复：“我明白啊，不信你可以问问我”\r\n用户回复：“这个世界上谁最美？”\r\n微信回复：“当然是你啦！”', '0', 'null', '地下凡星', '0.1', '1393987090', '0', '1', '4');
 INSERT INTO `wplt_addons` VALUES ('36', 'Extensions', '融合第三方', '第三方功能扩展', '1', 'null', '地下凡星', '0.1', '1394268715', '1', '1', '4');
 INSERT INTO `wplt_addons` VALUES ('32', 'Suggestions', '建议意见', '用户在微信里输入“建议意见”四个字时，返回一个图文信息，引导用户进入填写建议意见的3G页面，用户填写信息提交后显示感谢之意并提示关闭页面返回微信\r\n管理员可以在管理中心里看到用户反馈的内容列表，并对内容进行编辑，删除操作', '1', '{\"need_truename\":\"0\",\"need_mobile\":\"0\"}', '地下凡星', '0.1', '1394264272', '1', '1', '3');
 INSERT INTO `wplt_addons` VALUES ('38', 'Card', '会员卡', '这是一个临时描述', '1', 'null', '无名', '0.1', '1395235360', '0', '1', '2');
@@ -230,7 +230,7 @@ INSERT INTO `wplt_addons` VALUES ('58', 'Cascade', '级联菜单', '支持无级
 INSERT INTO `wplt_addons` VALUES ('59', 'Coupon', '优惠券', '配合粉丝圈子，打造粉丝互动的运营激励基础', '1', 'null', '凡星', '0.1', '1399259217', '1', '1', '3');
 INSERT INTO `wplt_addons` VALUES ('60', 'Scratch', '刮刮卡', '刮刮卡', '1', 'null', '凡星', '0.1', '1399273157', '1', '1', '3');
 INSERT INTO `wplt_addons` VALUES ('64', 'Tongji', '运营统计', '统计每个插件使用情况', '1', 'null', '凡星', '0.1', '1401371025', '1', '1', '2');
-INSERT INTO `wplt_addons` VALUES ('83', 'YouaskService', '你问我答客服系统', '一个支持你问我答,关键词制定客服的客服系统', '1', 'null', '陌路生人', '0.1', '1403947448', '1', '1', '1');
+INSERT INTO `wplt_addons` VALUES ('83', 'YouaskService', '你问我答客服系统', '一个支持你问我答,关键词制定客服的客服系统', '0', 'null', '陌路生人', '0.1', '1403947448', '1', '1', '1');
 INSERT INTO `wplt_addons` VALUES ('91', 'WxCardAlkaid', '微信卡券', '卡券插件 创建修改等基础操作', '1', '{\"random\":\"1\"}', 'alkaid', '0.1', '1431066156', '1', '1', '2');
 INSERT INTO `wplt_addons` VALUES ('92', 'LangerieCard1', '卡券', '兰卓丽卡券1', '1', '{\"random\":\"1\"}', '无名', '0.1', '1431398237', '1', '1', '5');
 
@@ -1362,7 +1362,7 @@ INSERT INTO `wplt_config` VALUES ('34', 'DENY_VISIT', '3', '超管专限控制�
 INSERT INTO `wplt_config` VALUES ('35', 'REPLY_LIST_ROWS', '0', '回复列表每页条数', '2', '', '', '1386645376', '1387178083', '1', '20', '0');
 INSERT INTO `wplt_config` VALUES ('36', 'ADMIN_ALLOW_IP', '2', '后台允许访问IP', '4', '', '多个用逗号分隔，如果不配置表示不限制IP访问', '1387165454', '1387165553', '1', '', '12');
 INSERT INTO `wplt_config` VALUES ('37', 'SHOW_PAGE_TRACE', '4', '是否显示页面Trace', '4', '0:关闭\r\n1:开启', '是否显示页面Trace信息', '1387165685', '1387165685', '1', '0', '1');
-INSERT INTO `wplt_config` VALUES ('38', 'WEB_SITE_VERIFY', '4', '登录验证码', '1', '0:关闭\r\n1:开启', '登录时是否需要验证码', '1378898976', '1406859544', '1', '1', '2');
+INSERT INTO `wplt_config` VALUES ('38', 'WEB_SITE_VERIFY', '4', '登录验证码', '1', '0:关闭\r\n1:开启', '登录时是否需要验证码', '1378898976', '1406859544', '1', '0', '2');
 INSERT INTO `wplt_config` VALUES ('42', 'ACCESS', '2', '未登录时可访问的页面', '4', '', '不区分大小写', '1390656601', '1390664079', '1', 'Home/User/*\r\nHome/Index/*\r\nhome/weixin/*\r\nadmin/File/*\r\nhome/File/*\r\nhome/Forum/*', '0');
 INSERT INTO `wplt_config` VALUES ('44', 'DEFAULT_PUBLIC_GROUP_ID', '0', '公众号默认等级ID', '3', '', '前台新增加的公众号的默认等级，值为0表示不做权限控制，公众号拥有全部插件的权限', '1393759885', '1393759981', '1', '0', '1');
 INSERT INTO `wplt_config` VALUES ('45', 'SYSTEM_UPDATE_REMIND', '4', '系统升级提醒', '4', '0:关闭\r\n1:开启', '开启后官方有新升级信息会及时在后台的网站设置页面头部显示升级提醒', '1393764263', '1393764263', '1', '1', '5');
@@ -2052,7 +2052,7 @@ CREATE TABLE `wplt_member_public_token_io` (
 -- Records of wplt_member_public_token_io
 -- ----------------------------
 INSERT INTO `wplt_member_public_token_io` VALUES ('1', '108', '0', 'sdf2', '0', 'sdf2', 'tyrty1', null, '0', null, null);
-INSERT INTO `wplt_member_public_token_io` VALUES ('2', '109', '1', 'http://coodroid.com/wengine/index.php?s=/home/weixin/getaccesstoken/id/109.html', '0', '', '', null, '0', null, null);
+INSERT INTO `wplt_member_public_token_io` VALUES ('2', '109', '1', 'http://coodroid.com/wengine/index.php?s=/home/weixin/getaccesstoken/id/109.html', '0', '', '', null, '0', '', 'http://coodroid.com/wengine/index.php?s=/home/weixin/jsapiticket/id/109.html');
 
 -- ----------------------------
 -- Table structure for wplt_menu
@@ -2679,7 +2679,7 @@ CREATE TABLE `wplt_tongji` (
   `day` int(10) NOT NULL COMMENT '日期',
   `content` text NOT NULL COMMENT '统计数据',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of wplt_tongji
@@ -2693,6 +2693,7 @@ INSERT INTO `wplt_tongji` VALUES ('6', 'gh_99be645d3d8f', '201505', '20150511', 
 INSERT INTO `wplt_tongji` VALUES ('7', 'gh_99be645d3d8f', '201505', '20150512', 'a:4:{s:12:\"WxCardAlkaid\";i:6;s:11:\"CustomReply\";i:3;s:8:\"Leaflets\";i:1;s:13:\"LangerieCard1\";i:1;}');
 INSERT INTO `wplt_tongji` VALUES ('8', '-1', '201505', '20150512', 'a:1:{s:12:\"WxCardAlkaid\";i:1;}');
 INSERT INTO `wplt_tongji` VALUES ('9', 'gh_99be645d3d8f', '201505', '20150513', 'a:1:{s:13:\"LangerieCard1\";i:1;}');
+INSERT INTO `wplt_tongji` VALUES ('10', 'gh_99be645d3d8f', '201505', '20150514', 'a:4:{s:6:\"Wecome\";i:1;s:11:\"CustomReply\";i:1;s:12:\"WxCardAlkaid\";i:1;s:10:\"CustomMenu\";i:2;}');
 
 -- ----------------------------
 -- Table structure for wplt_ucenter_admin
@@ -2981,11 +2982,12 @@ CREATE TABLE `wplt_weixin_log` (
   `data` text,
   `data_post` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of wplt_weixin_log
 -- ----------------------------
+INSERT INTO `wplt_weixin_log` VALUES ('1', '1431592714', '2015-05-14 16:38:34', '从第三方接口获取accesstoken', '{\"wechat_id\":\"gh_99be645d3d8f\",\"access_token\":\"dGJus7moSwFlMQ80el8EhcjaTr1qa0vx3OCBEfrgOtdwirNaemORjkbGc2tGAtxUFS4eUmuLW6iM_UKdnniD_uauTGJr_VBekb_hL3cdzmk\",\"expires_time\":1431599933}');
 
 -- ----------------------------
 -- Table structure for wplt_wxcard

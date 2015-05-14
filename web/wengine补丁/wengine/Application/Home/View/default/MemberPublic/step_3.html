@@ -1,0 +1,213 @@
+{//+++++++++++++added by alkaid++++++++++++++}
+<extend name="Base/common" />
+<block name="body">
+  <div class="span9 page_message">
+<section id="contents">
+  <ul class="tab-nav nav">
+    <li class="current"><a href="{:U('Home/MemberPublic/lists')}">公众号管理<span class="arrow fa fa-sort-up"></span></a></li>
+  </ul>
+   <div class="setting_step app_setting">
+         <a class="step " href="{:U('Home/MemberPublic/add',array('id'=>$id))}">1.增加基本信息</a>
+         <a class="step " href="{:U('Home/MemberPublic/step_1',array('id'=>$id))}">2.配置公众平台</a>
+         <a class="step step_cur" href="{:U('Home/MemberPublic/step_2',array('id'=>$id))}">3.保存接口配置</a>
+
+         <a class="step step_cur_1" href="<empty name="id">###<else /> {:U('Home/MemberPublic/step_3',array('id'=>$id))}</empty>">4.第三方Acesstoken接口(可选)</a>
+
+  </div>
+  <div class="tab-content">
+    <!-- 表单 -->
+    <form class="form-horizontal" method="post" action="{:U('Home/MemberPublic/step_3',array('id'=>$id))}" id="form">
+        <input type="hidden" class="hide-data" name="id" value="{$info.id}"/>
+      <!-- 基础文档模型 -->
+      <div class="tab-pane in              tab1" id="tab1">
+          <div class="form-item cf toggle-type">
+              <label class="item-label"> Accesstoken输入开关 <span class="check-tips"> </span></label>
+              <div class="controls">
+                  <div class="check-item">
+                      <!--[if !IE]><!-->
+                      <input type="radio" <eq name="info.input_switch" value="0">checked="checked"</eq>  name="input_switch" id="input_switch_0" value="0" class="regular-radio">
+                      <label for="input_switch_0"></label>
+                      关闭
+                      <!--<![endif]-->
+                      <!--[if IE]>
+                      <input type="radio" <eq name="info.input_switch" value="0">checked</eq> value="0"  id="input_switch_0" name="input_switch" checked="checked" />
+                      <label for="input_switch_0"></label>关闭
+                      <![endif]-->
+                  </div>
+                  <div class="check-item">
+                      <!--[if !IE]><!-->
+                      <input type="radio" <eq name="info.input_switch" value="1">checked="checked"</eq> name="input_switch" id="input_switch_1" value="1" class="regular-radio">
+                      <label for="input_switch_1"></label>
+                      打开
+                      <!--<![endif]-->
+                      <!--[if IE]>
+                      <input type="radio" <eq name="info.input_switch" value="1">checked="checked"</eq> value="1" id="input_switch_1" name="input_switch" />
+                      <label for="input_switch_1"></label>打开
+                      <![endif]-->
+                  </div>
+              </div>
+          </div>
+
+<!--          <p>Accesstoken接收地址：<span style="color: #FF0000">{:U('home/weixin/setaccesstoken',array('id'=>$id))}</span><br>
+              须提交的post参数：类型:json. 字段：wechat_id（微信原始ID），access_token，expires_time或expires_in
+          </p>
+          <div class="form-item cf toggle-secret">
+              <label class="item-label"> AppSecret <span class="check-tips"> （应用密钥） </span></label>
+              <div class="controls">
+                  <input type="text" value="{$info.input_secret}" name="input_secret" class="text input-large">
+              </div>
+          </div>-->
+          <div class="form-item cf toggle-appid">
+              <label class="item-label"> Accesstoken输入接口 <span class="check-tips"> （从第三方地址请求获得Accesstoken） </span></label>
+              <div class="controls">
+                  <input type="text" value="{$info.input_url}" name="input_url" class="text input-large">
+              </div>
+          </div>
+          <p>
+              获得的post参数：类型:json. 字段：wechat_id（微信原始ID），access_token，expires_time
+          </p>
+          <br/><br/><br/>
+
+          <div class="form-item cf toggle-type">
+              <label class="item-label"> Accesstoken输出开关 <span class="check-tips"> </span></label>
+              <div class="controls">
+                  <div class="check-item">
+                      <!--[if !IE]><!-->
+                      <input type="radio" <eq name="info.output_switch" value="0">checked="checked"</eq>  name="output_switch" id="output_switch_0" value="0" class="regular-radio">
+                      <label for="output_switch_0"></label>
+                      关闭
+                      <!--<![endif]-->
+                      <!--[if IE]>
+                      <input type="radio" <eq name="info.output_switch" value="0">checked</eq> value="0"  id="output_switch_0" name="output_switch" checked="checked" />
+                      <label for="output_switch_0"></label>关闭
+                      <![endif]-->
+                  </div>
+                  <div class="check-item">
+                      <!--[if !IE]><!-->
+                      <input type="radio" <eq name="info.output_switch" value="1">checked="checked"</eq> name="output_switch" id="output_switch_1" value="1" class="regular-radio">
+                      <label for="output_switch_1"></label>
+                      打开
+                      <!--<![endif]-->
+                      <!--[if IE]>
+                      <input type="radio" <eq name="info.output_switch" value="1">checked="checked"</eq> value="1" id="output_switch_1" name="output_switch" />
+                      <label for="output_switch_1"></label>打开
+                      <![endif]-->
+                  </div>
+              </div>
+          </div>
+
+          <p>Accesstoken获取地址：<span style="color: #FF0000">{:U('home/weixin/getaccesstoken',array('id'=>$id))}</span><br>
+              须提交的post参数：类型:json. 字段：wechat_id（微信原始ID），secret(下面提供的Appsecret)
+          </p>
+          <div class="form-item cf toggle-secret">
+              <label class="item-label"> AppSecret <span class="check-tips"> （应用密钥） </span></label>
+              <div class="controls">
+                  <input type="text" value="{$info.output_secret}" name="output_secret" class="text input-large">
+              </div>
+          </div>
+<!--          <div class="form-item cf toggle-appid">
+          <label class="item-label"> Accesstoken输出接口 <span class="check-tips"> （将Accesstoken推送至第三方地址） </span></label>
+          <div class="controls">
+              <input type="text" value="{$info.output_url}" name="output_url" class="text input-large">
+          </div>
+      </div>
+          <p>
+              推送的post参数：类型:json. 字段：wechat_id（微信原始ID），access_token，expires_time
+          </p>-->
+          <br/><br/><br/>
+
+          <div class="form-item cf toggle-type">
+              <label class="item-label"> 微信数据转发开关 <span class="check-tips"> </span></label>
+              <div class="controls">
+                  <div class="check-item">
+                      <!--[if !IE]><!-->
+                      <input type="radio" <eq name="info.wxdata_output_switch" value="0">checked="checked"</eq>  name="wxdata_output_switch" id="wxdata_output_switch_0" value="0" class="regular-radio">
+                      <label for="wxdata_output_switch_0"></label>
+                      关闭
+                      <!--<![endif]-->
+                      <!--[if IE]>
+                      <input type="radio" <eq name="info.wxdata_output_switch" value="0">checked</eq> value="0"  id="wxdata_output_switch_0" name="wxdata_output_switch" checked="checked" />
+                      <label for="wxdata_output_switch_0"></label>关闭
+                      <![endif]-->
+                  </div>
+                  <div class="check-item">
+                      <!--[if !IE]><!-->
+                      <input type="radio" <eq name="info.wxdata_output_switch" value="1">checked="checked"</eq> name="wxdata_output_switch" id="wxdata_output_switch_1" value="1" class="regular-radio">
+                      <label for="wxdata_output_switch_1"></label>
+                      打开
+                      <!--<![endif]-->
+                      <!--[if IE]>
+                      <input type="radio" <eq name="info.wxdata_output_switch" value="1">checked="checked"</eq> value="1" id="wxdata_output_switch_1" name="wxdata_output_switch" />
+                      <label for="wxdata_output_switch_1"></label>打开
+                      <![endif]-->
+                  </div>
+              </div>
+          </div>
+
+          <div class="form-item cf toggle-appid">
+              <label class="item-label"> 微信数据输出接口 <span class="check-tips"> （将微信数据推送至第三方地址） </span></label>
+              <div class="controls">
+                  <input type="text" value="{$info.wxdata_output_url}" name="wxdata_output_url" class="text input-large">
+              </div>
+          </div>
+          <p>
+              推送的post参数：将微信xml数据原封不动转发
+          </p>
+          <br/><br/><br/>
+
+
+          <div class="form-item cf toggle-appid">
+              <label class="item-label"> jsapi_ticket输入接口 <span class="check-tips"> （从第三方地址请求获得jsapi_ticket） </span></label>
+              <div class="controls">
+                  <input type="text" value="{$info.jsticket_iurl}" name="jsticket_iurl" class="text input-large">
+              </div>
+          </div>
+          <p>
+              获得的post参数：类型:json. 字段：wechat_id（微信原始ID），jsapi_ticket
+          </p>
+          <br/><br/><br/>
+          <p>jsapi_ticket获取地址：<span style="color: #FF0000">{:U('home/weixin/jsapiticket',array('id'=>$id))}</span><br>
+              须提交的post参数：类型:json. 字段：wechat_id（微信原始ID），secret(下面提供的Appsecret)
+          </p>
+          <br/><br/><br/>
+
+
+        <div class="form-item cf">
+          <button target-form="form-horizontal" type="submit" id="submit" class="btn submit-btn ajax-post">保 存</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+</block>
+<block name="script">
+  <link href="__STATIC__/datetimepicker/css/datetimepicker.css?v={:SITE_VERSION}" rel="stylesheet" type="text/css">
+  <php>if(C('COLOR_STYLE')=='blue_color') echo '
+    <link href="__STATIC__/datetimepicker/css/datetimepicker_blue.css?v={:SITE_VERSION}" rel="stylesheet" type="text/css">
+    ';</php>
+  <link href="__STATIC__/datetimepicker/css/dropdown.css?v={:SITE_VERSION}" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="__STATIC__/datetimepicker/js/bootstrap-datetimepicker.js"></script> 
+  <script type="text/javascript" src="__STATIC__/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js?v={:SITE_VERSION}" charset="UTF-8"></script> 
+  <script type="text/javascript">
+$('#submit').click(function(){
+    $('#form').submit();
+});
+
+$(function(){
+    $('.time').datetimepicker({
+        format: 'yyyy-mm-dd hh:ii',
+        language:"zh-CN",
+        minView:0,
+        autoclose:true
+    });
+    $('.date').datetimepicker({
+        format: 'yyyy-mm-dd',
+        language:"zh-CN",
+        minView:2,
+        autoclose:true
+    });	
+    showTab();
+});
+</script> 
+</block>
+{//-------------added by alkaid--------------}
