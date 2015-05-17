@@ -18,6 +18,8 @@
 <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <block name="head"></block>
 <script type="text/javascript">
+    var userinfo={$user};
+//    alert(userinfo.nickname);
     var currurl=window.location.href;
     var jsApiList=["addCard","chooseCard","openCard","chooseImage"];
     $.ajax({
@@ -30,7 +32,7 @@
 //                $.each( data, function( key, val ) {
 //                   console.log(key+"="+val);
 //                });
-                data.debug=true;
+//                data.debug=true;
                 data.jsApiList=jsApiList;
                 wx.config(data);
                 wx.ready(function(){

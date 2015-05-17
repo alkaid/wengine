@@ -1540,6 +1540,7 @@ function get_access_token($token = '') {
     $key = 'access_token_' . $token;
     $key_expire_time= 'access_token_expire_time_' . $token;
     $key_jsapi_tickett='jsapi_ticket_'.$token;
+    $key_cardapi_ticket='carapi_ticket_'.$token;
     $res = S ( $key );
     if ($res !== false)
         return $res;
@@ -1617,19 +1618,26 @@ function get_access_token($token = '') {
                 foreach($rawArray as $raw){
                     if(strpos($raw,'jsapi_ticket=')!==false){
                         $jsapi_ticket=str_replace('jsapi_ticket=','',$raw);
-                        S ( $key_jsapi_tickett, $jsapi_ticket, $expires_in+10 );
+                        S ( $key_jsapi_tickett, $jsapi_ticket, $expires_in+100 );
                         break;
                     }
                 }
             }
         }
 //				push_access_token($token,$tokenIO,$tempArr['accessToken'],$expireTime);
-
+        //TODO 以后再改成第三方 暂时从官方获取卡券api_ticket
+        $url='https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token='.$access_token.'&type=wx_card';
+        $tempJson=wp_file_get_contents ( $url );
+        addWeixinLog ( "从官方获取卡券api_ticket",$tempJson  );
+        $tempArr = json_decode ( $tempJson, true );
+        if (@array_key_exists ( 'ticket', $tempArr )) {
+            S ( $key_cardapi_ticket, $tempArr['ticket'], $expires_in+100 );
+        }
         return $access_token;
     }
 
     $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' . $info ['appid'] . '&secret=' . $info ['secret'];
-	$tempJson=file_get_contents ( $url );
+	$tempJson=wp_file_get_contents ( $url );
 	addWeixinLog ( "从微信接口获取accesstoken",$tempJson  );
 	$tempArr = json_decode ( $tempJson, true );
     if (@array_key_exists ( 'access_token', $tempArr )) {
@@ -1641,16 +1649,24 @@ function get_access_token($token = '') {
             $expireTime=$expireIn+time();
         }
         S ( $key, $tempArr ['access_token'], $expireIn );
-        S($key_expire_time,$expireTime,$expireIn+10);
+        S($key_expire_time,$expireTime,$expireIn+100);
         //获取jsapi_ticket
         $url = 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=' . $access_token . '&type=jsapi';
-        $tempJson=file_get_contents ( $url );
+        $tempJson=wp_file_get_contents ( $url );
         addWeixinLog ( "从微信接口获取jsapi_ticket",$tempJson  );
         $tempArr = json_decode ( $tempJson, true );
         if (@array_key_exists ( 'ticket', $tempArr )) {
-            S ( $key_jsapi_tickett, $tempArr['ticket'], $expireIn+10 );
+            S ( $key_jsapi_tickett, $tempArr['ticket'], $expireIn+100 );
         }
 //        push_access_token($token,$tokenIO,$tempArr['access_token'],$expireTime);
+        //获取卡券api_ticket
+        $url='https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token='.$access_token.'&type=wx_card';
+        $tempJson=wp_file_get_contents ( $url );
+        addWeixinLog ( "从官方获取卡券api_ticket",$tempJson  );
+        $tempArr = json_decode ( $tempJson, true );
+        if (@array_key_exists ( 'ticket', $tempArr )) {
+            S ( $key_cardapi_ticket, $tempArr['ticket'], 7200 );
+        }
         return $access_token;
     } else {
         return 0;
@@ -1733,6 +1749,23 @@ function get_jsapi_ticket($token = '') {
     S($key,null);
     get_access_token($token);
     $res = S ( $key_jsapi_tickett );
+    if ($res !== false)
+        return $res;
+    return 0;
+}
+
+// 获取卡券api_ticket，自动带缓存功能
+function get_cardapi_ticket($token = '') {
+    empty ( $token ) && $token = get_token ();
+    $key_cardapi_ticket='carapi_ticket_'.$token;
+    get_access_token($token);
+    $res = S ( $key_cardapi_ticket );
+    if ($res !== false)
+        return $res;
+    $key = 'access_token_' . $token;
+    S($key,null);
+    get_access_token($token);
+    $res = S ( $key_cardapi_ticket );
     if ($res !== false)
         return $res;
     return 0;

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="__STATIC__/jquery-2.0.3.min.js"></script>
+    <title><php>echo empty($page_title) ? C('WEB_SITE_TITLE') : $page_title;</php></title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" href="{:SITE_URL}/favicon.ico">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        html{height: 100%;}
+        body {
+            height: 100%;;
+            line-height: 1.6;
+            font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "黑体", Arial, sans-serif;
+            font-size: 14px;
+            margin: 0;
+            text-align: center;;
+        }
+        .mainbg{
+            height: 100%;
+/*            -moz-background-size:cover;
+            -webkit-background-size:cover;
+            -o-background-size:cover;
+            background-size:cover;*/
+            background:#666 url({:ADDON_PUBLIC_PATH}/langeriebgcell.gif) repeat;
+        }
+        #header{ height: 10%;background: url({:ADDON_PUBLIC_PATH}/langerielogo.png) no-repeat center; background-size: auto 50%;}
+        #body{ height: 70%;}
+        #footer{ height: 20%;background: url({:ADDON_PUBLIC_PATH}/langerielogo.png) no-repeat center; background-size: auto 50%;}
+        .col-center-block {
+            float: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .form-signin-heading{
+            color: #d43f3a;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            // process the form
+            $('form').submit(function(event) {
+                $('#btnConsume').button('loading');
+                // get the form data
+                // there are many ways to get this data using jQuery (you can use the class or id also)
+                var formData = {
+                    'consumepwd'    : $('input[name=consumepwd]').val(),
+                    'code'          :'{$card.code}',
+                    'cardid'        :'{$card.id}'
+                };
+                // process the form
+                $.ajax({
+                    type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                    url         : "{:U('consume?id='.$mp_id)}", // the url where we want to POST
+                    data        : formData, // our data object
+                    dataType    : 'json', // what type of data do we expect back from the server
+                    encode          : true
+                })
+                    // using the done promise callback
+                        .done(function(data) {
+                            console.log(data);
+                            if(data.success){
+                                $('#divError').html('<strong>'+data.errmsg+'!</strong>  ');
+                                $('#divError').removeClass('alert-danger').addClass('alert-success').removeClass('hide').addClass('show');
+                            }else{
+                                $('#btnConsume').button('reset');
+                                $('#divError').html('<strong>错误!</strong> '+data.errmsg);
+                                $('#divError').removeClass('alert-success').addClass('alert-danger').removeClass('hide').addClass('show');
+                            }
+                            // here we will handle errors and validation messages
+                        })
+                        .fail(function(data) {
+                            $('#divError').html('<strong>错误!</strong> 服务器或网络错误，请稍后重试');
+                            $('#divError').removeClass('alert-success').addClass('alert-danger').removeClass('hide').addClass('show');
+                        });
+                event.preventDefault();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+<div class="container mainbg">
+    <div id="header">
+    </div>
+    <div id="body">
+    <form class="form-signin" action="{:U('consume?id='.$mp_id)}"  method="post">
+        <h2 class="form-signin-heading">卡券核销</h2>
+        <div class="alert alert-danger hide" id="divError" style="text-align: left;">
+            <strong>Error!</strong> A problem has been occurred while submitting your data.
+        </div>
+        <h1><strong>{$card.text}</strong></h1>
+        <input name="consumepwd" style="margin-top: 1.5em" class="form-control input-lg" placeholder="输入核销码" id="focusedInput" type="password" required>
+        <button id="btnConsume" class="btn btn-lg btn-primary btn-block btn-danger" style="margin-top: 2em" type="submit" data-loading-text="Loading...">核销</button>
+    </form>
+    </div>
+
+    <div id="footer">
+    </div>
+</div>
+</body>
+
+</html>

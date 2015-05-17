@@ -11,18 +11,19 @@
             <div id="img-content" class="rich_media_area_primary"><h2 class="rich_media_title" id="activity-name">
                 sdf </h2>
 
-                <div class="rich_media_meta_list"><em id="post-date" class="rich_media_meta rich_media_meta_text">2015-05-09</em>
-                    <em class="rich_media_meta rich_media_meta_text">we</em> <a
+                <div class="rich_media_meta_list"><em id="post-date" class="rich_media_meta rich_media_meta_text">2015-05-20</em>
+                    <em class="rich_media_meta rich_media_meta_text"></em> <!--<a
                             class="rich_media_meta rich_media_meta_link rich_media_meta_nickname"
-                            href="javascript:void(0);" id="post-user">五维微动力</a> <span
-                            class="rich_media_meta rich_media_meta_text rich_media_meta_nickname">五维微动力</span>
+                            href="javascript:void(0);" id="post-user">{$member.public_name}</a>-->
+                    <em class="rich_media_meta  rich_media_meta_nickname"  id="post-user">{$member.public_name}</em>
+                    <span class="rich_media_meta rich_media_meta_text rich_media_meta_nickname">{$member.public_name}</span>
 
                     <div id="js_profile_qrcode" class="profile_container" style="display: none;">
-                        <div class="profile_inner"><strong class="profile_nickname">五维微动力</strong> <img
+                        <div class="profile_inner"><strong class="profile_nickname">{$member.public_name}</strong> <img
                                 class="profile_avatar" id="js_profile_qrcode_img" src="" alt="">
 
                             <p class="profile_meta"><label class="profile_meta_label">微信号</label> <span
-                                    class="profile_meta_value">fivewaypower</span></p>
+                                    class="profile_meta_value">{$member.wechat}</span></p>
 
                             <p class="profile_meta"><label class="profile_meta_label">功能介绍</label> <span
                                     class="profile_meta_value">欢迎您的光临</span></p></div>
@@ -31,24 +32,16 @@
                                 class="profile_arrow arrow_in"></i>                            </span></div>
                 </div>
                 <div class="rich_media_thumb_wrp" id="media">
-                    <script>
-                        (function () {
-                            var cover = "http://mmbiz.qpic.cn/mmbiz/8N0DCyeic0iczKaJcZYdTVtpdDKc888dnTbEkZZe8MoG10IAu3dC0tlIqcZVSOL62LDZBx0dibXqn1ticQuHMGoxOQ/0?wx_fmt=jpeg";
-                            document.write('<img class="rich_media_thumb" id="js_cover" onerror="this.parentNode.removeChild(this)" data-src="' + cover + '" />');
-                        })();
-                    </script>
                     <img class="rich_media_thumb" id="js_cover" onerror="this.parentNode.removeChild(this)"
                          data-s="300,640"
                          src="http://mmbiz.qpic.cn/mmbiz/8N0DCyeic0iczKaJcZYdTVtpdDKc888dnTbEkZZe8MoG10IAu3dC0tlIqcZVSOL62LDZBx0dibXqn1ticQuHMGoxOQ/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5">
                 </div>
                 <div class="rich_media_content" id="js_content">
                     <p>
-                        <iframe class="res_iframe card_iframe js_editor_card" data-cardid="pY5Fws_wYXS9uy3WE8zAKmLNqbDg" data-num="0"
-                                data-display-src="/cgi-bin/readtemplate?t=cardticket/card_preview_tmpl&amp;logo_url=https%3A%2F%2Fmmbiz.qlogo.cn%2Fmmbiz%2F8N0DCyeic0icxScSK0RK0tXMuS2MFV7c67c52wzsibVViaM3ceZeRLd396Uvm5sDkia88ibjh01vNqgicyr5bw9NZjwEQ%2F0%3Fwx_fmt%3Djpeg&amp;brand_name=%E4%BA%94%E7%BB%B4&amp;title=%E4%BA%94%E7%BB%B4%E6%95%B0%E7%A0%8110%E5%85%83%E4%BB%A3%E9%87%91%E5%88%B8&amp;color=%2355bd47&amp;lang=zh_CN"
-                                data-src="http://mp.weixin.qq.com/bizmall/appmsgcard?action=show&amp;biz=MzAxMDQ5ODkxNQ==&amp;cardid=pY5Fws_wYXS9uy3WE8zAKmLNqbDg&amp;wechat_card_js=1#wechat_redirect"
-                                src="{: SITE_URL}/index.php?s=/addon/WxCardAlkaid/WxCardPublic/getCardFrame/cardid/pY5Fws_wYXS9uy3WE8zAKmLNqbDg.html"
+                        <iframe class="res_iframe card_iframe js_editor_card" data-cardid="{$cardid}" data-num="0"
+                                src="{: SITE_URL}/index.php?s=/addon/WxCardAlkaid/WxCardPublic/getCardFrame/cardid/{$cardid}.html"
                                 style="height: 184px;"></iframe>
-                        dsf
+                        test
                     </p>
                 </div>
                 <script type="text/javascript">
@@ -85,8 +78,37 @@
         // 通过origin属性判断消息来源地址
         if (event.origin == "{: 'http://'.SITE_DOMAIN}") {
 //            alert(event.data);    // 弹出从子页面post过来的信息
-            if(event.data!='obtainCard'){
-                return;
+            if(event.data=='obtainCard'){
+                if(userinfo.subscribe<=0){
+                    alert("请先关注'{$mp_name}'官方微信账号再领取卡券");
+                    return;
+                }else{
+                    $.ajax({
+                        method: "POST",
+                        url: "{: SITE_URL}/index.php?s=/home/weixin/cardInfoForAdd/id/{$mp_id}.html",
+                        dataType:"json",
+                        data: { card_id: '{$cardid}' }
+                    })
+                            .done(function( data ) {
+//                                alert(data);
+//                                var cardlist=new Array();
+//                                cardlist.push(data);
+//                                alert(data.card_ext);
+                                wx.addCard({
+                                    cardList: [{
+                                        cardId: '{$cardid}',
+                                        cardExt: data.card_ext
+                                    }], // 需要添加的卡券列表
+                                    success: function (res) {
+//                                        var cardList = res.cardList; // 添加的卡券列表信息
+//                                        alert("addcard success:"+res.cardList[0].card_id);
+                                    }
+                                });
+                            })
+                            .fail(function(data) {
+                                alert('服务器或网络错误，请稍后重试');
+                            });
+                }
             }
 
         }
