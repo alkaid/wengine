@@ -1572,7 +1572,7 @@ function get_access_token($token = '') {
         curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, true );
         $tempJson = curl_exec ( $ch );
 		curl_close ( $ch );
-		addWeixinLog ( "从第三方接口获取accesstoken",$tempJson  );
+		addWeixinLog ( "从第三方接口获取accesstoken,".$tokenIO['input_url'],$tempJson  );
 		$tempArr = json_decode ( $tempJson, true );
         $thridSuccess=false;
         $expires_in=-1;
