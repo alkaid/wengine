@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
-Source Server Version : 50538
+Source Server         : local_mysql
+Source Server Version : 50540
 Source Host           : localhost:3306
 Source Database       : weplt
 
 Target Server Type    : MYSQL
-Target Server Version : 50538
+Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2015-05-18 02:30:26
+Date: 2015-05-18 18:23:41
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -2953,12 +2953,13 @@ CREATE TABLE `wplt_wxcard` (
   `data` text NOT NULL COMMENT '卡券数据',
   `changes` text COMMENT '改动项数据',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of wplt_wxcard
 -- ----------------------------
 INSERT INTO `wplt_wxcard` VALUES ('1', '五维数码1元代金券', 'pY5Fws4JV5pKaXnTxrbZeojhj8CA', 'CARD_STATUS_NOT_VERIFY', 'gh_99be645d3d8f', '{\"errcode\":0,\"errmsg\":\"ok\",\"card\":{\"card_type\":\"CASH\",\"cash\":{\"base_info\":{\"id\":\"pY5Fws4JV5pKaXnTxrbZeojhj8CA\",\"logo_url\":\"https:\\/\\/mmbiz.qlogo.cn\\/mmbiz\\/8N0DCyeic0icxScSK0RK0tXMuS2MFV7c67c52wzsibVViaM3ceZeRLd396Uvm5sDkia88ibjh01vNqgicyr5bw9NZjwEQ\\/0?wx_fmt=jpeg\",\"code_type\":\"CODE_TYPE_TEXT\",\"brand_name\":\"五维\",\"title\":\"五维数码1元代金券\",\"sub_title\":\"全国专柜适用\",\"date_info\":{\"type\":1,\"begin_timestamp\":1427817600,\"end_timestamp\":1451577600},\"color\":\"#d54036\",\"notice\":\"使用时请出示给收银员MM\",\"description\":\"此券消费任意商品产品满一百元即可直接抵扣1元\",\"location_id_list\":[],\"get_limit\":100,\"can_share\":false,\"can_give_friend\":false,\"use_custom_code\":false,\"bind_openid\":false,\"status\":\"CARD_STATUS_VERIFY_OK\",\"sku\":{\"quantity\":89999996,\"total_quantity\":90000000},\"create_time\":1431780139,\"update_time\":1431780139,\"custom_url_name\":\"立即使用\",\"custom_url\":\"http:\\/\\/wechatengine.com\\/wei\\/plt\\/wengine\\/index.php?s=\\/addon\\/LangerieCard1\\/LangerieCardPublic\\/consume\\/id\\/109.html\",\"js_oauth_uin_list\":[]},\"reduce_cost\":100}}}', null);
+INSERT INTO `wplt_wxcard` VALUES ('2', '10元代金券', 'pn0s-t0Qd6eiXDtNSSVQ6Vcjd7nA', 'CARD_STATUS_VERIFY_OK', 'gh_9a02b12868ff', '{\"errcode\":0,\"errmsg\":\"ok\",\"card\":{\"card_type\":\"CASH\",\"cash\":{\"base_info\":{\"id\":\"pn0s-t0Qd6eiXDtNSSVQ6Vcjd7nA\",\"logo_url\":\"https:\\/\\/mmbiz.qlogo.cn\\/mmbiz\\/MKEdQ52IP2NiafI3znI4lAjWk2DKkxZEYCHbJbKibPicVc9pFEVPFlCjjoJt4hfiaGMjvxJ5Q7DjE4HE94oeiaib0Sibw\\/0?wx_fmt=jpeg\",\"code_type\":\"CODE_TYPE_TEXT\",\"brand_name\":\"兰卓丽\",\"title\":\"10元代金券\",\"sub_title\":\"全国专柜适用\",\"date_info\":{\"type\":1,\"begin_timestamp\":1431878400,\"end_timestamp\":1454083200},\"color\":\"#55bd47\",\"notice\":\"使用时请出示给收银员MM\",\"service_phone\":\"400-889-9925\",\"description\":\"适用于全国兰卓丽直营专柜及门店，\\r消费任意商品即可直接抵扣10元，每笔消费仅限使用一张代金券.2016年1月30日前均可使用.\",\"location_id_list\":[],\"get_limit\":1,\"can_share\":false,\"can_give_friend\":false,\"use_custom_code\":false,\"bind_openid\":false,\"status\":\"CARD_STATUS_VERIFY_OK\",\"sku\":{\"quantity\":90000000,\"total_quantity\":90000000},\"create_time\":1431919488,\"update_time\":1431942876,\"custom_url_name\":\"立即使用\",\"custom_url\":\"http:\\/\\/weixin.maniform.cn\\/wei\\/plt\\/wengine\\/index.php?s=\\/addon\\/LangerieCard1\\/LangerieCardPublic\\/consume\\/id\\/110.html\",\"js_oauth_uin_list\":[]},\"reduce_cost\":1000}}}', null);
 
 -- ----------------------------
 -- Table structure for wplt_youaskservice_behavior
