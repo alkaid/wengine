@@ -21,7 +21,7 @@
     var userinfo={$user};
 //    alert(userinfo.nickname);
     var currurl=window.location.href;
-    var jsApiList=["addCard","chooseCard","openCard","chooseImage"];
+    var jsApiList=["addCard","chooseCard","openCard","chooseImage","onMenuShareTimeline","onMenuShareAppMessage"];
     $.ajax({
     method: "POST",
     url: "{: SITE_URL}/index.php?s=/home/weixin/jsconfig/id/{$mp_id}.html",
@@ -41,6 +41,7 @@
                         success: function(res) {
                             // 以键值对的形式返回，可用的api值true，不可用为false
                             // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+                            <block name="onWeixinReady"></block>
                         }
                     });
                 });
