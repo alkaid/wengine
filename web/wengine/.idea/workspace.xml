@@ -62,8 +62,8 @@
       <file leaf-file-name="LangerieCardPublicController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCardPublicController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4133" max-vertical-offset="4636">
-              <caret line="210" column="51" selection-start-line="210" selection-start-column="51" selection-end-line="210" selection-end-column="51" />
+            <state vertical-scroll-proportion="-13.964286" vertical-offset="3865" max-vertical-offset="4636">
+              <caret line="226" column="13" selection-start-line="226" selection-start-column="13" selection-end-line="226" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -72,8 +72,8 @@
       <file leaf-file-name="article2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/article2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.7815127" vertical-offset="5898" max-vertical-offset="7011">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            <state vertical-scroll-proportion="-2.4076335" vertical-offset="6270" max-vertical-offset="7011">
+              <caret line="247" column="83" selection-start-line="247" selection-start-column="83" selection-end-line="247" selection-end-column="83" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
@@ -153,8 +153,6 @@
                 <element signature="n#style#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#strong#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#br#0;n#section#1;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#2;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
@@ -225,9 +223,9 @@
         <option value="$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/article1.html" />
         <option value="$PROJECT_DIR$/Addons/WxCardAlkaid/View/default/WxCardPublic/getCardFrame.html" />
         <option value="$PROJECT_DIR$/Addons/WxCardAlkaid/Controller/WxCardPublicController.class.php" />
-        <option value="$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCardPublicController.class.php" />
         <option value="$PROJECT_DIR$/Addons/LangerieCard1/View/default/Public/rich.css" />
         <option value="$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/article2.html" />
+        <option value="$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCardPublicController.class.php" />
       </list>
     </option>
   </component>
@@ -279,6 +277,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -719,7 +718,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -812,7 +810,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2353823" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23913044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961586" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1199,14 +1197,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCardPublicController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4133" max-vertical-offset="4636">
-          <caret line="210" column="51" selection-start-line="210" selection-start-column="51" selection-end-line="210" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/default/Weixin/jssdk.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="1482">
@@ -1215,10 +1205,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCardPublicController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.964286" vertical-offset="3865" max-vertical-offset="4636">
+          <caret line="226" column="13" selection-start-line="226" selection-start-column="13" selection-end-line="226" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/article2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.7815127" vertical-offset="5898" max-vertical-offset="7011">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        <state vertical-scroll-proportion="-2.4076335" vertical-offset="6270" max-vertical-offset="7011">
+          <caret line="247" column="83" selection-start-line="247" selection-start-column="83" selection-end-line="247" selection-end-column="83" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
@@ -1298,8 +1296,6 @@
             <element signature="n#style#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#strong#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#br#0;n#section#1;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#2;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
