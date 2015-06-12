@@ -1,0 +1,364 @@
+<extend name="Weixin/jssdk" />
+<block name="head">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<link href="{:ADDON_PUBLIC_PATH}/rich.css?v={:SITE_VERSION}" rel="stylesheet" type="text/css">
+<style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}
+.video-wrapper {
+    height: 0;
+    padding-bottom: 60.25%; /* 16:9  56.25% */
+    position: relative;
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;height: 100%;
+}
+</style>
+</block>
+<block name="onWeixinReady">
+    wx.onMenuShareTimeline({
+    title: '分享你的“自由性感”，赢iPhone6和兰卓丽超人气新品！', // 分享标题
+    link: currurl, // 分享链接
+        imgUrl: 'http://{:SITE_DOMAIN.ADDON_PUBLIC_PATH}/article2/sharethumb.jpg', // 分享图标
+    success: function () {
+    // 用户确认分享后执行的回调函数
+    },
+    cancel: function () {
+    // 用户取消分享后执行的回调函数
+    }
+    });
+    wx.onMenuShareAppMessage({
+    title: '分享你的“自由性感”，赢iPhone6和兰卓丽超人气新品！', // 分享标题
+    desc: '用短视频show出你的生活中的性感时刻，iPhone6和百件新品等你来拿！现在购买无钢圈产品可享立减50大优惠，戳戳手指领取吧@', // 分享描述
+    link: currurl, // 分享链接
+    imgUrl: 'http://{:SITE_DOMAIN.ADDON_PUBLIC_PATH}/article2/sharethumb.jpg', // 分享图标
+    success: function () {
+    // 用户确认分享后执行的回调函数
+    },
+    cancel: function () {
+    // 用户取消分享后执行的回调函数
+    }
+    });
+</block>
+<block name="body">
+<div id="js_article" class="rich_media">
+    <div id="js_top_ad_area" class="top_banner"></div>
+    <div class="rich_media_inner">
+        <div id="page-content">
+            <div id="img-content" class="rich_media_area_primary"><h2 class="rich_media_title" id="activity-name">
+                分享你的“自由性感”，赢iPhone6和&nbsp;兰卓丽超人气新品！</h2>
+
+                <div class="rich_media_meta_list"><em id="post-date" class="rich_media_meta rich_media_meta_text">2015-06-12</em>
+                    <em class="rich_media_meta rich_media_meta_text"></em> <!--<a
+                            class="rich_media_meta rich_media_meta_link rich_media_meta_nickname"
+                            href="javascript:void(0);" id="post-user">{$member.public_name}</a>-->
+                    <em class="rich_media_meta  rich_media_meta_nickname"  id="post-user">{$member.public_name}</em>
+                    <span class="rich_media_meta rich_media_meta_text rich_media_meta_nickname">{$member.public_name}</span>
+
+                    <div id="js_profile_qrcode" class="profile_container" style="display: none;">
+                        <div class="profile_inner"><strong class="profile_nickname">{$member.public_name}</strong> <img
+                                class="profile_avatar" id="js_profile_qrcode_img" src="" alt="">
+
+                            <p class="profile_meta"><label class="profile_meta_label">微信号</label> <span
+                                    class="profile_meta_value">{$member.wechat}</span></p>
+
+                            <p class="profile_meta"><label class="profile_meta_label">功能介绍</label> <span
+                                    class="profile_meta_value">欢迎您的光临</span></p></div>
+                        <span class="profile_arrow_wrp" id="js_profile_arrow_wrp">                                <i
+                                class="profile_arrow arrow_out"></i>                                <i
+                                class="profile_arrow arrow_in"></i>                            </span></div>
+                </div>
+
+                <div class="rich_media_content" id="js_content">
+                    <section
+                            style="border: 0px; box-sizing: border-box; width: 100%; margin: 0.8em 0px 0.2em; clear: both; padding: 0px;"
+                            class="tn-Powered-by-XIUMI"><img
+                            style="box-sizing: border-box; width: 100% !important; visibility: visible !important; height: auto !important;"
+                            class="tn-Powered-by-XIUMI" data-type="jpeg" data-ratio="0.5138339920948617" data-w=""
+                            _width="100%"
+                            src="{:ADDON_PUBLIC_PATH}/article2/0.png">
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <p><br></p>
+                    <section style="border: 0px; margin: 0.8em 0px 0.5em; box-sizing: border-box; padding: 0px;"
+                             class="tn-Powered-by-XIUMI">
+                        <section
+                                style="padding: 0.7em 0px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(63, 71, 78); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(63, 71, 78); font-size: 100%; font-family: inherit; font-weight: bold; text-align: center; text-decoration: inherit; color: rgb(37, 30, 33); box-sizing: border-box;"
+                                class="tn-Powered-by-XIUMI">
+                            <section style="font-style: italic; box-sizing: border-box;" class="tn-Powered-by-XIUMI">
+                                你渴望被宠爱，却总是被伤害，<br class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"></section>
+                            <section style="font-style: italic; box-sizing: border-box;" class="tn-Powered-by-XIUMI">
+                                你为了追逐梦想，逆着风飞翔。<br class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"></section>
+                            <section style="font-style: italic; box-sizing: border-box;" class="tn-Powered-by-XIUMI">
+                                这个城市每天都在上演，最鲜活的故事，<br class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">
+                            </section>
+                            <section style="font-style: italic; box-sizing: border-box;" class="tn-Powered-by-XIUMI">
+                                什么样的女孩，最自由性感？
+                            </section>
+                            <section style="font-style: italic; box-sizing: border-box;" class="tn-Powered-by-XIUMI">
+                                什么样的人生，才是自<span
+                                    style="color: inherit; font-family: inherit; font-weight: inherit; text-align: inherit; text-decoration: inherit; line-height: 1.6; box-sizing: border-box;"
+                                    class="tn-Powered-by-XIUMI">在诱人？ </span></section>
+                            <section style="font-style: italic; box-sizing: border-box;" class="tn-Powered-by-XIUMI">
+                                快来点击 “奔跑吧，姐妹” 微电影，
+                            </section>
+                            <section style="font-style: italic; box-sizing: border-box;" class="tn-Powered-by-XIUMI">
+                                分享两个女孩的性<span
+                                    style="color: inherit; font-family: inherit; font-weight: inherit; text-align: inherit; text-decoration: inherit; line-height: 1.6; box-sizing: border-box;"
+                                    class="tn-Powered-by-XIUMI">感蜕变吧！ </span></section>
+                        </section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                   <!-- <section
+                            style="margin: 0.8em 0.3em; font-size: 1em; line-height: 1.4; text-align: center; box-sizing: border-box; padding: 0px; border: 0px;"
+                            xmlns="http://www.w3.org/1999/html" class="tn-Powered-by-XIUMI">-->
+                        <section style="display: none; opacity: 0.5; box-sizing: border-box;"
+                                 class="tn-Powered-by-XIUMI">
+                            <section
+                                    style="display: inline-block; padding: 0.4em; font-size: 1em; border-radius: 0.5em; color: white; box-sizing: border-box; background-color: black;"
+                                    class="tn-Powered-by-XIUMI">点击边框编辑视频
+                            </section>
+                            <section
+                                    style="width: 0px; margin: 0px auto; border-top-width: 6px; border-top-style: solid; border-top-color: black; border-left-width: 6px; border-left-style: solid; border-left-color: transparent; border-right-width: 6px; border-right-style: solid; border-right-color: transparent; box-sizing: border-box;"
+                                    class="tn-Powered-by-XIUMI"></section>
+                        </section>
+                        <img style="width: 100% !important; margin: 0px auto -0.5em; box-sizing: border-box; visibility: visible !important; height: auto !important;"
+                             class="tn-Powered-by-XIUMI" data-type="jpeg" data-ratio="0.2056451612903226" data-w="496"
+                             _width="100%"
+                             src="{:ADDON_PUBLIC_PATH}/article2/1.png">
+                       <!-- <section
+                                style="padding: 0.8em; width: 100%; height: 15em; box-shadow: rgb(204, 204, 204) 0px 0.1em 0.3em; box-sizing: border-box; background-color: rgb(0, 0, 0);"
+                                class="tn-Powered-by-XIUMI">-->
+                        <br  /><br  />
+                            <p><span style="font-size: 18px;">友情提示：视频请在WIFI环境下观看</span></p><br  />
+                    <div class="video-wrapper">
+                            <iframe class="video_iframe" id style="   z-index:1; " frameborder="0"
+                                    src="http://v.qq.com/iframe/player.html?vid=b0156w544p2&amp;auto=0" allowfullscreen=""></iframe>
+                    </div>
+                        <!--</section>-->
+                        <img style="width: 100% !important; box-sizing: border-box; visibility: visible !important; height: auto !important;"
+                             class="tn-Powered-by-XIUMI" data-type="jpeg" data-ratio="0.09274193548387097" data-w="496"
+                             _width="100%"
+                             src="{:ADDON_PUBLIC_PATH}/article2/2.png">
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                   <!-- </section>-->
+                    <section
+                            style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit; box-sizing: border-box; padding: 0px;"
+                            class="tn-Powered-by-XIUMI">
+                        <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">自由，就是从心出发，努力去实现，就是最性感的状态
+                            。<span style="color: inherit; font-family: inherit; font-size: 1em; font-weight: inherit; line-height: 1.6; text-decoration: inherit; box-sizing: border-box;"
+                                   class="tn-Powered-by-XIUMI">兰卓丽与你一起，追求专属于你的“自由性感”。 </span></section>
+                        <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">品牌代言人选拔大赛现在开始，<span
+                                style="color: inherit; font-family: inherit; font-size: 1em; font-weight: inherit; text-decoration: inherit; line-height: 1.6; box-sizing: border-box;"
+                                class="tn-Powered-by-XIUMI">诚邀你和你的朋友们，一起show出生活中最性感的时刻</span><span
+                                style="color: inherit; font-family: inherit; font-size: 1em; font-weight: inherit; text-decoration: inherit; line-height: 1.6; box-sizing: border-box;"
+                                class="tn-Powered-by-XIUMI">。心动大奖等你哦！</span></section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <section style="border: 0px; margin: 0.8em 0px 0.5em; box-sizing: border-box; padding: 0px;"
+                             class="tn-Powered-by-XIUMI">
+                        <section
+                                style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(249, 87, 160); line-height: 1; font-size: 1em; font-family: inherit; font-weight: inherit; text-align: center; text-decoration: inherit; color: rgb(255, 255, 255);"
+                                class="tn-Powered-by-XIUMI">
+                            <section
+                                    style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; font-size: 1em; font-family: inherit; box-sizing: border-box; word-wrap: break-word !important; background-color: rgb(249, 87, 160);"
+                                    class="tn-Powered-by-XIUMI">
+                                <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">1</section>
+                            </section>
+                            <span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4; font-size: 1em; word-wrap: break-word !important; box-sizing: border-box;"
+                                  class="tn-Powered-by-XIUMI"><span
+                                    style="max-width: 100%; font-size: 1em; font-family: inherit; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(249, 87, 160); box-sizing: border-box; word-wrap: break-word !important;"
+                                    class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI"
+                                                                         style="box-sizing: border-box;">最赞奖品
+                            </section></span></span></section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <section
+                            style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit; box-sizing: border-box; padding: 0px;"
+                            class="tn-Powered-by-XIUMI">
+                        <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">一等奖，奖品：iPhone
+                            6一部及价值3000元兰卓丽内衣代金券<br class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">
+                        </section>
+                        <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">二等奖，奖品：ipad
+                            mini3一台及价值2000元兰卓丽内衣代金券<br class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">
+                        </section>
+                        <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">三等奖，奖品：价值1000元兰卓丽内衣代金券。<br
+                                class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"></section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <section style="border: 0px; margin: 0.8em 0px 0.5em; box-sizing: border-box; padding: 0px;"
+                             class="tn-Powered-by-XIUMI">
+                        <section
+                                style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(249, 87, 160); line-height: 1; font-size: 1em; font-family: inherit; font-weight: inherit; text-align: center; text-decoration: inherit; color: rgb(255, 255, 255);"
+                                class="tn-Powered-by-XIUMI">
+                            <section
+                                    style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; font-size: 1em; font-family: inherit; box-sizing: border-box; word-wrap: break-word !important; background-color: rgb(249, 87, 160);"
+                                    class="tn-Powered-by-XIUMI">
+                                <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">2</section>
+                            </section>
+                            <span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4; font-size: 1em; word-wrap: break-word !important; box-sizing: border-box;"
+                                  class="tn-Powered-by-XIUMI"><span
+                                    style="max-width: 100%; font-size: 1em; font-family: inherit; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(249, 87, 160); box-sizing: border-box; word-wrap: break-word !important;"
+                                    class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI"
+                                                                         style="box-sizing: border-box;">参与方式
+                            </section></span></span></section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <section
+                            style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; font-weight: inherit; text-align: justify; text-decoration: inherit; color: rgb(37, 30, 33); box-sizing: border-box; padding: 0px;"
+                            class="tn-Powered-by-XIUMI">
+                        <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">美拍视频呈现出你在生活中捕捉到的性感时刻，<span
+                                style="font-family: inherit; font-weight: inherit; text-decoration: inherit; line-height: 1.6; box-sizing: border-box;"
+                                class="tn-Powered-by-XIUMI">发布视频，添加话题#自由性感兰卓丽# ，</span><span
+                                style="font-family: inherit; font-weight: inherit; text-decoration: inherit; line-height: 1.6; box-sizing: border-box;"
+                                class="tn-Powered-by-XIUMI">并<span
+                                style="font-family: inherit; font-weight: inherit; text-decoration: inherit; line-height: 1.6; color: rgb(249, 87, 160); box-sizing: border-box;"
+                                class="tn-Powered-by-XIUMI">@兰卓丽Langerie</span>官方微博，即可参与评选。</span></section>
+                        <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"><br
+                                class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"></section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <section style="border: 0px; margin: 0.5em 0px; padding: 0px; box-sizing: border-box;"
+                             class="tn-Powered-by-XIUMI">
+                        <section
+                                style="width: 100%; margin-bottom: -4.2em; display: inline-block; vertical-align: bottom; font-size: 1em; font-family: inherit; font-style: inherit; font-weight: inherit; text-align: center; text-decoration: inherit; color: rgb(255, 255, 255); border-color: rgb(249, 87, 160); box-sizing: border-box;"
+                                class="tn-Powered-by-XIUMI">
+                            <section style="padding: 5px; box-sizing: border-box; background-color: rgb(249, 87, 160);"
+                                     class="tn-Powered-by-XIUMI">
+                                <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">转发有好礼</section>
+                            </section>
+                            <section style="width: 100%; box-sizing: border-box;" class="tn-Powered-by-XIUMI">
+                                <section
+                                        style="width: 0px; float: left; border-right-width: 4px; border-right-style: solid; border-right-color: rgb(249, 87, 160); border-top-width: 4px; border-top-style: solid; border-top-color: rgb(249, 87, 160); border-left-width: 4px !important; border-left-style: solid !important; border-left-color: transparent !important; border-bottom-width: 4px !important; border-bottom-style: solid !important; border-bottom-color: transparent !important; box-sizing: border-box;"
+                                        class="tn-Powered-by-XIUMI"></section>
+                                <section
+                                        style="width: 0px; float: right; border-left-width: 4px; border-left-style: solid; border-left-color: rgb(249, 87, 160); border-top-width: 4px; border-top-style: solid; border-top-color: rgb(249, 87, 160); border-right-width: 4px !important; border-right-style: solid !important; border-right-color: transparent !important; border-bottom-width: 4px !important; border-bottom-style: solid !important; border-bottom-color: transparent !important; box-sizing: border-box;"
+                                        class="tn-Powered-by-XIUMI"></section>
+                            </section>
+                        </section>
+                        <section style="width: 100%; padding: 0px 8px; box-sizing: border-box;"
+                                 class="tn-Powered-by-XIUMI">
+                            <section
+                                    style="border: 1px solid rgb(204, 204, 204); padding: 5em 5px 1em; width: 100%; border-radius: 0.3em; -webkit-box-shadow: rgba(159, 160, 160, 0.498039) 0px 0px 10px; box-shadow: rgba(159, 160, 160, 0.498039) 0px 0px 10px; font-size: 1em; font-family: inherit; font-weight: inherit; text-decoration: inherit; color: rgb(72, 72, 72); box-sizing: border-box;"
+                                    class="tn-Powered-by-XIUMI">
+                                <section style="box-sizing: border-box;" class="tn-Powered-by-XIUMI">
+                                    点击右上角...分享活动到朋友圈，即可参与抽奖，<strong><span
+                                        style="color: rgb(249, 87, 160); box-sizing: border-box;"
+                                        class="tn-Powered-by-XIUMI">每天5件新品文胸，送足20天！</span></strong><span
+                                        style="color: rgb(37, 30, 33); box-sizing: border-box;"
+                                        class="tn-Powered-by-XIUMI"> </span>小心惊喜随时砸到你！
+                                </section>
+                                <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">
+                                    转发后将朋友圈页面截图与你的手机号码发送至官方微信，即可参与！<br class="tn-Powered-by-XIUMI"
+                                                                       style="box-sizing: border-box;"></section>
+                            </section>
+                        </section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <section style="border: 0px; margin: 0.8em 0px 0px; box-sizing: border-box; padding: 0px;"
+                             class="tn-Powered-by-XIUMI">
+                        <section
+                                style="width: 100%; padding: 5px; font-size: 1em; font-family: inherit; font-weight: inherit; text-align: inherit; text-decoration: inherit; border-color: rgb(249, 110, 87); box-sizing: border-box; background-color: rgba(145, 144, 144, 0.117647);"
+                                class="tn-Powered-by-XIUMI"><span
+                                style="float: left; width: 5%; font-size: 3em; line-height: 0.8em; display: inline-block; font-weight: bolder; vertical-align: top; box-sizing: border-box;"
+                                class="tn-Powered-by-XIUMI">“</span> <span
+                                style="font-size: 1em; width: 88%; line-height: 1.2; margin-top: 0.5em; margin-left: 1.2em; display: inline-block; vertical-align: middle; font-family: inherit; box-sizing: border-box;"
+                                class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI"
+                                                                     style="box-sizing: border-box;">
+                            现在到专柜购买无钢圈家族文胸，更可享受最新优惠立减50元<span
+                                style="font-family: inherit; font-size: 1em; line-height: 1.2; font-weight: inherit; text-align: inherit; text-decoration: inherit; box-sizing: border-box;"
+                                class="tn-Powered-by-XIUMI">！戳戳手指即刻领取！<br class="tn-Powered-by-XIUMI"
+                                                                          style="box-sizing: border-box;"></span>
+                        </section></span></section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <section
+                            style="border: 0px; box-sizing: border-box; width: 100%; margin: 0.8em 0px 0.2em; clear: both; padding: 0px;"
+                            class="tn-Powered-by-XIUMI">
+
+                        <div class="alert alert-danger hide" id="divError" style="text-align: left;">
+                            <strong>Error!</strong> A problem has been occurred while submitting your data.
+                        </div>
+                        <iframe class="res_iframe card_iframe js_editor_card" data-cardid="{$cardid}" data-num="0"
+                                src="{: SITE_URL}/index.php?s=/addon/WxCardAlkaid/WxCardPublic/getCardFrame/cardid/{$cardid}.html"
+                                style="height: 184px;"></iframe>
+
+
+
+
+
+
+
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <section
+                            style="border: 0px; box-sizing: border-box; width: 100%; margin: 0.8em 0px 0.2em; clear: both; padding: 0px;"
+                            class="tn-Powered-by-XIUMI">
+                        <img
+                            style="box-sizing: border-box; width: 100% !important; visibility: visible !important; height: auto !important;"
+                            class="tn-Powered-by-XIUMI" data-type="jpeg" data-ratio="0.549407114624506" data-w=""
+                            _width="100%"
+                            src="{:ADDON_PUBLIC_PATH}/article2/3.png">
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <p><br></p>
+
+                    <p><br></p></div>
+            </div>
+            <div class="rich_media_area_extra">
+                <div class="mpda_bottom_container" id="js_bottom_ad_area"></div>
+                <div id="js_iframetest" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener('message', function(event){
+        // 通过origin属性判断消息来源地址
+        if (event.origin == "{: 'http://'.SITE_DOMAIN}") {
+//            alert(event.data);    // 弹出从子页面post过来的信息
+            if(event.data=='obtainCard'){
+                if(userinfo.subscribe<=0){
+//                    alert("请先关注'{$member.public_name}'官方微信账号再领取卡券");
+                    $('#divError').html("<strong>请先关注'{$member.public_name}'官方微信账号再领取卡券</strong>  ");
+                    $('#divError').removeClass('alert-danger').addClass('alert-success').removeClass('hide').addClass('show');
+                    return;
+                }else{
+                    $.ajax({
+                        method: "POST",
+                        url: "{: SITE_URL}/index.php?s=/home/weixin/cardInfoForAdd/id/{$mp_id}.html",
+                        dataType:"json",
+                        data: { card_id: '{$cardid}' }
+                    })
+                            .done(function( data ) {
+                                $('#divError').removeClass('show').addClass('hide');
+//                                alert(data);
+//                                var cardlist=new Array();
+//                                cardlist.push(data);
+//                                alert(data.card_ext);
+                                wx.addCard({
+                                    cardList: [{
+                                        cardId: '{$cardid}',
+                                        cardExt: data.card_ext
+                                    }], // 需要添加的卡券列表
+                                    success: function (res) {
+//                                        var cardList = res.cardList; // 添加的卡券列表信息
+//                                        alert("addcard success:"+res.cardList[0].card_id);
+                                    }
+                                });
+                            })
+                            .fail(function(data) {
+                                $('#divError').html("<strong>服务器或网络错误，请稍后重试</strong>  ");
+                                $('#divError').removeClass('alert-success').addClass('alert-danger').removeClass('hide').addClass('show');
+//                                alert('服务器或网络错误，请稍后重试');
+                            });
+                }
+            }
+
+        }
+    }, false);
+</script>
+</block>
+</html>
