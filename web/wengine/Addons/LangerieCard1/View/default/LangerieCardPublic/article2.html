@@ -216,11 +216,77 @@
                                 style="font-family: inherit; font-weight: inherit; text-decoration: inherit; line-height: 1.6; box-sizing: border-box;"
                                 class="tn-Powered-by-XIUMI">并<span
                                 style="font-family: inherit; font-weight: inherit; text-decoration: inherit; line-height: 1.6; color: rgb(249, 87, 160); box-sizing: border-box;"
-                                class="tn-Powered-by-XIUMI">@兰卓丽Langerie</span>官方微博，即可参与评选。</span></section>
+                                class="tn-Powered-by-XIUMI">@兰卓丽Langerie</span>官方微博，即可参与评选。如下图：</span></section>
                         <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"><br
                                 class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"></section>
                         <section style="width: 0px; height: 0px; clear: both;"></section>
                     </section>
+                    <div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                        <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice"
+                             tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)"
+                             template-path="/templates/parts">
+                            <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+                            <div class="tn-page ng-scope"
+                                 ng-include="(page.templateId) | templateIdToPath: templatePath">
+                                <fieldset style="border: none; margin: 0.5em 0; padding: 0 0.5em" class="ng-scope">
+                                    <section style="-webkit-box-shadow:0 0 10px rgba(159, 160, 160, 0.5);
+                  -moz-box-shadow:0 0 10px rgba(159, 160, 160, 0.5);
+                  box-shadow:0 0 10px rgba(159, 160, 160, 0.5);  padding: 10px;
+                  width: 65%; display: inline-block;vertical-align: top">
+                                        <section style="-webkit-box-shadow:inset 0 0 10px rgba(0, 0, 0, 0.29);
+                          -moz-box-shadow:inset 0 0 10px rgba(0, 0, 0, 0.29);
+                          box-shadow:inset 0 0 10px rgba(0, 0, 0, 0.29);  padding: 7px"><img style="box-sizing: border-box; float: left;
+              width: 100%;
+              height: auto !important; margin: 0;
+              text-align: start"
+                                                                                             src="{:ADDON_PUBLIC_PATH}/article2/sample1.png"
+                                                                                             tn-page-editable="img0"
+                                                                                             tn-page-editable-type="image"
+                                                                                             ng-src="{:ADDON_PUBLIC_PATH}/article2/sample1.png"
+                                                                                             class="ng-scope tn-page-editable">
+                                            <section style="clear: both"></section>
+                                        </section>
+                                    </section>
+                                    <section
+                                            style="width: 29%; margin-left: 4%; display: inline-block;vertical-align:bottom">
+                                        <section
+                                                style="display: inline-block; border-bottom-width: 1px; border-bottom-style: solid; border-color: black; font-size: 1.2em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: left; text-decoration: inherit; color: black; background-color: transparent;"
+                                                tn-page-editable="richtext0" tn-not-editable-attr="backgroundColor"
+                                                ng-bind-html="eo.text | eol2br | unsafe"
+                                                class="tn-rich-text-content ng-scope tn-page-editable ng-binding"
+                                                tn-page-editable-type="ed-type-rich-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor),
+  'background-color': (eo.backgroundColor || theme.majorColor),
+  'border-color'    : (eo.borderColor || theme.majorColor)
+} ">
+                                            <section>发布视频</section>
+                                        </section>
+                                        <section
+                                                style="width: 100%; margin-top: 0.2em; margin-bottom: 15px; font-size: 0.9em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: left; text-decoration: inherit; color: rgba(0, 0, 0, 0.611765);"
+                                                tn-page-editable="text1" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe" class="ng-scope tn-page-editable ng-binding">
+                                            <section>添加话题、</section>
+                                            <section>@兰卓丽langerie<br></section>
+                                        </section>
+                                    </section>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+
                     <section style="border: 0px; margin: 0.5em 0px; padding: 0px; box-sizing: border-box;"
                              class="tn-Powered-by-XIUMI">
                         <section
@@ -258,6 +324,39 @@
                         </section>
                         <section style="width: 0px; height: 0px; clear: both;"></section>
                     </section>
+
+                    <div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                        <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border: none; margin: 0.5em 0; padding: 0 0.5em" class="ng-scope"><section style="-webkit-box-shadow:0 0 10px rgba(159, 160, 160, 0.5);
+                  -moz-box-shadow:0 0 10px rgba(159, 160, 160, 0.5);
+                  box-shadow:0 0 10px rgba(159, 160, 160, 0.5);  padding: 10px;
+                  width: 65%; display: inline-block;vertical-align: top"><section style="-webkit-box-shadow:inset 0 0 10px rgba(0, 0, 0, 0.29);
+                          -moz-box-shadow:inset 0 0 10px rgba(0, 0, 0, 0.29);
+                          box-shadow:inset 0 0 10px rgba(0, 0, 0, 0.29);  padding: 7px"><img style="box-sizing: border-box; float: left;
+              width: 100%;
+              height: auto !important; margin: 0;
+              text-align: start" src="{:ADDON_PUBLIC_PATH}/article2/sample2.png" tn-page-editable="img0" tn-page-editable-type="image" ng-src="{:ADDON_PUBLIC_PATH}/article2/sample2.png" class="ng-scope tn-page-editable"><section style="clear: both"></section></section></section><section style="width: 29%; margin-left: 4%; display: inline-block;vertical-align:bottom"><section style="display: inline-block; border-bottom-width: 1px; border-bottom-style: solid; border-color: black; font-size: 1.2em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: left; text-decoration: inherit; color: black; background-color: transparent;" tn-page-editable="richtext0" tn-not-editable-attr="backgroundColor" ng-bind-html="eo.text | eol2br | unsafe" class="tn-rich-text-content ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-rich-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor),
+  'background-color': (eo.backgroundColor || theme.majorColor),
+  'border-color'    : (eo.borderColor || theme.majorColor)
+} "><section>转发截图</section></section><section style="width: 100%; margin-top: 0.2em; margin-bottom: 15px; font-size: 0.9em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: left; text-decoration: inherit; color: rgba(0, 0, 0, 0.611765);" tn-page-editable="text1" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe" class="ng-scope tn-page-editable ng-binding"><section>与你的手机号一起发送给我们！ </section></section></section></fieldset></div></div>
+                    </div>
+
+
+
                     <section style="border: 0px; margin: 0.8em 0px 0px; box-sizing: border-box; padding: 0px;"
                              class="tn-Powered-by-XIUMI">
                         <section

@@ -72,8 +72,8 @@
       <file leaf-file-name="article2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/article2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.1890755" vertical-offset="1083" max-vertical-offset="7049">
-              <caret line="252" column="42" selection-start-line="252" selection-start-column="42" selection-end-line="252" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.3038168" vertical-offset="6337" max-vertical-offset="8930">
+              <caret line="344" column="63" selection-start-line="344" selection-start-column="63" selection-end-line="344" selection-end-column="63" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
@@ -142,6 +142,14 @@
                 <element signature="n#style#0;n#section#1;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#br#0;n#section#1;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#2;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#1;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#0;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
@@ -155,6 +163,14 @@
                 <element signature="n#style#0;n#span#0;n#strong#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#2;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#1;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
@@ -278,7 +294,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -537,6 +552,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="article2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wengine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wengine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Addons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LangerieCard1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="LangerieCardPublic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -569,6 +618,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -586,8 +636,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Projects\PHP\WWW\wengine\web\wengine\Public\Home\images\langerie" />
       <recent name="F:\Projects\PHP\WWW\wengine\web\wengine\Addons\LangerieCard1\View\default\Public\article2" />
+      <recent name="F:\Projects\PHP\WWW\wengine\web\wengine\Public\Home\images\langerie" />
       <recent name="F:\Projects\PHP\WWW\wengine\web\wengine\Addons\LangerieCard1\View\default\Public" />
       <recent name="F:\Projects\PHP\WWW\wengine\web\wengine\Addons\LangerieCard1\View\default\Public\article1" />
       <recent name="F:\Projects\PHP\WWW\wengine\web\wengine\Addons\LangerieCard1\View\default\LangerieCardPublic" />
@@ -661,7 +711,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24287856" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24662669" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961586" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1066,8 +1116,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/article2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.1890755" vertical-offset="1083" max-vertical-offset="7049">
-          <caret line="252" column="42" selection-start-line="252" selection-start-column="42" selection-end-line="252" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.3038168" vertical-offset="6337" max-vertical-offset="8930">
+          <caret line="344" column="63" selection-start-line="344" selection-start-column="63" selection-end-line="344" selection-end-column="63" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
@@ -1136,6 +1186,14 @@
             <element signature="n#style#0;n#section#1;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#br#0;n#section#1;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#2;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#1;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#0;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
@@ -1149,6 +1207,14 @@
             <element signature="n#style#0;n#span#0;n#strong#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#2;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#1;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
