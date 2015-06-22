@@ -3,6 +3,7 @@
 namespace Addons\LangerieCard1\Controller;
 use Addons\LangerieCard1\Model\LangerieCard1Model;
 use Home\Controller\AddonsController;
+use Home\Model\WeixinModel;
 use Think\Log;
 
 class LangerieCardPublicController extends AddonsController{
@@ -143,7 +144,36 @@ class LangerieCardPublicController extends AddonsController{
         $this->assign('page_title','兰卓丽卡券核销');
         $this->display();
     }
+    //领取卡券(领取规则跟活动相关)  入参：  get.activityId
+    public function cardInfoForAdd(){
+        $id = I ( 'get.id' );
+        if(!$id)
+            return false;
+        $member=M('member_public')->where('id='.$id)->find();
+        $token=$member['token'];
+        $activityId= I ( 'get.activityId' );
+        if(!$activityId)
+            return false;
+        $openid=I('post.openid');
+        $obtainData=D('Addons://LangerieCard1/LangerieCard1')->getObtainCardCount($activityId,$openid,$token);
+        if($activityId==1){
+            if($obtainData){
+                $error='抱歉，您已经领取过'.$member['public_name'].$obtainData[0]['name'].'活动的【'.$obtainData[0]['title'].'】,无法再次领取';
+                $response['status']=false;
+                $response['error']=$error;
+                echo json_encode($response);
+                return;
+            }
+        }else{
+            return false;
+        }
 
+        $response=WeixinModel::getCardExtForAdd();
+        if($response){
+            echo json_encode($response);
+        }
+    }
+    //兰卓丽关注礼
     function detail(){
         $id = I('get.id');
         $mpid = I('get.mpid');
@@ -190,7 +220,7 @@ class LangerieCardPublicController extends AddonsController{
         $this->assign('page_title','领取代金券');
         $this->display();
     }
-
+    //兰卓丽视频卡券
     function article2(){
         $id = I('get.id');
         $mpid = I('get.mpid');
@@ -274,7 +304,7 @@ class LangerieCardPublicController extends AddonsController{
                 $isSuperVip=false;//是否是金银卡VIP
                 $vipinfo=D('Addons://LangerieCard1/HuijieBind')->getVipInfo(44,$openid);
                 if($vipinfo){
-                    if($vipinfo['viplevel']=='伊维斯 E-VIP银卡会员' || $vipinfo['viplevel']=='伊维斯 E-VIP银卡会员'){
+                    if($vipinfo['viplevel']=='伊维斯 E-VIP金卡会员' || $vipinfo['viplevel']=='伊维斯 E-VIP银卡会员'){
                         $isSuperVip=true;
                     }
                 }

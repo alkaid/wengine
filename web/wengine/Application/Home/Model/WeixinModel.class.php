@@ -264,8 +264,9 @@ class WeixinModel extends Model {
             if(!$ext['openid'])     unset($ext['openid']);
             if(!$ext['balance'])     unset($ext['balance']);
             $response['card_ext']=json_encode($ext);
-            $str=json_encode($response);
-            return $str;
+//            $str=json_encode($response);
+			$response['status']=true;
+            return $response;
 //            echo($str);
         }else{
             return false;

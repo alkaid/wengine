@@ -175,9 +175,9 @@ class WeixinController extends HomeController {
 	}
 
     public function cardInfoForAdd(){
-        $str=WeixinModel::getCardExtForAdd();
-        if($str){
-            echo $str;
+        $response=WeixinModel::getCardExtForAdd();
+        if($response){
+            echo json_encode($response);
         }
     }
 

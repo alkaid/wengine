@@ -12,6 +12,7 @@ class LangerieCard1Model extends Model{
     const T_CARD_CONSUME_PWD            = 'card_consume_pwd';
     const T_CARD_ACTIVITY               = 'card_activity';
     const T_CARD_ACTIVITY_BIND          = 'card_activity_bind';
+    const T_CARD_OBTAIN                 = 'card_obtain';
 
     static public function getCards($token=''){
         empty ( $token ) && $token = get_token ();
@@ -43,5 +44,23 @@ class LangerieCard1Model extends Model{
             ->where("s.card_id='$card_id'")
             ->select();
         return $list;
+    }
+
+    /**
+     * 针对特定活动用户领取了多少张卡券
+     * @param $activityId   活动ID
+     * @param $openid   用户openid
+     * @param $token    微信原始id
+     */
+    public function getObtainCardCount($activityId,$openid,$token){
+        $prefix = C('DB_PREFIX');
+        $res=$this
+            ->field('a.name,w.title,w.card_id,w.alias,o.openid,o.count')
+            ->table($prefix.self::T_CARD_ACTIVITY.' a')
+            ->join ($prefix.self::T_WXCARD." w on a.id=w.activity_id and a.token=w.token",'LEFT')
+            ->join ($prefix.self::T_CARD_OBTAIN." o on o.card_id=w.card_id",'LEFT')
+            ->where(array('a.id'=>$activityId,'a.token'=>$token,'o.openid'=>$openid))
+            ->select();
+        return $res;
     }
 }
