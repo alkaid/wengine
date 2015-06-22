@@ -308,8 +308,8 @@ class LangerieCardPublicController extends AddonsController{
                         $isSuperVip=true;
                     }
                 }
-//                $cardid=$isSuperVip?'pnBYvtwD0lj7jv02LbD8N6i3ewIY':null;
-                $cardid=$isSuperVip?'pnBYvt50NLqtX7yqMq_sxc93hngU':null;    //测试用卡
+//                $cardid=$isSuperVip?'pnBYvtwD0lj7jv02LbD8N6i3ewIY':'pnBYvt4OCAfIqbgQWrPVrBMs-VYY';
+                $cardid=$isSuperVip?'pnBYvt50NLqtX7yqMq_sxc93hngU':'pnBYvt1RJ4kAcmJsspTQfewxd-l8';    //测试用卡
             }else{
                 return;
             }

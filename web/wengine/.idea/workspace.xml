@@ -38,8 +38,8 @@
       <file leaf-file-name="HuijieBindModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Model/HuijieBindModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="546" max-vertical-offset="1273">
-              <caret line="46" column="23" selection-start-line="41" selection-start-column="8" selection-end-line="46" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1273">
+              <caret line="15" column="23" selection-start-line="41" selection-start-column="8" selection-end-line="46" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -48,8 +48,8 @@
       <file leaf-file-name="WeixinModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Model/WeixinModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4536" max-vertical-offset="5320">
-              <caret line="242" column="20" selection-start-line="242" selection-start-column="20" selection-end-line="242" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="4617" max-vertical-offset="5320">
+              <caret line="243" column="20" selection-start-line="243" selection-start-column="20" selection-end-line="243" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -68,21 +68,29 @@
       <file leaf-file-name="LangerieCard1Model.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Model/LangerieCard1Model.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1368">
-              <caret line="54" column="66" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1254" max-vertical-offset="1368">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LangerieCardPublicController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LangerieCardPublicController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCardPublicController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49105915" vertical-offset="5552" max-vertical-offset="6479">
-              <caret line="311" column="82" selection-start-line="311" selection-start-column="82" selection-end-line="311" selection-end-column="82" />
-              <folding>
-                <element signature="e#50#100#0#PHP" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="50.214287" vertical-offset="4503" max-vertical-offset="6422">
+              <caret line="166" column="14" selection-start-line="166" selection-start-column="14" selection-end-line="166" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ewsArticle1.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/ewsArticle1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6260297" vertical-offset="456" max-vertical-offset="2698">
+              <caret line="64" column="22" selection-start-line="60" selection-start-column="14" selection-end-line="64" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,6 +137,7 @@
         <option value="$PROJECT_DIR$/Addons/LangerieCard1/Model/HuijieBindModel.class.php" />
         <option value="$PROJECT_DIR$/Addons/LangerieCard1/Model/LangerieCard1Model.class.php" />
         <option value="$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCardPublicController.class.php" />
+        <option value="$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/ewsArticle1.html" />
       </list>
     </option>
   </component>
@@ -152,10 +161,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
-    <option name="y" value="-8" />
-    <option name="width" value="1394" />
-    <option name="height" value="916" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="2558" />
+    <option name="height" value="1398" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -496,11 +505,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Alkaid\Projects\www\wengine\web\wengine\Addons\LangerieCard1\View\default\LangerieCardPublic" />
       <recent name="C:\Alkaid\Projects\www\wengine\web\wengine\Addons\LangerieCard1\Model" />
       <recent name="F:\Projects\PHP\WWW\wengine\web\wengine\Addons\LangerieCard1\View\default\Public\article2" />
       <recent name="F:\Projects\PHP\WWW\wengine\web\wengine\Public\Home\images\langerie" />
       <recent name="F:\Projects\PHP\WWW\wengine\web\wengine\Addons\LangerieCard1\View\default\Public" />
-      <recent name="F:\Projects\PHP\WWW\wengine\web\wengine\Addons\LangerieCard1\View\default\Public\article1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Alkaid\Projects\www\wengine\web\wengine\Addons\LangerieCard1\View\default\Public" />
@@ -534,6 +543,7 @@
       <node-options />
       <gulpfile />
       <tasks />
+      <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
       <method />
@@ -567,11 +577,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1394" height="916" extended-state="6" />
-    <editor active="false" />
+    <frame x="1" y="1" width="2558" height="1398" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26236883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26232114" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29081634" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -638,13 +648,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Addons/CustomMenu/Model/WeixinAddonModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="931">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/ArticleController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.178572" vertical-offset="4562" max-vertical-offset="16625">
@@ -959,8 +962,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Model/HuijieBindModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="546" max-vertical-offset="1273">
-          <caret line="46" column="23" selection-start-line="41" selection-start-column="8" selection-end-line="46" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1273">
+          <caret line="15" column="23" selection-start-line="41" selection-start-column="8" selection-end-line="46" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -975,27 +978,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Model/WeixinModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4536" max-vertical-offset="5320">
-          <caret line="242" column="20" selection-start-line="242" selection-start-column="20" selection-end-line="242" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="4617" max-vertical-offset="5320">
+          <caret line="243" column="20" selection-start-line="243" selection-start-column="20" selection-end-line="243" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Model/LangerieCard1Model.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1368">
-          <caret line="54" column="66" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1254" max-vertical-offset="1368">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCardPublicController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49105915" vertical-offset="5552" max-vertical-offset="6479">
-          <caret line="311" column="82" selection-start-line="311" selection-start-column="82" selection-end-line="311" selection-end-column="82" />
-          <folding>
-            <element signature="e#50#100#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="50.214287" vertical-offset="4503" max-vertical-offset="6422">
+          <caret line="166" column="14" selection-start-line="166" selection-start-column="14" selection-end-line="166" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/ewsArticle1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6260297" vertical-offset="456" max-vertical-offset="2698">
+          <caret line="64" column="22" selection-start-line="60" selection-start-column="14" selection-end-line="64" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
