@@ -1,6 +1,7 @@
 <?php
 
 namespace Home\Controller;
+use Home\Model\WeixinModel;
 
 /**
  * 微信交互控制器
@@ -174,40 +175,9 @@ class WeixinController extends HomeController {
 	}
 
     public function cardInfoForAdd(){
-        $id = I ( 'get.id' );
-        if(!$id)
-            return;
-        $member=M('member_public')->where('id='.$id)->find();
-        $token=$member['token'];
-        if(IS_POST){
-            $card_id=I('post.card_id');
-            $api_ticket=get_cardapi_ticket($token);
-            $ext['code']=I('post.code');
-            $ext['openid']=I('post.openid');
-            $ext['balance']=I('post.balance');
-            $ext['timestamp']=time();
-            $data=array($api_ticket,$card_id,$ext['code'], $ext['openid'],$ext['balance'],$ext['timestamp']);
-            sort($data,SORT_STRING);
-            $sign='';
-            foreach ($data as  $val) {
-                $sign=$sign.$val;
-            }
-//            addWeixinLog ( 'addcard signbefore,api_ticket='.$api_ticket.",timestamp=". $ext['timestamp'].',cardid='.$card_id,$sign  );
-            $sign=sha1($sign);
-//            addWeixinLog ( 'addcard signafter=',$sign  );
-            $info = get_token_appinfo ( $token );
-            if (empty ( $info ['appid'] )) {
-                return;
-            }
-
-            $response['card_id']=$card_id;
-            $ext['signature']=$sign;
-            if(!$ext['code'])     unset($ext['code']);
-            if(!$ext['openid'])     unset($ext['openid']);
-            if(!$ext['balance'])     unset($ext['balance']);
-            $response['card_ext']=json_encode($ext);
-            $str=json_encode($response);
-            echo($str);
+        $str=WeixinModel::getCardExtForAdd();
+        if($str){
+            echo $str;
         }
     }
 

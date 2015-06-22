@@ -237,4 +237,69 @@ class LangerieCardPublicController extends AddonsController{
         $this->assign('page_title','兰卓丽');
         $this->display();
     }
+
+    //伊维斯关注礼
+    function ewsArticle1(){
+        $id = I('get.id');
+        $mpid = I('get.mpid');
+        if(!$mpid)
+            $mpid=$id;
+        if(!$mpid)
+            return;
+        $cardid=I('get.cardid');
+        if(!$id)
+            return;
+        $member=M('member_public')->where('id='.$mpid)->find();
+        $token=$member['token'];
+        $appid=$member['appid'];
+        $code=I('get.code');
+        $debug=I('get.debug');
+        if($code){
+            $url='https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$member['appid'].'&secret='.$member['secret'].'&code='.$code.'&grant_type=authorization_code';
+            $tempJson = wp_file_get_contents($url);
+            addWeixinLog ( "获取网页access_token:".$url,$tempJson  );
+            $tempArr = json_decode ( $tempJson, true );
+            $openid=0;
+            if (@array_key_exists ( 'openid', $tempArr )) {
+                $openid=$tempArr['openid'];
+            }
+            if($openid){
+                $url='https://api.weixin.qq.com/cgi-bin/user/info?access_token='.get_access_token($token).'&openid='.$openid.'&lang=zh_CN';
+                $tempJson = wp_file_get_contents($url);
+                addWeixinLog ( "获取用户信息:".$url,$tempJson  );
+                //用户信息
+                $this->assign('user',$tempJson);
+//                print_r($tempJson);
+                //会员信息
+                $isSuperVip=false;//是否是金银卡VIP
+                $vipinfo=D('Addons://LangerieCard1/HuijieBind')->getVipInfo(44,$openid);
+                if($vipinfo){
+                    if($vipinfo['viplevel']=='伊维斯 E-VIP银卡会员' || $vipinfo['viplevel']=='伊维斯 E-VIP银卡会员'){
+                        $isSuperVip=true;
+                    }
+                }
+//                $cardid=$isSuperVip?'pnBYvtwD0lj7jv02LbD8N6i3ewIY':null;
+                $cardid=$isSuperVip?'pnBYvt50NLqtX7yqMq_sxc93hngU':null;    //测试用卡
+            }else{
+                return;
+            }
+        }else if(!$debug){
+            $url= "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$appid."&redirect_uri=".rawurlencode(GetCurUrl())."&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
+            print '<script type="text/javascript">location.href="'.$url.'";</script>';
+            return;
+        }
+        $this->assign('isSuperVip',$isSuperVip);
+        $this->assign('vipinfo',$vipinfo);
+        $this->assign('mp_id',$mpid);
+        $this->assign('member',$member);
+        $this->assign('cardid',$cardid);
+        //TODO 应该做成素材管理模块 get参数获得素材id 引用素材页面再插入所需js
+        $this->assign('page_title','伊维斯');
+        $this->display();
+    }
+
+    function test(){
+        $test=D('Addons://LangerieCard1/HuijieBind')->test(44);
+        var_dump($test);
+    }
 }

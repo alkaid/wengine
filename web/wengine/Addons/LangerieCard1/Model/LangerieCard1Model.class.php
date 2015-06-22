@@ -20,7 +20,7 @@ class LangerieCard1Model extends Model{
             return $groups[$uid];
         $prefix = C('DB_PREFIX');
         $list = M(self::T_WXCARD)
-            ->field('id,title,card_id,status,token')
+            ->field('id,title,card_id,status,token,alias')
             ->where("token='$token'")
             ->select();
         return $list;
@@ -36,7 +36,7 @@ class LangerieCard1Model extends Model{
     static public function getStatisticsByCard($card_id){
         $prefix = C('DB_PREFIX');
         $list = M()
-            ->field('s.id,s.token,s.card_id,s.quantity,p.shop,w.title')
+            ->field('s.id,s.token,s.card_id,s.quantity,p.shop,w.title,w.alias')
             ->table($prefix.self::T_CARD_CONSUME_STATISTICS.' s')
             ->join ($prefix.self::T_CARD_CONSUME_PWD." p on s.pwd_id=p.id")
             ->join ($prefix.self::T_WXCARD." w on s.card_id=w.card_id")

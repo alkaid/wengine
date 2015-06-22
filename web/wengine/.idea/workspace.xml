@@ -28,32 +28,38 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1197" max-vertical-offset="2698">
-              <caret line="63" column="60" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="60" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-18.321428" vertical-offset="1710" max-vertical-offset="2698">
+              <caret line="117" column="52" selection-start-line="117" selection-start-column="52" selection-end-line="117" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rich.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/Public/rich.css">
+      <file leaf-file-name="WeixinController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/WeixinController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="228">
-              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-              <folding>
-                <element signature="e#28312#29287#1" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-19.821428" vertical-offset="2884" max-vertical-offset="8075">
+              <caret line="181" column="5" selection-start-line="181" selection-start-column="5" selection-end-line="181" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jssdk.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/default/Weixin/jssdk.html">
+      <file leaf-file-name="WeixinModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/Model/WeixinModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="1482">
-              <caret line="36" column="20" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="20" />
+            <state vertical-scroll-proportion="-4.357143" vertical-offset="4419" max-vertical-offset="5301">
+              <caret line="239" column="20" selection-start-line="239" selection-start-column="8" selection-end-line="239" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WxCardPublicController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Addons/WxCardAlkaid/Controller/WxCardPublicController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.285715" vertical-offset="258" max-vertical-offset="1140">
+              <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -62,141 +68,50 @@
       <file leaf-file-name="LangerieCardPublicController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCardPublicController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13305323" vertical-offset="57" max-vertical-offset="4636">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/article2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.464286" vertical-offset="6508" max-vertical-offset="8930">
-              <caret line="355" column="26" selection-start-line="355" selection-start-column="26" selection-end-line="355" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.6247166" vertical-offset="2185" max-vertical-offset="5909">
+              <caret line="144" column="5" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#section#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#br#0;n#section#0;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#br#0;n#section#1;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#2;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#br#0;n#section#2;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#3;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#4;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#section#4;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#5;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#6;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#section#6;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#section#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#iframe#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#3;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#section#0;n#section#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#section#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#section#1;n#section#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#section#1;n#section#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#2;n#section#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#0;n#section#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#section#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#0;n#section#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#span#0;n#span#0;n#section#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#br#0;n#section#0;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#br#0;n#section#1;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#2;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#br#0;n#section#2;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#3;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#0;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#0;n#section#0;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#section#0;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#0;n#section#0;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#span#0;n#span#0;n#section#0;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#section#0;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#0;n#section#0;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#section#0;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#1;n#section#0;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#br#0;n#section#1;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#2;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#0;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#1;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#section#1;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#strong#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#2;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#span#1;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#section#0;n#span#1;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#br#0;n#span#0;n#section#0;n#span#1;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#11;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#section#11;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#iframe#0;n#section#11;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#11;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#12;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#section#12;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#section#12;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
+                <element signature="e#50#100#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="consume.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/consume.html">
+      <file leaf-file-name="LangerieCard1Controller.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCard1Controller.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6785714" vertical-offset="684" max-vertical-offset="2356">
-              <caret line="37" column="87" selection-start-line="37" selection-start-column="87" selection-end-line="37" selection-end-column="87" />
+            <state vertical-scroll-proportion="-20.642857" vertical-offset="106" max-vertical-offset="988">
+              <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LangerieCard1Model.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Model/LangerieCard1Model.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.214286" vertical-offset="125" max-vertical-offset="1007">
+              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HuijieBindModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Model/HuijieBindModel.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1862">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Model.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="26.011494" vertical-offset="12029" max-vertical-offset="31692">
+              <caret line="522" column="9" selection-start-line="522" selection-start-column="9" selection-end-line="522" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -212,7 +127,6 @@
         <option value="$PROJECT_DIR$/Application/Home/View/default/MemberPublic/step_2.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/default/MemberPublic/step_0.html" />
         <option value="$PROJECT_DIR$/Addons/CustomMenu/Controller/CustomMenuController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Model/WeixinModel.class.php" />
         <option value="$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCard1PublicController.class.php" />
         <option value="$PROJECT_DIR$/Addons/WxCardAlkaid/config.php" />
         <option value="$PROJECT_DIR$/Addons/WxCardAlkaid/View/default/Public/wxcard.css" />
@@ -222,15 +136,11 @@
         <option value="$PROJECT_DIR$/../../../facedemo/demo.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/MemberPublicController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/default/MemberPublic/step_3.html" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/WeixinController.class.php" />
         <option value="$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/consume.html" />
-        <option value="$PROJECT_DIR$/Addons/LangerieCard1/Model/LangerieCard1Model.class.php" />
         <option value="$PROJECT_DIR$/Addons/CustomMenu/View/default/CustomMenu/lists.html" />
-        <option value="$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCard1Controller.class.php" />
         <option value="$PROJECT_DIR$/Addons/LangerieCard1/Controller/PwdController.class.php" />
         <option value="$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php" />
         <option value="$PROJECT_DIR$/Addons/LangerieCard1/Controller/BaseController.class.php" />
-        <option value="$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCard1/lists.html" />
         <option value="$PROJECT_DIR$/../langerieConfig/wengine/Application/Common/Conf/config.php" />
         <option value="$PROJECT_DIR$/../langerieConfig/wengine/Application/User/Conf/config.php" />
         <option value="$PROJECT_DIR$/Application/Common/Common/function.php" />
@@ -239,10 +149,16 @@
         <option value="$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/detail.html" />
         <option value="$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/article1.html" />
         <option value="$PROJECT_DIR$/Addons/WxCardAlkaid/View/default/WxCardPublic/getCardFrame.html" />
-        <option value="$PROJECT_DIR$/Addons/WxCardAlkaid/Controller/WxCardPublicController.class.php" />
         <option value="$PROJECT_DIR$/Addons/LangerieCard1/View/default/Public/rich.css" />
-        <option value="$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCardPublicController.class.php" />
         <option value="$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/article2.html" />
+        <option value="$PROJECT_DIR$/Addons/LangerieCard1/Model/HuijieBindModel.class.php" />
+        <option value="$PROJECT_DIR$/Addons/WxCardAlkaid/Controller/WxCardPublicController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/Model/WeixinModel.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/WeixinController.class.php" />
+        <option value="$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCard1/lists.html" />
+        <option value="$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCard1Controller.class.php" />
+        <option value="$PROJECT_DIR$/Addons/LangerieCard1/Model/LangerieCard1Model.class.php" />
+        <option value="$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCardPublicController.class.php" />
       </list>
     </option>
   </component>
@@ -266,10 +182,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1394" />
-    <option name="height" value="916" />
+    <option name="width" value="2576" />
+    <option name="height" value="1416" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -323,38 +239,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -395,11 +279,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
+              <option name="myItemId" value="Model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -417,51 +297,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wengine" />
+              <option name="myItemId" value="Home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Conf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -520,78 +360,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Addons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LangerieCard1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="article2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Addons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LangerieCard1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="article1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -650,6 +418,32 @@
               <option name="myItemId" value="default" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LangerieCard1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wengine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wengine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Addons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LangerieCard1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -682,7 +476,7 @@
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../my/huijie/wepartner_huijie" />
     <property name="options.lastSelected" value="preferences.keymap" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -692,11 +486,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Alkaid\Projects\www\wengine\web\wengine\Addons\LangerieCard1\Model" />
       <recent name="F:\Projects\PHP\WWW\wengine\web\wengine\Addons\LangerieCard1\View\default\Public\article2" />
       <recent name="F:\Projects\PHP\WWW\wengine\web\wengine\Public\Home\images\langerie" />
       <recent name="F:\Projects\PHP\WWW\wengine\web\wengine\Addons\LangerieCard1\View\default\Public" />
       <recent name="F:\Projects\PHP\WWW\wengine\web\wengine\Addons\LangerieCard1\View\default\Public\article1" />
-      <recent name="F:\Projects\PHP\WWW\wengine\web\wengine\Addons\LangerieCard1\View\default\LangerieCardPublic" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Alkaid\Projects\www\wengine\web\wengine\Addons\LangerieCard1\View\default\Public" />
@@ -730,6 +524,7 @@
       <node-options />
       <gulpfile />
       <tasks />
+      <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
       <method />
@@ -763,28 +558,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1394" height="916" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25037482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961586" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2686916" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29336736" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25874403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1709062" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29205608" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2686916" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1709062" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39641744" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -808,102 +603,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="82" />
+      <option name="time" value="93" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/m/mobile_module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.167364" vertical-offset="2988" max-vertical-offset="3705">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/css/mobile_module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.25523" vertical-offset="6636" max-vertical-offset="7353">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/default/MemberPublic/step_1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1311">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/default/MemberPublic/step_2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38544154" vertical-offset="0" max-vertical-offset="1672">
-          <caret line="17" column="104" selection-start-line="17" selection-start-column="85" selection-end-line="17" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/YouaskService/View/default/KeywordKF/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15871121" vertical-offset="0" max-vertical-offset="4807">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/default/Public/mobile_head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.857142" vertical-offset="0" max-vertical-offset="551">
-          <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/Card/View/default/Card/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.089411765" vertical-offset="0" max-vertical-offset="1710">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/default/Public/body.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7952941" vertical-offset="312" max-vertical-offset="1539">
-          <caret line="52" column="82" selection-start-line="52" selection-start-column="72" selection-end-line="52" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/AddonCategoryController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75411767" vertical-offset="290" max-vertical-offset="1140">
-          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Model/AddonsModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.571428" vertical-offset="0" max-vertical-offset="874">
-          <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/Card/View/default/Card/config.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7142856" vertical-offset="0" max-vertical-offset="3553">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/Card/Controller/BaseController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.214286" vertical-offset="0" max-vertical-offset="893">
-          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/default/Addons/_nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="456">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Addons/Card/Controller/CouponsController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1121">
@@ -995,20 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Controller.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.535714" vertical-offset="14106" max-vertical-offset="17138">
-          <caret line="763" column="0" selection-start-line="763" selection-start-column="0" selection-end-line="763" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Common/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.857142" vertical-offset="9366" max-vertical-offset="28158">
-          <caret line="514" column="9" selection-start-line="514" selection-start-column="9" selection-end-line="514" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/Model/AddonsModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5" vertical-offset="1038" max-vertical-offset="2337">
@@ -1023,37 +713,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3435294" vertical-offset="12191" max-vertical-offset="31692">
-          <caret line="665" column="20" selection-start-line="665" selection-start-column="20" selection-end-line="665" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/WeixinController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5567" max-vertical-offset="8645">
-          <caret line="293" column="0" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/Public/langeriebgcell.gif">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCard1Controller.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8431912" vertical-offset="185" max-vertical-offset="912">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Db.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35123968" vertical-offset="3706" max-vertical-offset="17347">
-          <caret line="212" column="45" selection-start-line="212" selection-start-column="45" selection-end-line="212" selection-end-column="45" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../langerieConfig/wengine/Application/User/Conf/config.php">
@@ -1077,41 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5034388" vertical-offset="242" max-vertical-offset="969">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Model/LangerieCard1Model.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84033614" vertical-offset="293" max-vertical-offset="1007">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/ThinkPHP.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1383" max-vertical-offset="2432">
-          <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Common/Common/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33264464" vertical-offset="26914" max-vertical-offset="48640">
-          <caret line="1431" column="85" selection-start-line="1431" selection-start-column="85" selection-end-line="1431" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/WxCardAlkaid/Controller/WxCardPublicController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5412475" vertical-offset="130" max-vertical-offset="798">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Addons/WxCardAlkaid/View/default/WxCardPublic/getCardFrame.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7066116" vertical-offset="2052" max-vertical-offset="3021">
@@ -1119,23 +746,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1197" max-vertical-offset="2698">
-          <caret line="63" column="60" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="60" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/Public/rich.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="228">
           <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-          <folding>
-            <element signature="e#28312#29287#1" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1147,127 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/article2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.464286" vertical-offset="6508" max-vertical-offset="8930">
-          <caret line="355" column="26" selection-start-line="355" selection-start-column="26" selection-end-line="355" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#section#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#br#0;n#section#0;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#br#0;n#section#1;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#2;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#br#0;n#section#2;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#3;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#4;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#section#4;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#5;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#6;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#section#6;n#section#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#3;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#section#0;n#section#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#section#1;n#section#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#section#1;n#section#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#2;n#section#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#0;n#section#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#section#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#section#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#span#0;n#span#0;n#section#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#br#0;n#section#0;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#br#0;n#section#1;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#2;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#br#0;n#section#2;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#3;n#section#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#0;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#0;n#section#0;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#section#0;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#section#0;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#span#0;n#span#0;n#section#0;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#section#0;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#section#0;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#section#0;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#1;n#section#0;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#br#0;n#section#1;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#2;n#section#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#0;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#1;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#1;n#section#0;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#strong#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#section#0;n#section#0;n#section#1;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#2;n#section#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#0;n#section#0;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#1;n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#span#1;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#section#0;n#span#1;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#br#0;n#span#0;n#section#0;n#span#1;n#section#0;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#11;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#section#11;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#section#11;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#11;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#12;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#section#12;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#section#12;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#block#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/Public/article1/brand.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1275,17 +769,234 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/consume.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6785714" vertical-offset="684" max-vertical-offset="2356">
+        <state vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="2356">
           <caret line="37" column="87" selection-start-line="37" selection-start-column="87" selection-end-line="37" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/AliPlay/Play/danbao/notify_url.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46886018" vertical-offset="171" max-vertical-offset="2033">
+          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/mysql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34430084" vertical-offset="1759" max-vertical-offset="17081">
+          <caret line="108" column="9" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/Third/Common Demo/dede/wxapi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34430084" vertical-offset="106" max-vertical-offset="1178">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <marker date="1409024087847" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..dede_archives..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/Third/Common Demo/wxapi_zuitu/wxapi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34430084" vertical-offset="11" max-vertical-offset="1026">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding>
+            <marker date="1409024087889" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..team..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/LangerieCard1Addon.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="931">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="879">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Conf/convention_sae.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2899061" vertical-offset="0" max-vertical-offset="852">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/ThinkPHP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9237089" vertical-offset="1113" max-vertical-offset="2432">
+          <caret line="108" column="37" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Db.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.065727696" vertical-offset="1977" max-vertical-offset="17347">
+          <caret line="115" column="21" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
+          <folding>
+            <marker date="1409035528273" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1409035528273" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Install/Controller/InstallController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="875" max-vertical-offset="2432">
+          <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.428572" vertical-offset="0" max-vertical-offset="969">
+          <caret line="42" column="12" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Controller.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.06317044" vertical-offset="16260" max-vertical-offset="17138">
+          <caret line="861" column="20" selection-start-line="861" selection-start-column="20" selection-end-line="861" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Common/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52582157" vertical-offset="10211" max-vertical-offset="28158">
+          <caret line="569" column="10" selection-start-line="569" selection-start-column="10" selection-end-line="569" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="26.011494" vertical-offset="12029" max-vertical-offset="31692">
+          <caret line="522" column="9" selection-start-line="522" selection-start-column="9" selection-end-line="522" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/article2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.834043" vertical-offset="7638" max-vertical-offset="8626">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Logic/BaseLogic.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.39693594" vertical-offset="285" max-vertical-offset="1273">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Logic/ArticleLogic.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21169916" vertical-offset="0" max-vertical-offset="1064">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Common/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3460993" vertical-offset="33025" max-vertical-offset="48640">
+          <caret line="1757" column="9" selection-start-line="1757" selection-start-column="9" selection-end-line="1757" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Model/HuijieBindModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1862">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCardPublic/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.321428" vertical-offset="1710" max-vertical-offset="2698">
+          <caret line="117" column="52" selection-start-line="117" selection-start-column="52" selection-end-line="117" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/View/default/LangerieCard1/lists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19387755" vertical-offset="285" max-vertical-offset="1349">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCard1Controller.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.642857" vertical-offset="106" max-vertical-offset="988">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Model/LangerieCard1Model.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.214286" vertical-offset="125" max-vertical-offset="1007">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Model/WeixinModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.357143" vertical-offset="4419" max-vertical-offset="5301">
+          <caret line="239" column="20" selection-start-line="239" selection-start-column="8" selection-end-line="239" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/WxCardAlkaid/Controller/WxCardPublicController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.285715" vertical-offset="258" max-vertical-offset="1140">
+          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/WeixinController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.821428" vertical-offset="2884" max-vertical-offset="8075">
+          <caret line="181" column="5" selection-start-line="181" selection-start-column="5" selection-end-line="181" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Addons/LangerieCard1/Controller/LangerieCardPublicController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13305323" vertical-offset="57" max-vertical-offset="4636">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
+        <state vertical-scroll-proportion="0.6247166" vertical-offset="2185" max-vertical-offset="5909">
+          <caret line="144" column="5" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
+          <folding>
+            <element signature="e#50#100#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

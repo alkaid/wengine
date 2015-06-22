@@ -11,6 +11,7 @@
             <!-- 表头 -->
             <thead>
               <tr>
+                  <th>备注名</th>
                   <th>卡券标题</th>
                   <th>门店</th>
                   <th>核销量</th>
@@ -21,6 +22,7 @@
             <tbody>
               <volist name="list_data" id="data">
                 <tr>
+                    <td>{$data.alias}</td>
                     <td>{$data.title}</td>
                     <td>{$data.shop}</td>
                     <td>{$data.quantity}</td>

@@ -31,12 +31,16 @@ class LangerieCard1Controller extends BaseController{
 
     function get_data($map) {
 //        $map ['token'] = get_token ();
+        $result=array();
         $list = LangerieCard1Model::getCards();
         if(null!=$list){
-            $card=$list[0];
-            $data=LangerieCard1Model::getStatisticsByCard($card['card_id']);
-            return $data;
+            foreach($list as $card){
+                $data=LangerieCard1Model::getStatisticsByCard($card['card_id']);
+                if(null!=$data){
+                    $result=array_merge($result,$data);
+                }
+            }
         }
-        return false;
+        return $result;
     }
 }
