@@ -76,11 +76,13 @@
                     <div class="alert alert-danger hide" id="divError" style="text-align: left;">
                         <strong>Error!</strong> A problem has been occurred while submitting your data.
                     </div>
-                    <if condition="($isSuperVip)">
-                    <iframe class="res_iframe card_iframe js_editor_card" data-cardid="{$cardid}" data-num="0"
-                            src="{: SITE_URL}/index.php?s=/addon/WxCardAlkaid/WxCardPublic/getCardFrame/cardid/{$cardid}.html"
-                            style="height: 184px;"></iframe>
-                    <else />
+                    <switch name="vipLevel">
+                        <case value="3|2|1">
+                            <iframe class="res_iframe card_iframe js_editor_card" data-cardid="{$cardid}" data-num="0"
+                                    src="{: SITE_URL}/index.php?s=/addon/WxCardAlkaid/WxCardPublic/getCardFrame/cardid/{$cardid}.html"
+                                    style="height: 184px;"></iframe>
+                        </case>
+                        <default />
                         <div class="btn-group" data-toggle="buttons-radio">
                             <label class="btn btn-block btn-info">
                                 <input type="radio" name="rdosIsVip" value="1"> 我是伊维斯品牌会员
@@ -94,7 +96,8 @@
                         <iframe id="wxcard" class="res_iframe card_iframe js_editor_card hide" data-cardid="{$cardid}" data-num="0"
                                 src="{: SITE_URL}/index.php?s=/addon/WxCardAlkaid/WxCardPublic/getCardFrame/cardid/{$cardid}.html"
                                 style="height: 184px;"></iframe>
-                    </if>
+                    </switch>
+
                 </div>
             </div>
             <div class="rich_media_area_extra">
@@ -119,7 +122,7 @@
                 }else{
                     $.ajax({
                         method: "POST",
-                        url: "{: SITE_URL}/index.php?s=/addon/LangerieCard1/LangerieCardPublic/cardInfoForAdd/activityId/1/id/{$mp_id}.html",
+                        url: "{: SITE_URL}/index.php?s=/addon/LangerieCard1/LangerieCardPublic/cardInfoForAdd/activityid/1/id/{$mp_id}.html",
                         dataType:"json",
                         data: { card_id: '{$cardid}',openid:'{$openid}' }
                     })
@@ -132,11 +135,11 @@
                                             cardExt: data.card_ext
                                         }], // 需要添加的卡券列表
                                         success: function (res) {
-                                            var cardList = res.cardList; // 添加的卡券列表信息
-                                        alert("addcard success:"+res.cardList[0].card_id);
-                                            $.get( "{: SITE_URL}/index.php?s=/addon/LangerieCard1/LangerieCardPublic/onCardAddComplete/id/{$mp_id}/openid/{$openid}/cardid/"+res.cardList[0].card_id+".html", function( data ) {
-                                                alert(data);
-                                                console.log(data);
+//                                            var cardList = res.cardList; // 添加的卡券列表信息
+//                                            alert("addcard success:"+res.cardList[1].cardId);
+                                            if(res.cardList[0].cardId)
+                                            $.get( "{: SITE_URL}/index.php?s=/addon/LangerieCard1/LangerieCardPublic/onCardAddComplete/id/{$mp_id}/openid/{$openid}/cardid/"+res.cardList[0].cardId+".html", function( data ) {
+//                                                alert(data);
                                             });
                                         }
                                     });

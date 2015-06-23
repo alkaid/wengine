@@ -30,10 +30,11 @@ class LangerieCardPublicController extends AddonsController{
         }else{
             $map['count']=1;
             if($Model->add($map)){
+                echo 'success';
             }else{
                 Log::record("表".LangerieCard1Model::T_CARD_OBTAIN."插入失败.token=$token,pwd_id=".$map['pwd_id'].",card_id=". $map['card_id'],'ERR');
+                echo 'fail';
             }
-            echo 'fail';
         }
     }
     //核销
@@ -174,19 +175,21 @@ class LangerieCardPublicController extends AddonsController{
         $this->assign('page_title','兰卓丽卡券核销');
         $this->display();
     }
-    //领取卡券(领取规则跟活动相关)  入参：  get.activityId
+    //领取卡券(领取规则跟活动相关)  入参：  get.activityid
     public function cardInfoForAdd(){
         $id = I ( 'get.id' );
         if(!$id)
             return false;
         $member=M('member_public')->where('id='.$id)->find();
         $token=$member['token'];
-        $activityId= I ( 'get.activityId' );
-        if(!$activityId)
+        $activityid= I ( 'get.activityid' );
+        if(!$activityid){
             return false;
+        }
+
         $openid=I('post.openid');
-        $obtainData=D('Addons://LangerieCard1/LangerieCard1')->getObtainCardCount($activityId,$openid,$token);
-        if($activityId==1){
+        $obtainData=D('Addons://LangerieCard1/LangerieCard1')->getObtainCardCount($activityid,$openid,$token);
+        if($activityid==1){
             if($obtainData){
                 $error='抱歉，您已经领取过'.$member['public_name'].$obtainData[0]['name'].'活动的【'.$obtainData[0]['title'].'】,无法再次领取';
                 $response['status']=false;
@@ -306,7 +309,7 @@ class LangerieCardPublicController extends AddonsController{
             $mpid=$id;
         if(!$mpid)
             return;
-        $cardid=I('get.cardid');
+//        $cardid=I('get.cardid');
         if(!$id)
             return;
         $member=M('member_public')->where('id='.$mpid)->find();
@@ -331,15 +334,19 @@ class LangerieCardPublicController extends AddonsController{
                 $this->assign('user',$tempJson);
 //                print_r($tempJson);
                 //会员信息
-                $isSuperVip=false;//是否是金银卡VIP
+                $vipLevel=0;   //vip等级  0 非会员或未绑定会员 1普卡会员 2银卡会员 3金卡会员
                 $vipinfo=D('Addons://LangerieCard1/HuijieBind')->getVipInfo(44,$openid);
                 if($vipinfo){
-                    if($vipinfo['viplevel']=='伊维斯 E-VIP金卡会员' || $vipinfo['viplevel']=='伊维斯 E-VIP银卡会员'){
-                        $isSuperVip=true;
+                    if($vipinfo['viplevel']=='伊维斯 E-VIP金卡会员'){
+                        $vipLevel=3;
+                    }elseif($vipinfo['viplevel']=='伊维斯 E-VIP银卡会员'){
+                        $vipLevel=2;
+                    }elseif($vipinfo['viplevel']=='伊维斯 普通会员'){
+                        $vipLevel=1;
                     }
                 }
-//                $cardid=$isSuperVip?'pnBYvtwD0lj7jv02LbD8N6i3ewIY':'pnBYvt4OCAfIqbgQWrPVrBMs-VYY';
-                $cardid=$isSuperVip?'pnBYvt50NLqtX7yqMq_sxc93hngU':'pnBYvt1RJ4kAcmJsspTQfewxd-l8';    //测试用卡
+//                $cardid=$vipLevel==3||$vipLevel==2?'pnBYvtwD0lj7jv02LbD8N6i3ewIY':'pnBYvt4OCAfIqbgQWrPVrBMs-VYY';
+                $cardid=$vipLevel==3||$vipLevel==2?'pnBYvt50NLqtX7yqMq_sxc93hngU':'pnBYvt1RJ4kAcmJsspTQfewxd-l8';    //测试用卡
             }else{
                 return;
             }
@@ -349,7 +356,83 @@ class LangerieCardPublicController extends AddonsController{
             return;
         }
         $this->assign("openid",$openid);
-        $this->assign('isSuperVip',$isSuperVip);
+        $this->assign('vipLevel',$vipLevel);
+        $this->assign('vipinfo',$vipinfo);
+        $this->assign('mp_id',$mpid);
+        $this->assign('member',$member);
+        $this->assign('cardid',$cardid);
+        //TODO 应该做成素材管理模块 get参数获得素材id 引用素材页面再插入所需js
+        $this->assign('page_title','伊维斯');
+        $this->display();
+    }
+
+    //伊维斯闺蜜礼
+    function ewsArticle2(){
+        $id = I('get.id');
+        $mpid = I('get.mpid');
+        if(!$mpid)
+            $mpid=$id;
+        if(!$mpid)
+            return;
+//        $cardid=I('get.cardid');
+        if(!$id)
+            return;
+        $member=M('member_public')->where('id='.$mpid)->find();
+        $token=$member['token'];
+        $appid=$member['appid'];
+        $code=I('get.code');
+        $debug=I('get.debug');
+        if($code){
+            $url='https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$member['appid'].'&secret='.$member['secret'].'&code='.$code.'&grant_type=authorization_code';
+            $tempJson = wp_file_get_contents($url);
+            addWeixinLog ( "获取网页access_token:".$url,$tempJson  );
+            $tempArr = json_decode ( $tempJson, true );
+            $openid=0;
+            if (@array_key_exists ( 'openid', $tempArr )) {
+                $openid=$tempArr['openid'];
+            }
+            if($openid){
+                $url='https://api.weixin.qq.com/cgi-bin/user/info?access_token='.get_access_token($token).'&openid='.$openid.'&lang=zh_CN';
+                $tempJson = wp_file_get_contents($url);
+                addWeixinLog ( "获取用户信息:".$url,$tempJson  );
+                //用户信息
+                $this->assign('user',$tempJson);
+//                print_r($tempJson);
+                //会员信息
+                $vipLevel=0;   //vip等级  0 非会员或未绑定会员 1普卡会员 2银卡会员 3金卡会员
+                $vipinfo=D('Addons://LangerieCard1/HuijieBind')->getVipInfo(44,$openid);
+                if($vipinfo){
+                    if($vipinfo['viplevel']=='伊维斯 E-VIP金卡会员'){
+                        $vipLevel=3;
+                    }elseif($vipinfo['viplevel']=='伊维斯 E-VIP银卡会员'){
+                        $vipLevel=2;
+                    }elseif($vipinfo['viplevel']=='伊维斯 普通会员'){
+                        $vipLevel=1;
+                    }
+                    //闺蜜
+                    if($vipLevel==2||$vipLevel==3){
+                        $vipPhone=$vipinfo['phone'];
+                        $gfgift=M('enweis_gfgift')->where(array('vip_phone'=>$vipPhone))->find();
+                        if($gfgift){
+                            //TODO 已经成功邀请过闺蜜
+                        }else{
+                            //TODO 还未邀请过闺蜜
+                        }
+                    }
+                }
+
+//                $cardid=$vipLevel==3||$vipLevel==2?'pnBYvtwD0lj7jv02LbD8N6i3ewIY':'pnBYvt4OCAfIqbgQWrPVrBMs-VYY';
+                $cardid=$vipLevel==3||$vipLevel==2?'pnBYvt50NLqtX7yqMq_sxc93hngU':'pnBYvt1RJ4kAcmJsspTQfewxd-l8';    //测试用卡
+            }else{
+                return;
+            }
+        }else if(!$debug){
+            $url= "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$appid."&redirect_uri=".rawurlencode(GetCurUrl())."&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
+            print '<script type="text/javascript">location.href="'.$url.'";</script>';
+            return;
+        }
+        $this->assign("openid",$openid);
+        $this->assign('vipLevel',$vipLevel);
         $this->assign('vipinfo',$vipinfo);
         $this->assign('mp_id',$mpid);
         $this->assign('member',$member);
@@ -360,7 +443,7 @@ class LangerieCardPublicController extends AddonsController{
     }
 
     function test(){
-        $test=D('Addons://LangerieCard1/HuijieBind')->test(44);
-        var_dump($test);
+        $Model=M('enweis_gfgift');
+        var_dump($Model->select());
     }
 }
