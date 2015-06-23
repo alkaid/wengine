@@ -7,6 +7,36 @@ use Home\Model\WeixinModel;
 use Think\Log;
 
 class LangerieCardPublicController extends AddonsController{
+    //成功领取卡券 统计
+    public function onCardAddComplete(){
+        $id = I('get.id');
+        $cardid=I('get.cardid');
+        $openid=I('get.openid');
+        if(!$id){
+            return;
+        }
+        $member=M('member_public')->where('id='.$id)->find();
+        $token=$member['token'];
+        //统计核销数据
+        $map=array();
+        $map['token'] = $token;
+        $map['openid'] =  $openid;
+        $map['card_id']=$cardid;
+        $Model=M(LangerieCard1Model::T_CARD_OBTAIN);
+        $statistics=$Model->where($map)->find();
+        if($statistics){
+            $Model->where("id=".$statistics['id'])->setInc('count',1); // 核销量+1
+            echo 'success';
+        }else{
+            $map['count']=1;
+            if($Model->add($map)){
+            }else{
+                Log::record("表".LangerieCard1Model::T_CARD_OBTAIN."插入失败.token=$token,pwd_id=".$map['pwd_id'].",card_id=". $map['card_id'],'ERR');
+            }
+            echo 'fail';
+        }
+    }
+    //核销
     function consume(){
         $id = I('get.id');
         if(!$id){
@@ -318,6 +348,7 @@ class LangerieCardPublicController extends AddonsController{
             print '<script type="text/javascript">location.href="'.$url.'";</script>';
             return;
         }
+        $this->assign("openid",$openid);
         $this->assign('isSuperVip',$isSuperVip);
         $this->assign('vipinfo',$vipinfo);
         $this->assign('mp_id',$mpid);

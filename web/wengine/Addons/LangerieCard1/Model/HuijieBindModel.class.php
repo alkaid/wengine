@@ -53,7 +53,7 @@ class HuijieBindModel extends Model{
             ->field('c.phone,c.viplevel')
             ->table(self::WPD_TABLE_PREFIX.self::WPD_TABLE_BIND.' a')
             ->join (self::WPD_TABLE_PREFIX.self::WPD_TABLE_BIND_LEVEL." c on a.phone=c.phone and a.weid=c.weid")
-            ->where(array('c.weid'=>$weid,'b.open_id'=>$openid))
+            ->where(array('c.weid'=>$weid,'a.open_id'=>$openid))
             ->find();
         return $res;
     }
