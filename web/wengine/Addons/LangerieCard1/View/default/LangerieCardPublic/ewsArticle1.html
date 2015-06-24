@@ -136,9 +136,9 @@
                                         }], // 需要添加的卡券列表
                                         success: function (res) {
 //                                            var cardList = res.cardList; // 添加的卡券列表信息
-//                                            alert("addcard success:"+res.cardList[1].cardId);
-                                            if(res.cardList[0].cardId)
-                                            $.get( "{: SITE_URL}/index.php?s=/addon/LangerieCard1/LangerieCardPublic/onCardAddComplete/id/{$mp_id}/openid/{$openid}/cardid/"+res.cardList[0].cardId+".html", function( data ) {
+//                                            alert("addcard success:"+res.cardList[0].cardId);
+                                            if('{$cardid}')
+                                            $.get( "{: SITE_URL}/index.php?s=/addon/LangerieCard1/LangerieCardPublic/onCardAddComplete/id/{$mp_id}/openid/{$openid}/cardid/{$cardid}.html", function( data ) {
 //                                                alert(data);
                                             });
                                         }

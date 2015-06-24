@@ -3,6 +3,7 @@
 namespace Home\Model;
 
 use Think\Model;
+use Think\Log;
 
 /**
  * 微信基础模型
@@ -250,9 +251,9 @@ class WeixinModel extends Model {
             foreach ($data as  $val) {
                 $sign=$sign.$val;
             }
-//            addWeixinLog ( 'addcard signbefore,api_ticket='.$api_ticket.",timestamp=". $ext['timestamp'].',cardid='.$card_id,$sign  );
+			Log::record( 'addcard signbefore,api_ticket='.$api_ticket.",timestamp=". $ext['timestamp'].',cardid='.$card_id.' ,'.implode($ext).' ,sign='.$sign,'INFO');
             $sign=sha1($sign);
-//            addWeixinLog ( 'addcard signafter=',$sign  );
+			Log::record( 'addcard signafter sign='.$sign,'INFO');
             $info = get_token_appinfo ( $token );
             if (empty ( $info ['appid'] )) {
                 return false;

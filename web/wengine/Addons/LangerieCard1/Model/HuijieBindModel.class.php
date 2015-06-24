@@ -58,4 +58,14 @@ class HuijieBindModel extends Model{
         return $res;
     }
 
+    public function getVipInfoByPhone($weid,$phone){
+        $res=$this
+            ->field('c.viplevel')
+            ->table(self::WPD_TABLE_PREFIX.self::WPD_TABLE_BIND.' a')
+            ->join (self::WPD_TABLE_PREFIX.self::WPD_TABLE_BIND_LEVEL." c on a.phone=c.phone and a.weid=c.weid")
+            ->where(array('c.weid'=>$weid,'a.phone'=>$phone))
+            ->find();
+        return $res;
+    }
+
 }
