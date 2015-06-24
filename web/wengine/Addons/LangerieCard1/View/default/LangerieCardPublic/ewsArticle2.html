@@ -22,6 +22,9 @@
                 $('input[name=rdosIsVip][value=2]').attr("checked",true)
                 $("#divPhoneForm").removeClass('hide').addClass('show');
             });
+            $('#btnRefresh').click(function(){
+                location.href="{:U('ewsArticle2?id='.$mp_id)}";
+            });
 //            $("input[name='rdosIsVip']").click(function(){
 //                var isVip=$(this).val()==1;
 //                if(isVip){
@@ -149,7 +152,7 @@
                                     $('#divError').html("<strong>{$error}</strong>  ");
                                     $('#divError').removeClass('alert-danger').addClass('alert-info').removeClass('hide').addClass('show');
                                 </script>
-                                <button id="btnRefresh" class="btn btn-lg btn-primary btn-block btn-danger" style="margin-top: 2em"  data-loading-text="Loading..." onclick="location.reload();">已经邀请，点击重试</button>
+                                <button id="btnRefresh" class="btn btn-lg btn-primary btn-block btn-danger" style="margin-top: 2em"  data-loading-text="Loading..." >已经邀请，点击重试</button>
                             </if>
                         </case>
                         <default />

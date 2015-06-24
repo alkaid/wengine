@@ -175,8 +175,15 @@ class LangerieCardPublicController extends AddonsController{
         $card['text']=$code;
         $this->assign('card',$card);
         $this->assign('mp_id',$id);
-        $this->assign('page_title','兰卓丽卡券核销');
-        $this->display();
+        $this->assign('page_title',$member['public_name'].'卡券核销');
+        switch($id){
+            case 111:
+                $this->display('consumeenweis');
+                break;
+            default:
+                $this->display();
+                break;
+        }
     }
     //领取卡券(领取规则跟活动相关)  入参：  get.activityid
     public function cardInfoForAdd(){
