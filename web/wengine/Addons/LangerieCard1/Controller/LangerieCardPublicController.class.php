@@ -532,8 +532,25 @@ class LangerieCardPublicController extends AddonsController{
         $this->display();
     }
 
-    function test(){
-        $Model=M('enweis_gfgift');
-        var_dump($Model->select());
+    function testToken(){
+        echo get_access_token();
+    }
+
+    function testCache(){
+        $token = get_token ();//get_access_token_expires_time($token)
+        $key = 'access_token_' . $token;
+        $key_expire_time= 'access_token_expire_time_' . $token;
+        $res = S ( $key );
+        echo 'cache token:';
+        echo $res?$res:'no cache';
+        echo '   '.date('Y-m-d H:i:s',S($key_expire_time));
+    }
+
+    function testClearCache(){
+        $token = get_token ();//get_access_token_expires_time($token)
+        $key = 'access_token_' . $token;
+        $key_expire_time= 'access_token_expire_time_' . $token;
+        S($key,null);
+        S($key_expire_time,null);
     }
 }
