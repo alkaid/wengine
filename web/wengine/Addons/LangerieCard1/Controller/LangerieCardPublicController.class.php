@@ -8,7 +8,7 @@ use Think\Log;
 
 class LangerieCardPublicController extends AddonsController{
     private function isCardDebug(){
-        return true;
+        return false;
     }
     //成功领取卡券 统计
     public function onCardAddComplete(){
@@ -440,7 +440,7 @@ class LangerieCardPublicController extends AddonsController{
                         $vipLevel=1;
                     }
                 }
-//                Log::record('invited vip levle='.$vipinfo['viplevel'].' ,code='.$vipLevel);
+                Log::record('invited vip levle='.$vipinfo['viplevel'].' ,code='.$vipLevel);
                 if($vipLevel==2||$vipLevel==3){
                     $response['success']=true;
                     $response['cardid']=$this->isCardDebug()?'pnBYvtwMKhvYSKRvSX3xPoNHYSek':'pnBYvt0aJPPeY4MgYEIYkAa3UUZg';
@@ -473,7 +473,6 @@ class LangerieCardPublicController extends AddonsController{
                 $openid=$tempArr['openid'];
             }
             if($openid){
-                Log::record('ddddddd','ddddddddd');
                 $url='https://api.weixin.qq.com/cgi-bin/user/info?access_token='.get_access_token($token).'&openid='.$openid.'&lang=zh_CN';
                 $tempJson = wp_file_get_contents($url);
                 addWeixinLog ( "获取用户信息:".$url,$tempJson  );
@@ -492,6 +491,7 @@ class LangerieCardPublicController extends AddonsController{
                         $vipLevel=1;
                     }
                 }
+                Log::record('vip levle='.$vipinfo['viplevel'].' ,code='.$vipLevel,'INFO');
                 //闺蜜
                 if($vipLevel==2||$vipLevel==3){
                     $vipPhone=$vipinfo['phone'];
@@ -552,5 +552,17 @@ class LangerieCardPublicController extends AddonsController{
         $key_expire_time= 'access_token_expire_time_' . $token;
         S($key,null);
         S($key_expire_time,null);
+    }
+
+    function testVipLevel(){
+        echo D('Addons://LangerieCard1/HuijieBind')->getVipLevelByPhone(44,'13043432626');
+    }
+
+    function testObtain(){
+        $obtainData=D('Addons://LangerieCard1/LangerieCard1')->getObtainCardCount(1,'onBYvt8D1QwFd5SdqJ45NRRoJrk0',get_token());
+        if($obtainData && $obtainData['count']>0)
+            print_r($obtainData);
+        else
+            echo 'false';
     }
 }

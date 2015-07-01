@@ -55,6 +55,9 @@ class HuijieBindModel extends Model{
             ->join (self::WPD_TABLE_PREFIX.self::WPD_TABLE_BIND_LEVEL." c on a.phone=c.phone and a.weid=c.weid")
             ->where(array('c.weid'=>$weid,'a.open_id'=>$openid))
             ->find();
+        if($res){
+            $res['viplevel']=$this->getVipLevelByPhone($weid,$res['phone']);
+        }
         return $res;
     }
 
@@ -65,7 +68,66 @@ class HuijieBindModel extends Model{
             ->join (self::WPD_TABLE_PREFIX.self::WPD_TABLE_BIND_LEVEL." c on a.phone=c.phone and a.weid=c.weid")
             ->where(array('c.weid'=>$weid,'a.phone'=>$phone))
             ->find();
+        if($res){
+            $res['viplevel']=$this->getVipLevelByPhone($weid,$phone);
+        }
         return $res;
+    }
+
+    public function getVipLevelByPhone($weid,$phone){
+        //TODO 暂时只开放伊维斯
+        if($weid!=44)
+            return false;
+        $url = "http://10.0.0.131/huijie_api/huijie_api.php?action=getinfo&phone=".$phone;
+        $basic = json_decode(wp_file_get_contents($url),true);
+//验证该手机号码是不是属于绑定登录的品牌会员
+        $cardLevel = "";
+        switch ($weid) {
+            case 38:
+                if($basic[6] == ""){
+                    $info = array('status'=>'fail', 'msg'=>'绑定失败，该手机号不是曼妮芬的会员');
+                    exit(json_encode($info));
+                }
+                else{
+                    $cardLevel = $basic[6];
+                }
+
+                break;
+            case 39:
+                if($basic[8] == ""){
+                    $info = array('status'=>'fail', 'msg'=>'绑定失败，该手机号不是兰卓丽的会员');
+                    exit(json_encode($info));
+                }
+                else{
+                    $cardLevel = $basic[8];
+                }
+                break;
+            case 43:
+                if($basic[9] == ""){
+                    $info = array('status'=>'fail', 'msg'=>'绑定失败，该手机号不是乔百仕的会员');
+                    exit(json_encode($info));
+                }
+                else{
+                    $cardLevel = $basic[9];
+                }
+                break;
+            case 44:
+                if($basic[7] == ""){
+                    $info = array('status'=>'fail', 'msg'=>'绑定失败，该手机号不是伊维斯的会员');
+//                    exit(json_encode($info));
+                    return false;
+                }
+                else{
+                    $cardLevel = $basic[7];
+                }
+                break;
+
+            default:
+                $info = array('status'=>'fail', 'msg'=>'该手机已经被绑定');
+                exit(json_encode($info));
+                break;
+        }
+        return $cardLevel;
     }
 
 }
