@@ -116,6 +116,9 @@ class LangerieCardPublicController extends AddonsController{
             }else{
                 $response['success'] = false;
                 $response['errmsg'] = $res['errmsg'];
+                $checkRes=checkAccessToken($res,$token);
+                if($checkRes['error'])
+                    $response['errmsg']=$checkRes['errmsg'];
             }
             echo json_encode($response);
             return ;
@@ -150,6 +153,13 @@ class LangerieCardPublicController extends AddonsController{
             $code=$res['code'];
         }
         if(!$code){
+            $checkRes=checkAccessToken($res,$token);
+            if($checkRes['error']) {
+                $response['errmsg'] = $checkRes['errmsg'];
+                echo $response['errmsg'];
+                return;
+            }
+            echo '获取卡券序列号失败，请稍后重试';
             return;
         }
 
@@ -247,6 +257,11 @@ class LangerieCardPublicController extends AddonsController{
                 addWeixinLog ( "获取用户信息:".$url,$tempJson  );
                 //用户信息
                 $this->assign('user',$tempJson);
+                $checkRes=checkAccessToken(json_decode ( $tempJson, true ),$token);
+                if($checkRes['error']) {
+                    showError($checkRes['errmsg']);
+                    return;
+                }
 //                print_r($tempJson);
             }else{
                 return;
@@ -294,6 +309,11 @@ class LangerieCardPublicController extends AddonsController{
                 addWeixinLog ( "获取用户信息:".$url,$tempJson  );
                 //用户信息
                 $this->assign('user',$tempJson);
+                $checkRes=checkAccessToken(json_decode ( $tempJson, true ),$token);
+                if($checkRes['error']) {
+                    showError($checkRes['errmsg']);
+                    return;
+                }
 //                print_r($tempJson);
             }else{
                 return;
@@ -342,6 +362,11 @@ class LangerieCardPublicController extends AddonsController{
                 addWeixinLog ( "获取用户信息:".$url,$tempJson  );
                 //用户信息
                 $this->assign('user',$tempJson);
+                $checkRes=checkAccessToken(json_decode ( $tempJson, true ),$token);
+                if($checkRes['error']) {
+                    showError($checkRes['errmsg']);
+                    return;
+                }
 //                print_r($tempJson);
                 //会员信息
                 $vipLevel=0;   //vip等级  0 非会员或未绑定会员 1普卡会员 2银卡会员 3金卡会员
@@ -478,6 +503,11 @@ class LangerieCardPublicController extends AddonsController{
                 addWeixinLog ( "获取用户信息:".$url,$tempJson  );
                 //用户信息
                 $this->assign('user',$tempJson);
+                $checkRes=checkAccessToken(json_decode ( $tempJson, true ),$token);
+                if($checkRes['error']) {
+                    showError($checkRes['errmsg']);
+                    return;
+                }
 //                print_r($tempJson);
                 //会员信息
                 $vipLevel=0;   //vip等级  0 非会员或未绑定会员 1普卡会员 2银卡会员 3金卡会员
@@ -564,5 +594,13 @@ class LangerieCardPublicController extends AddonsController{
             print_r($obtainData);
         else
             echo 'false';
+    }
+
+    function testSetWrongCache(){
+        $token = get_token ();//get_access_token_expires_time($token)
+        $key = 'access_token_' . $token;
+        $key_expire_time= 'access_token_expire_time_' . $token;
+        S($key,'teewdsfdsf',3600);
+        S($key_expire_time,time()+3600,3600);
     }
 }

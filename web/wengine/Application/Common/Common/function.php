@@ -1674,6 +1674,26 @@ function get_access_token($token = '') {
 }
 //-----------------modified by alkaid-----------------------
 //++++++++++++++++ added by alkaid+++++++++++++++++++++++
+function  showError($errmsg){
+	$this->assign('errmsg',$errmsg);
+	$this->display('Home@Public:error');
+}
+function checkAccessToken($wxResponse,$token){
+	$token ||  $token=get_token();
+	$res=array();
+	if($wxResponse['errcode'] && $wxResponse['errcode']==40001){
+		$res['error']=true;
+		$res['rawmsg']=$wxResponse['errmsg'];
+		$res['errmsg']='服务器出现错误，请关闭页面后重试..';
+		$key = 'access_token_' . $token;
+		$key_expire_time= 'access_token_expire_time_' . $token;
+		S($key,null);
+		S($key_expire_time,null);
+	}else{
+		$res['error']=false;
+	}
+	return $res;
+}
 // 获取access_token，自动带缓存功能
 function get_access_token_expires_time($token = '') {
     empty ( $token ) && $token = get_token ();
