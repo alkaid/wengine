@@ -259,7 +259,7 @@ class LangerieCardPublicController extends AddonsController{
                 $this->assign('user',$tempJson);
                 $checkRes=checkAccessToken(json_decode ( $tempJson, true ),$token);
                 if($checkRes['error']) {
-                    showError($checkRes['errmsg']);
+                    $this->showError($checkRes['errmsg']);
                     return;
                 }
 //                print_r($tempJson);
@@ -311,7 +311,7 @@ class LangerieCardPublicController extends AddonsController{
                 $this->assign('user',$tempJson);
                 $checkRes=checkAccessToken(json_decode ( $tempJson, true ),$token);
                 if($checkRes['error']) {
-                    showError($checkRes['errmsg']);
+                    $this->showError($checkRes['errmsg']);
                     return;
                 }
 //                print_r($tempJson);
@@ -364,7 +364,7 @@ class LangerieCardPublicController extends AddonsController{
                 $this->assign('user',$tempJson);
                 $checkRes=checkAccessToken(json_decode ( $tempJson, true ),$token);
                 if($checkRes['error']) {
-                    showError($checkRes['errmsg']);
+                    $this->showError($checkRes['errmsg']);
                     return;
                 }
 //                print_r($tempJson);
@@ -505,7 +505,7 @@ class LangerieCardPublicController extends AddonsController{
                 $this->assign('user',$tempJson);
                 $checkRes=checkAccessToken(json_decode ( $tempJson, true ),$token);
                 if($checkRes['error']) {
-                    showError($checkRes['errmsg']);
+                    $this->showError($checkRes['errmsg']);
                     return;
                 }
 //                print_r($tempJson);
@@ -602,5 +602,9 @@ class LangerieCardPublicController extends AddonsController{
         $key_expire_time= 'access_token_expire_time_' . $token;
         S($key,'teewdsfdsf',3600);
         S($key_expire_time,time()+3600,3600);
+    }
+
+    function testShowError(){
+        $this->showError('Test ERROR');
     }
 }

@@ -1674,10 +1674,6 @@ function get_access_token($token = '') {
 }
 //-----------------modified by alkaid-----------------------
 //++++++++++++++++ added by alkaid+++++++++++++++++++++++
-function  showError($errmsg){
-	$this->assign('errmsg',$errmsg);
-	$this->display('Home@Public:error');
-}
 function checkAccessToken($wxResponse,$token){
 	$token ||  $token=get_token();
 	$res=array();

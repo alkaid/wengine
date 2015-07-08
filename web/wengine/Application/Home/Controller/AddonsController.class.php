@@ -272,4 +272,9 @@ class AddonsController extends Controller {
 		$model = D ( 'Addons://' . $_addon . '/WeixinAddon' );
 		$model->reply ( $dataArr, $keywordArr );
 	}
+
+    function showError($errmsg){
+        $this->assign('errmsg',$errmsg);
+        $this->display('Home@Public:error');
+    }
 }
