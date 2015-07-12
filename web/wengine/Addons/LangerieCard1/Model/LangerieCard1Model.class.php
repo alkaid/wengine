@@ -34,10 +34,10 @@ class LangerieCard1Model extends Model{
      *                                         array('uid'=>'用户id','group_id'=>'用户组id','title'=>'用户组名称','rules'=>'用户组拥有的规则id,多个,号隔开'),
      *                                         ...)
      */
-    static public function getStatisticsByCard($card_id){
+    static public function getStatisticsByCard($card_id,$forExcel=false){
         $prefix = C('DB_PREFIX');
         $list = M()
-            ->field('s.id,s.token,s.card_id,s.quantity,p.shop,w.title,w.alias')
+            ->field($forExcel?'w.alias,w.title,p.shop,s.quantity'  : 's.id,s.token,s.card_id,s.quantity,p.shop,w.title,w.alias')
             ->table($prefix.self::T_CARD_CONSUME_STATISTICS.' s')
             ->join ($prefix.self::T_CARD_CONSUME_PWD." p on s.pwd_id=p.id")
             ->join ($prefix.self::T_WXCARD." w on s.card_id=w.card_id")
