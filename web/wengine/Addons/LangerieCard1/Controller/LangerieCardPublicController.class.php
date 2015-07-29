@@ -380,6 +380,7 @@ class LangerieCardPublicController extends AddonsController{
                         $vipLevel=1;
                     }
                 }
+                Log::record('vip phone='.$vipinfo['phone'] .' levle='.$vipinfo['viplevel'].' ,code='.$vipLevel,'INFO');
                 if($this->isCardDebug())
                     $cardid=$vipLevel==3||$vipLevel==2?'pnBYvt50NLqtX7yqMq_sxc93hngU':'pnBYvt1RJ4kAcmJsspTQfewxd-l8';    //测试用卡
                 else
