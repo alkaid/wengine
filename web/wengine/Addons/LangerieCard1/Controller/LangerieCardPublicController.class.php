@@ -40,9 +40,11 @@ class LangerieCardPublicController extends AddonsController{
             }
         }
     }
+
     //核销
     function consume(){
         $id = I('get.id');
+        $activityid=I('get.activityid');
         if(!$id){
             return;
         }
@@ -55,10 +57,14 @@ class LangerieCardPublicController extends AddonsController{
             $req['consumepwd']=I('post.consumepwd');
             $req['code']=I('post.code');
             $req['card_id']=I('post.cardid');
+            $req['activityid']=I('post.activityid');
             //验证核销码
             $map['token'] = $token;
             $map['pwd'] =  $req['consumepwd'];
             $consumePwd=M(LangerieCard1Model::T_CARD_CONSUME_PWD)->where($map)->find();
+//            if($req['activityid']==2){
+//                $consumePwd=  $req['consumepwd']=='909090';
+//            }
             if($consumePwd){
 //                addWeixinLog ( "验证核销码:".$req['consumepwd'],'true'  );
             }else{
@@ -93,6 +99,8 @@ class LangerieCardPublicController extends AddonsController{
             if($res['errcode']===0){
                 $response['success'] = true;
                 $response['errmsg'] = '卡券核销成功';
+                Log::record('卡券核销成功 token='.$token .' pwd='.$req['consumepwd'],'INFO');
+                //TODO 获取用户信息 记录每次核销的数据到数据库 用于纠错分析
                 //统计核销数据
                 $map=array();
                 $map['token'] = $token;
@@ -186,6 +194,7 @@ class LangerieCardPublicController extends AddonsController{
         $this->assign('card',$card);
         $this->assign('mp_id',$id);
         $this->assign('page_title',$member['public_name'].'卡券核销');
+        $this->assign('activityid',$activityid);
         switch($id){
             case 111:
                 $this->display('consumeenweis');
@@ -280,6 +289,59 @@ class LangerieCardPublicController extends AddonsController{
     }
     //兰卓丽视频卡券
     function article2(){
+        $id = I('get.id');
+        $mpid = I('get.mpid');
+        if(!$mpid)
+            $mpid=$id;
+        if(!$mpid)
+            return;
+        $cardid=I('get.cardid');
+        if(!$id)
+            return;
+        $member=M('member_public')->where('id='.$mpid)->find();
+        $token=$member['token'];
+        $appid=$member['appid'];
+        $code=I('get.code');
+        $debug=I('get.debug');
+        if($code){
+            $url='https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$member['appid'].'&secret='.$member['secret'].'&code='.$code.'&grant_type=authorization_code';
+            $tempJson = wp_file_get_contents($url);
+            addWeixinLog ( "获取网页access_token:".$url,$tempJson  );
+            $tempArr = json_decode ( $tempJson, true );
+            $openid=0;
+            if (@array_key_exists ( 'openid', $tempArr )) {
+                $openid=$tempArr['openid'];
+            }
+            if($openid){
+                $url='https://api.weixin.qq.com/cgi-bin/user/info?access_token='.get_access_token($token).'&openid='.$openid.'&lang=zh_CN';
+                $tempJson = wp_file_get_contents($url);
+                addWeixinLog ( "获取用户信息:".$url,$tempJson  );
+                //用户信息
+                $this->assign('user',$tempJson);
+                $checkRes=checkAccessToken(json_decode ( $tempJson, true ),$token);
+                if($checkRes['error']) {
+                    $this->showError($checkRes['errmsg']);
+                    return;
+                }
+//                print_r($tempJson);
+            }else{
+                return;
+            }
+        }else if(!$debug){
+            $url= "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$appid."&redirect_uri=".rawurlencode(GetCurUrl())."&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
+            print '<script type="text/javascript">location.href="'.$url.'";</script>';
+            return;
+        }
+        $this->assign('mp_id',$mpid);
+        $this->assign('member',$member);
+        $this->assign('cardid',$cardid);
+        //TODO 应该做成素材管理模块 get参数获得素材id 引用素材页面再插入所需js
+        $this->assign('page_title','兰卓丽');
+        $this->display();
+    }
+
+    //兰卓丽转发中奖者领取页面
+    function lanArticle3(){
         $id = I('get.id');
         $mpid = I('get.mpid');
         if(!$mpid)

@@ -267,6 +267,7 @@ class WeixinModel extends Model {
             $response['card_ext']=json_encode($ext);
 //            $str=json_encode($response);
 			$response['status']=true;
+			Log::record( 'card ext='.$response['card_ext'],'INFO');
             return $response;
 //            echo($str);
         }else{

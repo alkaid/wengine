@@ -24,6 +24,11 @@ class WxCardPublicController extends AddonsController{
             $logo='https://mmbiz.qlogo.cn/mmbiz/MKEdQ52IP2NiafI3znI4lAjWk2DKkxZEYCHbJbKibPicVc9pFEVPFlCjjoJt4hfiaGMjvxJ5Q7DjE4HE94oeiaib0Sibw/0?wx_fmt=jpeg';
             $color='#55bd47';
             $cardTitle='50元代金券';
+        }else if($cardid=='pn0s-tzZdRd9XgbaFVG7RDxGEokY'){
+            $brand='兰卓丽';
+            $logo='https://mmbiz.qlogo.cn/mmbiz/MKEdQ52IP2NNHdH3Wf8UkAviaQePLvoPPjvTFI5SD5B3XicDEstX8TsuxkDictsABnkUN3miaKhquWLYicpQ6Jib4iadQ/0?wx_fmt=jpeg';
+            $color='#55bd47';
+            $cardTitle='无钢圈文胸兑换券';
         }else if($cardid=='pnBYvt4OCAfIqbgQWrPVrBMs-VYY' || $cardid=='pnBYvt1RJ4kAcmJsspTQfewxd-l8'){
             //伊维斯普卡关注礼
             $brand='伊维斯';
