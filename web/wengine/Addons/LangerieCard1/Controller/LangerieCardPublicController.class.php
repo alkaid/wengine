@@ -258,7 +258,7 @@ class LangerieCardPublicController extends AddonsController{
             $tempArr = json_decode ( $tempJson, true );
             $openid=0;
             if (@array_key_exists ( 'openid', $tempArr )) {
-                $openid=$tempArr['openid'];
+               $openid=$tempArr['openid'];
             }
             if($openid){
                 $url='https://api.weixin.qq.com/cgi-bin/user/info?access_token='.get_access_token($token).'&openid='.$openid.'&lang=zh_CN';

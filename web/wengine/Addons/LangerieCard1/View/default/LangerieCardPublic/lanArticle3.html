@@ -1,0 +1,248 @@
+<extend name="Weixin/jssdk" />
+<block name="head">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<link href="{:ADDON_PUBLIC_PATH}/rich.css?v={:SITE_VERSION}" rel="stylesheet" type="text/css">
+<style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style>
+</block>
+<block name="onWeixinReady">
+    wx.onMenuShareTimeline({
+    title: '自由性感兰卓丽，惊喜为你而来！', // 分享标题
+    link: currurl, // 分享链接
+        imgUrl: 'http://{:SITE_DOMAIN.ADDON_PUBLIC_PATH}/article1/sharethumb.jpg', // 分享图标
+    success: function () {
+    // 用户确认分享后执行的回调函数
+    },
+    cancel: function () {
+    // 用户取消分享后执行的回调函数
+    }
+    });
+    wx.onMenuShareAppMessage({
+    title: '自由性感兰卓丽，惊喜为你而来！', // 分享标题
+    desc: '粉丝福利！快来领取限量代金券啦！使用无门槛，优惠随心享！', // 分享描述
+    link: currurl, // 分享链接
+    imgUrl: 'http://{:SITE_DOMAIN.ADDON_PUBLIC_PATH}/article1/sharethumb.jpg', // 分享图标
+    success: function () {
+    // 用户确认分享后执行的回调函数
+    },
+    cancel: function () {
+    // 用户取消分享后执行的回调函数
+    }
+    });
+</block>
+<block name="body">
+<div id="js_article" class="rich_media">
+    <div id="js_top_ad_area" class="top_banner"></div>
+    <div class="rich_media_inner">
+        <div id="page-content">
+            <div id="img-content" class="rich_media_area_primary"><h2 class="rich_media_title" id="activity-name">
+                看到这条消息的小伙伴们！不许动！你们中奖啦！</h2>
+
+                <div class="rich_media_meta_list"><em id="post-date" class="rich_media_meta rich_media_meta_text">2015-9-11</em>
+                    <em class="rich_media_meta rich_media_meta_text"></em> <!--<a
+                            class="rich_media_meta rich_media_meta_link rich_media_meta_nickname"
+                            href="javascript:void(0);" id="post-user">{$member.public_name}</a>-->
+                    <em class="rich_media_meta  rich_media_meta_nickname"  id="post-user">{$member.public_name}</em>
+                    <span class="rich_media_meta rich_media_meta_text rich_media_meta_nickname">{$member.public_name}</span>
+
+                    <div id="js_profile_qrcode" class="profile_container" style="display: none;">
+                        <div class="profile_inner"><strong class="profile_nickname">{$member.public_name}</strong> <img
+                                class="profile_avatar" id="js_profile_qrcode_img" src="" alt="">
+
+                            <p class="profile_meta"><label class="profile_meta_label">微信号</label> <span
+                                    class="profile_meta_value">{$member.wechat}</span></p>
+
+                            <p class="profile_meta"><label class="profile_meta_label">功能介绍</label> <span
+                                    class="profile_meta_value">欢迎您的光临</span></p></div>
+                        <span class="profile_arrow_wrp" id="js_profile_arrow_wrp">                                <i
+                                class="profile_arrow arrow_out"></i>                                <i
+                                class="profile_arrow arrow_in"></i>                            </span></div>
+                </div>
+                <div class="rich_media_content" id="js_content">
+                    <div class="alert alert-danger hide" id="divError" style="text-align: left;">
+                        <strong>Error!</strong> A problem has been occurred while submitting your data.
+                    </div>
+
+                    <section
+                            style="border: 0px; box-sizing: border-box; width: 100%; margin: 0.8em 0px 0.2em; clear: both; padding: 0px;"
+                            class="tn-Powered-by-XIUMI"><img
+                            style="box-sizing: border-box; width: 100% !important; visibility: visible !important; height: auto !important;"
+                            data-src="http://mmbiz.qpic.cn/mmbiz/MKEdQ52IP2Nhxq8tiaAUKb29tfNlkWyhKRTJQMsZH7sTgbqBHmMiacVUl2RW7neTaSCpvVp4ZV9gOqzRz38B7oaQ/0?wx_fmt=jpeg"
+                            class="tn-Powered-by-XIUMI" data-type="jpeg" data-ratio="0.5138339920948617" data-w=""
+                            _width="100%"
+                            src="http://statics.xiumi.us/xmi/rc/exiZ/i/abdc6540627c5b0d8647567b8ce32ca6-sz_187034.jpg">
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <p></p>
+                    <section
+                            style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; text-align: justify; text-decoration: inherit; color: inherit; box-sizing: border-box; padding: 0px;"
+                            class="tn-Powered-by-XIUMI">
+                        <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"><br
+                                class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"></section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <section style="border: 0px; margin: 0.8em 0px 0px; box-sizing: border-box; padding: 0px;"
+                             class="tn-Powered-by-XIUMI">
+                        <section
+                                style="width: 100%; padding: 5px; font-size: 1em; font-family: inherit; text-decoration: inherit; border-color: rgb(249, 110, 87); box-sizing: border-box; background-color: rgba(145, 144, 144, 0.117647);"
+                                class="tn-Powered-by-XIUMI"><span
+                                style="float: left; width: 5%; font-size: 3em; line-height: 0.8em; display: inline-block; font-weight: bolder; vertical-align: top; box-sizing: border-box;"
+                                class="tn-Powered-by-XIUMI">“</span> <span
+                                style="font-size: 1em; width: 88%; line-height: 1.5em; margin-top: 0.5em; margin-left: 1.2em; display: inline-block; vertical-align: middle; font-family: inherit; box-sizing: border-box;"
+                                class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI"
+                                                                     style="box-sizing: border-box;">
+                            感谢大家转发“奔跑吧姐妹”活动微信。(づ￣3￣)づ╭❤～
+                        </section><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">
+                            所有收到公众号这条消息的妹纸们，
+                        </section><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">幸运之神眷顾了可爱善良的你！
+                        </section><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">
+                            现在就来点击专门为你们准备的礼品券吧！，带上它你就可以到我们的门店获取一件超人气无钢圈产品哦！先来看看领奖注意事项吧。
+                        </section></span></section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <section style="border: 0px; margin: 0.8em 0px 0.5em; box-sizing: border-box; padding: 0px;"
+                             class="tn-Powered-by-XIUMI">
+                        <section
+                                style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(255, 202, 0); line-height: 1; font-size: 1em; font-family: inherit; text-align: center; text-decoration: inherit; color: rgb(255, 255, 255);"
+                                class="tn-Powered-by-XIUMI">
+                            <section
+                                    style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; font-size: 1em; font-family: inherit; box-sizing: border-box; word-wrap: break-word !important; background-color: rgb(255, 202, 0);"
+                                    class="tn-Powered-by-XIUMI">
+                                <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">1</section>
+                            </section>
+                            <span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4; font-size: 1em; word-wrap: break-word !important; box-sizing: border-box;"
+                                  class="tn-Powered-by-XIUMI"><span
+                                    style="max-width: 100%; font-size: 1em; font-family: inherit; font-weight: bolder; text-decoration: inherit; color: rgb(72, 72, 72); word-wrap: break-word !important; box-sizing: border-box;"
+                                    class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI"
+                                                                         style="box-sizing: border-box;">领取方式
+                            </section></span></span></section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <section
+                            style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; text-align: justify; text-decoration: inherit; color: inherit; box-sizing: border-box; padding: 0px;"
+                            class="tn-Powered-by-XIUMI">
+                        <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">
+                            中奖人凭卡券+手机号+微信号，到店领取奖品，信息对应，方可领取。此卡券<span
+                                style="color: rgb(37, 30, 33); box-sizing: border-box;" class="tn-Powered-by-XIUMI">转发领取无效</span>。
+                        </section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <section style="border: 0px; margin: 0.8em 0px 0.5em; box-sizing: border-box; padding: 0px;"
+                             class="tn-Powered-by-XIUMI">
+                        <section
+                                style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(255, 202, 0); line-height: 1; font-size: 1em; font-family: inherit; text-align: center; text-decoration: inherit; color: rgb(255, 255, 255);"
+                                class="tn-Powered-by-XIUMI">
+                            <section
+                                    style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; font-size: 1em; font-family: inherit; box-sizing: border-box; word-wrap: break-word !important; background-color: rgb(255, 202, 0);"
+                                    class="tn-Powered-by-XIUMI">
+                                <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">2</section>
+                            </section>
+                            <span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4; font-size: 1em; word-wrap: break-word !important; box-sizing: border-box;"
+                                  class="tn-Powered-by-XIUMI"><span
+                                    style="max-width: 100%; font-size: 1em; font-family: inherit; font-weight: bolder; text-decoration: inherit; color: rgb(72, 72, 72); word-wrap: break-word !important; box-sizing: border-box;"
+                                    class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI"
+                                                                         style="box-sizing: border-box;">领取产品
+                            </section></span></span></section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <section
+                            style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; text-align: justify; text-decoration: inherit; color: inherit; box-sizing: border-box; padding: 0px;"
+                            class="tn-Powered-by-XIUMI">
+                        <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">
+                            奖品为指定的2015新款超人气无钢圈内衣一件，详情请到店咨询导购MM。
+                        </section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <section style="border: 0px; margin: 0.8em 0px 0.5em; box-sizing: border-box; padding: 0px;"
+                             class="tn-Powered-by-XIUMI">
+                        <section
+                                style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(255, 202, 0); line-height: 1; font-size: 1em; font-family: inherit; text-align: center; text-decoration: inherit; color: rgb(255, 255, 255);"
+                                class="tn-Powered-by-XIUMI">
+                            <section
+                                    style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; font-size: 1em; font-family: inherit; box-sizing: border-box; word-wrap: break-word !important; background-color: rgb(255, 202, 0);"
+                                    class="tn-Powered-by-XIUMI">
+                                <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">3</section>
+                            </section>
+                            <span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4; font-size: 1em; word-wrap: break-word !important; box-sizing: border-box;"
+                                  class="tn-Powered-by-XIUMI"><span
+                                    style="max-width: 100%; font-size: 1em; font-family: inherit; font-weight: bolder; text-decoration: inherit; color: rgb(72, 72, 72); word-wrap: break-word !important; box-sizing: border-box;"
+                                    class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI"
+                                                                         style="box-sizing: border-box;">工作人员
+                            </section></span></span></section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <section
+                            style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; text-align: justify; text-decoration: inherit; color: inherit; box-sizing: border-box; padding: 0px;"
+                            class="tn-Powered-by-XIUMI">
+                        <section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">
+                            如有小伙伴没领取到卡券的情况，请联系客服电话0755-82790356
+                        </section>
+                        <section style="width: 0px; height: 0px; clear: both;"></section>
+                    </section>
+                    <p></p>
+
+                    <p><br></p>
+
+                    <br/>
+                        <iframe class="res_iframe card_iframe js_editor_card" data-cardid="{$cardid}" data-num="0"
+                                src="{: SITE_URL}/index.php?s=/addon/WxCardAlkaid/WxCardPublic/getCardFrame/cardid/{$cardid}.html"
+                                style="height: 184px;"></iframe>
+
+                </div>
+            </div>
+            <div class="rich_media_area_extra">
+                <div class="mpda_bottom_container" id="js_bottom_ad_area"></div>
+                <div id="js_iframetest" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener('message', function(event){
+        // 通过origin属性判断消息来源地址
+        if (event.origin == "{: 'http://'.SITE_DOMAIN}") {
+//            alert(event.data);    // 弹出从子页面post过来的信息
+            if(event.data=='obtainCard'){
+                if(userinfo.subscribe<=0){
+//                    alert("请先关注'{$member.public_name}'官方微信账号再领取卡券");
+                    $('#divError').html("<strong>请先关注'{$member.public_name}'官方微信账号再领取卡券</strong>  ");
+                    $('#divError').removeClass('alert-danger').addClass('alert-success').removeClass('hide').addClass('show');
+                    return;
+                }else{
+                    $.ajax({
+                        method: "POST",
+                        url: "{: SITE_URL}/index.php?s=/home/weixin/cardInfoForAdd/id/{$mp_id}.html",
+                        dataType:"json",
+                        data: { card_id: '{$cardid}' }
+                    })
+                            .done(function( data ) {
+                                $('#divError').removeClass('show').addClass('hide');
+//                                alert(data);
+//                                var cardlist=new Array();
+//                                cardlist.push(data);
+//                                alert(data.card_ext);
+                                wx.addCard({
+                                    cardList: [{
+                                        cardId: '{$cardid}',
+                                        cardExt: data.card_ext
+                                    }], // 需要添加的卡券列表
+                                    success: function (res) {
+//                                        var cardList = res.cardList; // 添加的卡券列表信息
+//                                        alert("addcard success:"+res.cardList[0].card_id);
+                                    }
+                                });
+                            })
+                            .fail(function(data) {
+                                $('#divError').html("<strong>服务器或网络错误，请稍后重试</strong>  ");
+                                $('#divError').removeClass('alert-success').addClass('alert-danger').removeClass('hide').addClass('show');
+//                                alert('服务器或网络错误，请稍后重试');
+                            });
+                }
+            }
+
+        }
+    }, false);
+</script>
+</block>
+</html>

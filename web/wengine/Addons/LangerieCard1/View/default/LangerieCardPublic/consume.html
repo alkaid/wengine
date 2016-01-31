@@ -60,7 +60,8 @@
                 var formData = {
                     'consumepwd'    : $('input[name=consumepwd]').val(),
                     'code'          :'{$card.code}',
-                    'cardid'        :'{$card.id}'
+                    'cardid'        :'{$card.id}',
+                    'activityid'    :'{$activityid}'
                 };
                 // process the form
                 $.ajax({
