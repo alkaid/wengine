@@ -393,6 +393,66 @@ class LangerieCardPublicController extends AddonsController{
         $this->display();
     }
 
+<<<<<<< HEAD
+=======
+    //兰卓丽美食游戏入口
+    function lanSweetGame(){
+        $id = I('get.id');
+        $mpid = I('get.mpid');
+        if(!$mpid)
+            $mpid=$id;
+        if(!$mpid)
+            return;
+        $cardid=I('get.cardid');
+        if(!$id){
+//            $this->assign('page_title','兰卓丽甜心SHOP');
+//            $this->assign('mp_id',110);
+//            $this->display();
+            return;
+        }
+        $member=M('member_public')->where('id='.$mpid)->find();
+        $token=$member['token'];
+        $appid=$member['appid'];
+        $code=I('get.code');
+        $debug=I('get.debug');
+        if($code){
+            $url='https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$member['appid'].'&secret='.$member['secret'].'&code='.$code.'&grant_type=authorization_code';
+            $tempJson = wp_file_get_contents($url);
+            addWeixinLog ( "获取网页access_token:".$url,$tempJson  );
+            $tempArr = json_decode ( $tempJson, true );
+            $openid=0;
+            if (@array_key_exists ( 'openid', $tempArr )) {
+                $openid=$tempArr['openid'];
+            }
+            if($openid){
+                $url='https://api.weixin.qq.com/cgi-bin/user/info?access_token='.get_access_token($token).'&openid='.$openid.'&lang=zh_CN';
+                $tempJson = wp_file_get_contents($url);
+                addWeixinLog ( "获取用户信息:".$url,$tempJson  );
+                //用户信息
+                $this->assign('user',$tempJson);
+                $checkRes=checkAccessToken(json_decode ( $tempJson, true ),$token);
+                if($checkRes['error']) {
+                    $this->showError($checkRes['errmsg']);
+                    return;
+                }
+//                print_r($tempJson);
+            }else{
+                return;
+            }
+        }else if(!$debug){
+            $url= "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$appid."&redirect_uri=".rawurlencode(GetCurUrl())."&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
+            print '<script type="text/javascript">location.href="'.$url.'";</script>';
+            return;
+        }
+        $this->assign('mp_id',$mpid);
+        $this->assign('member',$member);
+        $this->assign('cardid',$cardid);
+        //TODO 应该做成素材管理模块 get参数获得素材id 引用素材页面再插入所需js
+        $this->assign('page_title','兰卓丽甜心SHOP');
+        $this->display();
+    }
+
+>>>>>>> origin/master
     //伊维斯关注礼
     function ewsArticle1(){
         $id = I('get.id');

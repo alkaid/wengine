@@ -78,7 +78,8 @@ class HuijieBindModel extends Model{
         //TODO 暂时只开放伊维斯
         if($weid!=44)
             return false;
-        $url = "http://10.0.0.131/huijie_api/huijie_api.php?action=getinfo&phone=".$phone;
+//        $url = "http://10.0.0.131/huijie_api/huijie_api.php?action=getinfo&phone=".$phone;
+        $url = "http://112.124.1.245/huijie_api/huijie_api.php?action=getinfo&phone=".$phone;
         $basic = json_decode(wp_file_get_contents($url),true);
 //验证该手机号码是不是属于绑定登录的品牌会员
         $cardLevel = "";
