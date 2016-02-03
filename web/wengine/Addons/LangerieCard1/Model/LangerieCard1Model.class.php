@@ -8,6 +8,7 @@ use Think\Model;
  */
 class LangerieCard1Model extends Model{
     const T_WXCARD                      = 'wxcard';
+    const T_CARD_CONSUME_DETAIL         = 'card_consume_detail';
     const T_CARD_CONSUME_STATISTICS     = 'card_consume_statistics';
     const T_CARD_CONSUME_PWD            = 'card_consume_pwd';
     const T_CARD_ACTIVITY               = 'card_activity';
@@ -60,6 +61,29 @@ class LangerieCard1Model extends Model{
             ->join ($prefix.self::T_WXCARD." w on a.id=w.activity_id and a.token=w.token",'LEFT')
             ->join ($prefix.self::T_CARD_OBTAIN." o on o.card_id=w.card_id",'LEFT')
             ->where(array('a.id'=>$activityId,'a.token'=>$token,'o.openid'=>$openid))
+            ->select();
+        return $res;
+    }
+
+    /**
+     * 根据活动id和领取人获得详细的领取信息
+     * @param $activityId
+     * @param $openid
+     * @param $token
+     * @return mixed
+     */
+    public function getConsumeDetailByActivityid($activityId,$openid,$token){
+        $tmp = M(LangerieCard1Model::T_CARD_CONSUME_DETAIL)->where(array('activity_id'=>$activityId,'token'=>$token,'openid'=>$openid))->find();
+        if(!$tmp){
+            return;
+        }
+        $prefix = C('DB_PREFIX');
+        $res=$this
+            ->field('a.name,w.title,w.card_id,w.alias,o.openid,o.nickname,o.time')
+            ->table($prefix.self::T_CARD_CONSUME_DETAIL.' o')
+            ->join ($prefix.self::T_WXCARD." w on o.card_id=w.card_id")
+            ->join ($prefix.self::T_CARD_ACTIVITY." a on a.id=w.activity_id and a.token=w.token")
+            ->where(array('a.id'=>$activityId,'a.token'=>$token,'o.openid'=>$openid,'o.card_id'=>$tmp['card_id']))
             ->select();
         return $res;
     }

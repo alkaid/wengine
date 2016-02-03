@@ -2,8 +2,63 @@
 <block name="head">
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-<link href="{:ADDON_PUBLIC_PATH}/rich.css?v={:SITE_VERSION}" rel="stylesheet" type="text/css">
-<style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style>
+<style type="text/css">
+    html{height: 100%;}
+    body {
+        height: 100%;;
+        line-height: 1.6;
+        font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "黑体", Arial, sans-serif;
+        font-size: 14px;
+        margin: 0;
+        text-align: center;;
+    }
+    .mainbg{
+        height: 100%;
+        /*-moz-background-size:cover;
+        -webkit-background-size:cover;
+        -o-background-size:cover;
+        background-size:cover;*/
+        background:#666 url({:ADDON_PUBLIC_PATH}/sweetgame/welcome_bg.jpg) ;
+        background-size:100% 100%;
+    }
+    #header{ height: 10%;/*background: url({:ADDON_PUBLIC_PATH}/langerielogo.png) no-repeat center; background-size: auto 50%;*/}
+    #body{ height: 52%;}
+    #footer{ height: 20%;}
+    .col-center-block {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .form-signin-heading{
+        color: #d43f3a;
+    }
+    .getcard {
+        color: #ffffff;
+        background-image: url({:ADDON_PUBLIC_PATH}/sweetgame/btn_getcard.png);
+        background-size:100% 100%;
+        font-size: 34px;
+        font-weight: bold;
+        color: #eb6e9f;
+        display: inline-block;
+        *display: inline;
+        padding: 8px 12px;
+        margin-bottom: 0;
+        *margin-left: .3em;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        border-radius:5px;
+        border:none;
+    }
+    .tip{
+        font-size: 18px;
+        color: #eb6e9f;
+        vertical-align: middle;
+        margin-top: 20px;
+    }
+    .tip a{color: #eb6e9f;}
+</style>
 </block>
 <block name="onWeixinReady">
     wx.onMenuShareTimeline({
@@ -35,34 +90,37 @@
         <div id="header">
         </div>
         <div id="body">
-            <form class="form-signin" action="{:U('lanSweetGame?id='.$mp_id)}"  method="post">
-                <h2 class="form-signin-heading"></h2>
-                <div class="alert alert-danger hide" id="divError" style="text-align: left;">
-                    <strong>Error!</strong> A problem has been occurred while submitting your data.
-                </div>
-                <input type="hidden" name="user" value="$user">
-                <button id="btnConsume" class="btn btn-lg btn-primary btn-block btn-danger" style="margin-top: 2em" type="submit" data-loading-text="Loading...">开始游戏</button>
-            </form>
+
         </div>
 
         <div id="footer">
+            <form class="form-signin" action="http://weixin.maniform.cn/wei/plt/langame/langamev4/index.html"  method="post">
+                <div class="alert alert-danger hide" id="divError" style="text-align: left;">
+                    <strong>Error!</strong> A problem has been occurred while submitting your data.
+                </div>
+                <input type="hidden" name="user" value="{$user}">
+                <button id="btnConsume" class="btn getcard" style="margin-top: 2em" type="submit" data-loading-text="Loading...">马上领取卡券</button>
+            </form>
+            <div class="tip">
+                活动日期：即日起至2016年6月30日</br>
+                <a href="{:U('lanSweetGameRule?id='.$mp_id)}">活动规则&gt;&gt;</a>
+            </div>
         </div>
     </div>
-
 <script type="text/javascript">
     $(document).ready(function() {
         // process the form
         $('form').submit(function(event) {
             if(userinfo.subscribe<=0){
-//                    alert("请先关注'{$member.public_name}'官方微信账号再领取卡券");
-                $('#divError').html("<strong>请先关注“{$member.public_name}”官方微信账号再开始游戏</strong>  ");
-                $('#divError').removeClass('alert-danger').addClass('alert-success').removeClass('hide').addClass('show');
+                    alert("请先关注"{$member.public_name}"官方微信账号再领取卡券");
+//                $('#divError').html("<strong>请先关注“{$member.public_name}”官方微信账号再开始游戏</strong>  ");
+//                $('#divError').removeClass('alert-danger').addClass('alert-success').removeClass('hide').addClass('show');
                 event.preventDefault();
                 return;
             }
 //            $('#btnConsume').button('loading');
-            location.href='http://weixin.maniform.cn/wei/plt/langame/langamev1/index.html?v=1';
-            event.preventDefault();
+//            location.href='http://weixin.maniform.cn/wei/plt/langame/langamev1/index.html?v=1';
+//            event.preventDefault();
         });
 
     });

@@ -58,6 +58,9 @@ class LangerieCardPublicController extends AddonsController{
             $req['code']=I('post.code');
             $req['card_id']=I('post.cardid');
             $req['activityid']=I('post.activityid');
+            $req['openid']=I('post.openid');
+            $req['nickname']=I('post.nickname');
+            $activityid=$req['activityid'];
             //验证核销码
             $map['token'] = $token;
             $map['pwd'] =  $req['consumepwd'];
@@ -101,6 +104,22 @@ class LangerieCardPublicController extends AddonsController{
                 $response['errmsg'] = '卡券核销成功';
                 Log::record('卡券核销成功 token='.$token .' pwd='.$req['consumepwd'],'INFO');
                 //TODO 获取用户信息 记录每次核销的数据到数据库 用于纠错分析
+                //暂时只记录美食游戏的
+                if($activityid==3){
+                    $Model=M(LangerieCard1Model::T_CARD_CONSUME_DETAIL);
+                    $map=array();
+                    $map['token'] = $token;
+                    $map['pwd_id'] =  $consumePwd['id'];
+                    $map['card_id']=$req['card_id'];
+                    $map['activity_id']=$activityid;
+                    $map['openid']=$req['openid'];
+                    $map['nickname']=$req['nickname'];
+                    $map['time']=time();
+                    if($Model->add($map)){
+                    }else{
+                        Log::record("表".LangerieCard1Model::T_CARD_CONSUME_DETAIL."插入失败.token=$token,pwd_id=".$map['pwd_id'].",card_id=". $map['card_id'].',openid='.$map['openid'].',nickname='.$map['nickname'],'ERR');
+                    }
+                }
                 //统计核销数据
                 $map=array();
                 $map['token'] = $token;
@@ -131,10 +150,45 @@ class LangerieCardPublicController extends AddonsController{
             echo json_encode($response);
             return ;
         }
+
         $encrypt_code=I('get.encrypt_code');
         $card_id=I('get.card_id');
         $signature=I('get.signature');
         $code=false;
+        $openid=I('get.openid');
+        $debug=I('get.debug');
+        if($openid){
+            $url='https://api.weixin.qq.com/cgi-bin/user/info?access_token='.get_access_token($token).'&openid='.$openid.'&lang=zh_CN';
+            $tempJson = wp_file_get_contents($url);
+            addWeixinLog ( "获取用户信息:".$url,$tempJson  );
+            //用户信息
+            $this->assign('user',$tempJson);
+            $checkRes=checkAccessToken(json_decode ( $tempJson, true ),$token);
+            if($checkRes['error']) {
+                $this->showError($checkRes['errmsg']);
+                return;
+            }
+            $user = json_decode ( $tempJson, true );
+            $nickname=$user['nickname'];
+            $this->assign('openid',$openid);
+            $this->assign('nickname',$nickname);
+        }else{
+//            print '<script type="text/javascript">alert("dddd"); location.href="'.$url.'";</script>';
+            echo '获取openid错误';
+            return;
+        }
+
+        //验证业务逻辑
+        if($activityid==3){
+            $obtainData=D('Addons://LangerieCard1/LangerieCard1')->getConsumeDetailByActivityid($activityid,$openid,$token);
+//            dump($obtainData);
+            if($obtainData){
+                $timestr=date('Y-m-d H:i:s',$obtainData[0]['time']);
+                $error='尊敬的'.$nickname.'先生/女士,抱歉，您于['.$timestr.']核销过'.$member['public_name'].$obtainData[0]['name'].'活动的【'.$obtainData[0]['title'].'】,无法再次核销同一活动的其他卡券';
+                $this->showError($error);
+                return;
+            }
+        }
 
         //开始解码
         $url='https://api.weixin.qq.com/card/code/decrypt?access_token='.get_access_token($token);
@@ -181,8 +235,13 @@ class LangerieCardPublicController extends AddonsController{
 //        addWeixinLog ( 'consume signbefore,appsecret='.$appsecret.",code=". $code.',cardid='.$card_id,$sign  );
         $sign=sha1($sign);
 //        addWeixinLog ( 'consume signafter='.$sign.",weixin signaature=".$signature  );
-        if($sign!==$signature)
-            return;
+//        if($sign!==$signature){
+//            echo "   sign=".$sign."   ,WxSign=".$signature;
+//            echo GetCurUrl();
+//            echo "签名验证错误";
+//            return;
+//        }
+
 
         $card['id']=$card_id;
         $card['code']=$code;
@@ -227,7 +286,7 @@ class LangerieCardPublicController extends AddonsController{
                 return;
             }
         }else{
-            return false;
+//            return false;
         }
 
         $response=WeixinModel::getCardExtForAdd();
@@ -393,6 +452,9 @@ class LangerieCardPublicController extends AddonsController{
         $this->display();
     }
 
+    function lanSweetGameRule(){
+        $this->display();
+    }
     //兰卓丽美食游戏入口
     function lanSweetGame(){
         $id = I('get.id');
@@ -402,12 +464,6 @@ class LangerieCardPublicController extends AddonsController{
         if(!$mpid)
             return;
         $cardid=I('get.cardid');
-        if(!$id){
-//            $this->assign('page_title','兰卓丽甜心SHOP');
-//            $this->assign('mp_id',110);
-//            $this->display();
-            return;
-        }
         $member=M('member_public')->where('id='.$mpid)->find();
         $token=$member['token'];
         $appid=$member['appid'];
@@ -447,6 +503,78 @@ class LangerieCardPublicController extends AddonsController{
         $this->assign('cardid',$cardid);
         //TODO 应该做成素材管理模块 get参数获得素材id 引用素材页面再插入所需js
         $this->assign('page_title','兰卓丽甜心SHOP');
+        $this->display();
+    }
+
+    //兰卓丽美食游戏奖励领取页面
+    function lanSweetGamePrize(){
+        $id = I('get.id');
+        $mpid = I('get.mpid');
+        $prize=I('get.prize');
+        if(!$mpid)
+            $mpid=$id;
+        if(!$mpid)
+            return;
+        if(!$id)
+            return;
+        if(!$prize)
+            return;
+        switch($prize){
+            case 1:
+//                $cardid='pn0s-txK8DHvw_GAuHY8x7Cc0plY';//test
+                $cardid='pn0s-tz4LFpj38RqiLus6Xch_4fc';//real
+                break;
+            case 2:
+//                $cardid='pn0s-twxw73Ryu38b__8-7Ro8awA';//test
+                $cardid='pn0s-twTSkWz-abXBOahj_bXRrsE';//real
+                break;
+            case 3:
+//                $cardid='pn0s-t2HyH2rahV3KzLiogFL3p9M';//test
+                $cardid='pn0s-t4plIXmLcUmoyZH63BeIchQ';//real
+                break;
+            default:
+                return;
+        }
+        $member=M('member_public')->where('id='.$mpid)->find();
+        $token=$member['token'];
+        $appid=$member['appid'];
+        $code=I('get.code');
+        $debug=I('get.debug');
+        if($code){
+            $url='https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$member['appid'].'&secret='.$member['secret'].'&code='.$code.'&grant_type=authorization_code';
+            $tempJson = wp_file_get_contents($url);
+            addWeixinLog ( "获取网页access_token:".$url,$tempJson  );
+            $tempArr = json_decode ( $tempJson, true );
+            $openid=0;
+            if (@array_key_exists ( 'openid', $tempArr )) {
+                $openid=$tempArr['openid'];
+            }
+            if($openid){
+                $url='https://api.weixin.qq.com/cgi-bin/user/info?access_token='.get_access_token($token).'&openid='.$openid.'&lang=zh_CN';
+                $tempJson = wp_file_get_contents($url);
+                addWeixinLog ( "获取用户信息:".$url,$tempJson  );
+                //用户信息
+                $this->assign('user',$tempJson);
+                $checkRes=checkAccessToken(json_decode ( $tempJson, true ),$token);
+                if($checkRes['error']) {
+                    $this->showError($checkRes['errmsg']);
+                    return;
+                }
+//                print_r($tempJson);
+            }else{
+                return;
+            }
+        }else if(!$debug){
+            $url= "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$appid."&redirect_uri=".rawurlencode(GetCurUrl())."&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
+            print '<script type="text/javascript">location.href="'.$url.'";</script>';
+            return;
+        }
+        $this->assign('mp_id',$mpid);
+        $this->assign('member',$member);
+        $this->assign('cardid',$cardid);
+        $this->assign('openid',$openid);
+        //TODO 应该做成素材管理模块 get参数获得素材id 引用素材页面再插入所需js
+        $this->assign('page_title','兰卓丽');
         $this->display();
     }
 
