@@ -60,31 +60,7 @@
     .tip a{color: #eb6e9f;}
 </style>
 </block>
-<block name="onWeixinReady">
-    wx.onMenuShareTimeline({
-    title: '自由性感兰卓丽，惊喜为你而来！', // 分享标题
-    link: currurl, // 分享链接
-        imgUrl: 'http://{:SITE_DOMAIN.ADDON_PUBLIC_PATH}/article1/sharethumb.jpg', // 分享图标
-    success: function () {
-    // 用户确认分享后执行的回调函数
-    },
-    cancel: function () {
-    // 用户取消分享后执行的回调函数
-    }
-    });
-    wx.onMenuShareAppMessage({
-    title: '自由性感兰卓丽，惊喜为你而来！', // 分享标题
-    desc: '粉丝福利！快来领取限量代金券啦！使用无门槛，优惠随心享！', // 分享描述
-    link: currurl, // 分享链接
-    imgUrl: 'http://{:SITE_DOMAIN.ADDON_PUBLIC_PATH}/article1/sharethumb.jpg', // 分享图标
-    success: function () {
-    // 用户确认分享后执行的回调函数
-    },
-    cancel: function () {
-    // 用户取消分享后执行的回调函数
-    }
-    });
-</block>
+
 <block name="body">
     <div class="container mainbg">
         <div id="header">
@@ -102,7 +78,7 @@
                 <button id="btnConsume" class="btn getcard" style="margin-top: 2em" type="submit" data-loading-text="Loading...">马上领取卡券</button>
             </form>
             <div class="tip">
-                活动日期：即日起至2016年6月30日</br>
+                活动日期：即日起至2016年5月20日</br>
                 <a href="{:U('lanSweetGameRule?id='.$mp_id)}">活动规则&gt;&gt;</a>
             </div>
         </div>
@@ -112,7 +88,7 @@
         // process the form
         $('form').submit(function(event) {
             if(userinfo.subscribe<=0){
-                    alert("请先关注"{$member.public_name}"官方微信账号再领取卡券");
+                    alert("请先关注【{$member.public_name}】官方微信账号再领取卡券");
 //                $('#divError').html("<strong>请先关注“{$member.public_name}”官方微信账号再开始游戏</strong>  ");
 //                $('#divError').removeClass('alert-danger').addClass('alert-success').removeClass('hide').addClass('show');
                 event.preventDefault();

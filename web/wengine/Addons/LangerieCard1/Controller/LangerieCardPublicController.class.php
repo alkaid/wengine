@@ -522,15 +522,15 @@ class LangerieCardPublicController extends AddonsController{
         switch($prize){
             case 1:
 //                $cardid='pn0s-txK8DHvw_GAuHY8x7Cc0plY';//test
-                $cardid='pn0s-tz4LFpj38RqiLus6Xch_4fc';//real
+                $cardid='pn0s-t0R7wM5xcI-Q0XgbXaxNwzM';//real
                 break;
             case 2:
 //                $cardid='pn0s-twxw73Ryu38b__8-7Ro8awA';//test
-                $cardid='pn0s-twTSkWz-abXBOahj_bXRrsE';//real
+                $cardid='pn0s-t9LpRV9ipiANhQIemauNTmk';//real
                 break;
             case 3:
 //                $cardid='pn0s-t2HyH2rahV3KzLiogFL3p9M';//test
-                $cardid='pn0s-t4plIXmLcUmoyZH63BeIchQ';//real
+                $cardid='pn0s-t3FBeNEA1uchmaqtPIYQoYI';//real
                 break;
             default:
                 return;

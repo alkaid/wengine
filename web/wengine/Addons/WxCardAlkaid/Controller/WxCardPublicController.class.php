@@ -25,17 +25,17 @@ class WxCardPublicController extends AddonsController{
             $color='#55bd47';
             $cardTitle='50元代金券';
             //以下3个美食游戏活动的
-        }else if($cardid=='pn0s-t4plIXmLcUmoyZH63BeIchQ'|| $cardid=='pn0s-t2HyH2rahV3KzLiogFL3p9M'){
+        }else if($cardid=='pn0s-t3FBeNEA1uchmaqtPIYQoYI'|| $cardid=='pn0s-t2HyH2rahV3KzLiogFL3p9M'){
             $brand='兰卓丽';
             $logo='http://weixin.maniform.cn/wei/plt/wengine/Addons/LangerieCard1/View/default/Public/langerie_wxcard_logo.png';
             $color='#55bd47';
             $cardTitle='50元代金券';
-        }else if($cardid=='pn0s-twTSkWz-abXBOahj_bXRrsE'|| $cardid=='pn0s-twxw73Ryu38b__8-7Ro8awA'){
+        }else if($cardid=='pn0s-t9LpRV9ipiANhQIemauNTmk'|| $cardid=='pn0s-twxw73Ryu38b__8-7Ro8awA'){
             $brand='兰卓丽';
             $logo='http://weixin.maniform.cn/wei/plt/wengine/Addons/LangerieCard1/View/default/Public/langerie_wxcard_logo.png';
             $color='#55bd47';
             $cardTitle='30元代金券';
-        }else if($cardid=='pn0s-tz4LFpj38RqiLus6Xch_4fc'|| $cardid=='pn0s-txK8DHvw_GAuHY8x7Cc0plY'){
+        }else if($cardid=='pn0s-t0R7wM5xcI-Q0XgbXaxNwzM'|| $cardid=='pn0s-txK8DHvw_GAuHY8x7Cc0plY'){
             $brand='兰卓丽';
             $logo='http://weixin.maniform.cn/wei/plt/wengine/Addons/LangerieCard1/View/default/Public/langerie_wxcard_logo.png';
             $color='#55bd47';
