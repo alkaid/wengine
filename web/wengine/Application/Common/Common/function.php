@@ -1680,7 +1680,7 @@ function checkAccessToken($wxResponse,$token){
 	if($wxResponse['errcode'] && $wxResponse['errcode']==40001){
 		$res['error']=true;
 		$res['rawmsg']=$wxResponse['errmsg'];
-		$res['errmsg']='服务器出现错误，请关闭页面后重试..';
+		$res['errmsg']='(code:40001)服务器出现错误，请关闭页面后重试..';
 		$key = 'access_token_' . $token;
 		$key_expire_time= 'access_token_expire_time_' . $token;
 		S($key,null);
